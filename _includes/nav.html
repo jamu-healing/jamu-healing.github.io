@@ -1,0 +1,89 @@
+<nav class="bg-gray-800 sticky top-0 z-50 shadow-lg">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <a href="/" class="text-xl font-bold text-white hover:text-purple-400 transition">
+        Jamu Healing
+      </a>
+      
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center space-x-8">
+        <li><a href="/" class="hover:text-purple-400 transition">Home</a></li>
+        <li><a href="/about" class="hover:text-purple-400 transition">About</a></li>
+        
+        <!-- Services Dropdown -->
+        <li class="relative group">
+          <a href="/services" class="hover:text-purple-400 transition flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 rounded-lg shadow-xl p-2 min-w-48 top-full">
+            <li>
+              <a href="/services/body" class="block px-4 py-2 hover:bg-gray-700 rounded transition">
+                Body Healing
+              </a>
+            </li>
+            <li>
+              <a href="/services/herbal" class="block px-4 py-2 hover:bg-gray-700 rounded transition">
+                Herbal Medicine
+              </a>
+            </li>
+            <li>
+              <a href="/services/classes" class="block px-4 py-2 hover:bg-gray-700 rounded transition">
+                Massage Classes
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <li><a href="/blog" class="hover:text-purple-400 transition">Blog</a></li>
+        <li><a href="/contacts" class="hover:text-purple-400 transition">Contacts</a></li>
+        <li><a href="/links" class="hover:text-purple-400 transition">Links</a></li>
+        
+        <!-- Language Switcher -->
+        <li>
+          {% if page.lang == 'ru' %}
+            <a href="{{ page.url | remove: '/ru' }}" class="px-3 py-1 border border-gray-600 rounded hover:bg-gray-700 transition text-sm">
+              EN
+            </a>
+          {% else %}
+            <a href="/ru{{ page.url }}" class="px-3 py-1 border border-gray-600 rounded hover:bg-gray-700 transition text-sm">
+              RU
+            </a>
+          {% endif %}
+        </li>
+      </ul>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <ul class="space-y-2">
+        <li><a href="/" class="block py-2 hover:text-purple-400 transition">Home</a></li>
+        <li><a href="/about" class="block py-2 hover:text-purple-400 transition">About</a></li>
+        <li><a href="/services" class="block py-2 hover:text-purple-400 transition">Services</a></li>
+        <li><a href="/services/body" class="block py-2 pl-4 text-gray-400 hover:text-purple-400 transition">→ Body Healing</a></li>
+        <li><a href="/services/herbal" class="block py-2 pl-4 text-gray-400 hover:text-purple-400 transition">→ Herbal Medicine</a></li>
+        <li><a href="/services/classes" class="block py-2 pl-4 text-gray-400 hover:text-purple-400 transition">→ Massage Classes</a></li>
+        <li><a href="/blog" class="block py-2 hover:text-purple-400 transition">Blog</a></li>
+        <li><a href="/contacts" class="block py-2 hover:text-purple-400 transition">Contacts</a></li>
+        <li><a href="/links" class="block py-2 hover:text-purple-400 transition">Links</a></li>
+        <li>
+          {% if page.lang == 'ru' %}
+            <a href="{{ page.url | remove: '/ru' }}" class="block py-2 hover:text-purple-400 transition">🌐 EN</a>
+          {% else %}
+            <a href="/ru{{ page.url }}" class="block py-2 hover:text-purple-400 transition">🌐 RU</a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

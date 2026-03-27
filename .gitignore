@@ -1,5 +1,6 @@
 # Specs and documentation (developer files)
 specs/
+.clinerules/
 
 # OS files
 .DS_Store

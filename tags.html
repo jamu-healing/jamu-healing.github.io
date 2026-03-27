@@ -1,0 +1,38 @@
+---
+layout: page
+title: "Tags"
+permalink: /tags/
+description: "Browse blog posts by tags and topics."
+---
+
+## Browse by Tags
+
+{% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+
+<div class="tags-cloud mb-12">
+  {% for tag in all_tags %}
+    {% if tag != "" %}
+    <a href="#{{ tag }}" class="tag">{{ tag }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% for tag in all_tags %}
+{% if tag != "" %}
+<div id="{{ tag }}" class="tag-section mb-12">
+  <h2 class="text-2xl font-bold mb-6">{{ tag }}</h2>
+  {% assign tagged_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+  <div class="space-y-4">
+    {% for post in tagged_posts %}
+    <article class="p-4 bg-gray-800 rounded-lg">
+      <h3 class="font-bold mb-2">
+        <a href="{{ post.url }}" class="hover:text-purple-400 transition">{{ post.title }}</a>
+      </h3>
+      <time class="text-sm text-gray-400">{{ post.date | date: "%B %d, %Y" }}</time>
+      <p class="mt-2 text-gray-400">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+{% endfor %}

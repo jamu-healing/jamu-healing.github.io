@@ -1,38 +1,216 @@
-.dark-linux {
-    background-color: #1e1e1e;
-    color: #c5c8c6;
-    font-family: 'Courier New', Courier, monospace;
+/* Blog Card Styles */
+.blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.dark-linux h1,
-.dark-linux h2,
-.dark-linux h3 {
-    color: #81a2be;
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #374151;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  margin: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.tag:hover {
+  background: #8B5CF6;
+  color: white;
 }
 
-.dark-linux a {
-    color: #b5bd68;
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.dark-linux a:hover {
-    color: #f8f8f2;
+/* Search */
+.search-box input {
+  width: 100%;
+  padding: 16px;
+  background: #1F2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+}
+.search-box input:focus {
+  outline: none;
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
 }
 
-.dark-linux pre {
-    background-color: #272727;
-    border-left: 3px solid #b5bd68;
-    padding: 5px;
+/* Carousel */
+.carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel > * {
+  scroll-snap-align: start;
+  flex: 0 0 300px;
 }
 
-.dark-linux code {
-    color: #f8f8f2;
+/* Instagram Grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.dark-linux button {
-    background-color: #373b41;
-    color: #c5c8c6;
+/* Persona Section */
+.persona-image {
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.dark-linux button:hover {
-    background-color: #1e1e1e;
+/* Navigation Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background: #1F2937;
+  min-width: 200px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  z-index: 50;
+}
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+/* Service Cards */
+.service-card {
+  background: #1F2937;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+.service-card:hover {
+  background: #374151;
+  transform: translateY(-4px);
+}
+
+/* Language Switcher */
+.language-switcher a {
+  padding: 4px 12px;
+  border: 1px solid #4B5563;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+.language-switcher a:hover {
+  background: #374151;
+  border-color: #8B5CF6;
+}
+
+/* Prose Styles for Content */
+.prose {
+  line-height: 1.8;
+}
+.prose h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.prose h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+.prose p {
+  margin-bottom: 1rem;
+}
+.prose ul,
+.prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.prose li {
+  margin-bottom: 0.5rem;
+}
+.prose strong {
+  font-weight: 600;
+}
+.prose a {
+  color: #8B5CF6;
+  text-decoration: underline;
+}
+.prose a:hover {
+  color: #A78BFA;
+}
+
+/* Line Clamp */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Gradient Text */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+::-webkit-scrollbar-thumb {
+  background: #4B5563;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+}
+th {
+  background: #1F2937;
+  font-weight: 600;
+}
+tr:hover {
+  background: #1F2937;
 }

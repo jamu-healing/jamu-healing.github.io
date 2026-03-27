@@ -1,15 +1,91 @@
 title: "Jamu Healing"
-description: "Javanese Therapy by Evi Sudarto at Bali, Indonesia. Jamu, traditional Javanese medicine, ostheo, wellness"
-baseurl: ""
+description: "Traditional Javanese Medicine by Evi Sudarto in Bali, Indonesia. Osteopathy, herbal medicine, massage therapy, and wellness classes."
 url: "https://jamu-healing.github.io"
-theme: minima
+baseurl: ""
 author: "Evi Sudarto"
-email: "evi.sudarto@example.com"
 
-minima:
-  skin: dark
-  social_links:
-    - platform: github
-      user_url: "https://github.com/jamu-healing"
+# Build settings
+markdown: kramdown
+permalink: pretty
 
-exclude_from_home: ["hdn"]
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Evi Sudarto"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+      author: "Evi Sudarto"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Feed settings
+feed:
+  path: /feed.xml
+
+# Exclude from build
+exclude:
+  - specs/
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+
+# Include files
+include:
+  - _pages
+
+# Sass configuration
+sass:
+  style: compressed
+
+# Site language
+lang: en
+
+# Contact information
+contact:
+  phone: "+62 857-3886-7684"
+  whatsapp: "https://wa.me/6285738867684"
+  telegram: "https://t.me/jamu_healing"
+  email: "evi.sudarto@gmail.com"
+  address:
+    street: "Jl. Blong Keker"
+    city: "Jimbaran"
+    region: "Bali"
+    country: "Indonesia"
+
+# Social links
+social:
+  instagram: "https://www.instagram.com/healerdewi/"
+  facebook: "https://www.facebook.com/Jamu.Healing/"
+  youtube: "https://www.youtube.com/@osteopathbali"
+  telegram_channel: "https://t.me/osteopathbali"
+
+# Services pricing
+pricing:
+  standard_session: "3,200,000 IDR"
+  session_duration: "90+ minutes"
+  herbal_course: "2,000,000 IDR/month"
+  online_support: "4,500,000 IDR/month"
