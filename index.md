@@ -4,8 +4,8 @@ title: "Welcome to Jamu Healing"
 ---
 
 <!-- Hero Section -->
-<section class="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-purple-900 via-gray-900 to-gray-800 -mx-4 -mt-8 px-4 mb-12">
-    <div class="text-center max-w-4xl">
+<section class="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-purple-900 via-gray-900 to-gray-800 mb-12">
+    <div class="text-center max-w-4xl px-4">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Jamu Healing
         </h1>
@@ -164,8 +164,8 @@ title: "Welcome to Jamu Healing"
 </section>
 
 <!-- Persona Section -->
-<section id="persona" class="py-16 bg-gray-800 -mx-4 px-4">
-    <div class="container mx-auto">
+<section id="persona" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <img src="/images/evi-sudarto.jpg" alt="Evi Sudarto" class="rounded-2xl shadow-xl w-full">
@@ -249,8 +249,8 @@ title: "Welcome to Jamu Healing"
 </section>
 
 <!-- Instagram Grid Section -->
-<section id="instagram" class="py-16 bg-gray-800 -mx-4 px-4">
-    <div class="container mx-auto">
+<section id="instagram" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold mb-12 text-center">Follow @healerdewi</h2>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -350,8 +350,8 @@ title: "Welcome to Jamu Healing"
 </section>
 
 <!-- CTA Section -->
-<section class="py-16 bg-gradient-to-r from-purple-900 to-gray-800 -mx-4 px-4">
-    <div class="text-center max-w-2xl mx-auto">
+<section class="py-16 bg-gradient-to-r from-purple-900 to-gray-800">
+    <div class="text-center max-w-2xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-4">Join Our Journey</h2>
         <p class="text-gray-300 mb-8">Join us on our journey to health and healing with Jamu!</p>
         <a href="#contact" class="inline-block bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105">
