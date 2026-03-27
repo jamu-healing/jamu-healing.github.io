@@ -30,12 +30,15 @@ title: "Welcome to Jamu Healing"
 <!-- About Section -->
 <section id="about" class="py-16">
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold mb-8 text-center">About Us</h2>
+        <h2 class="text-4xl font-bold mb-8 text-center">About Evi Sudarto</h2>
         <div class="bg-gray-800 rounded-2xl p-8 shadow-xl">
+            <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                <strong>Evi Sudarto</strong> is a highly skilled osteopath and manual therapist based in Bali with over <strong>30 years of experience</strong>. 
+                She applies her own created therapeutic methodology - a compound of modern osteopathy and traditional Javanese medicine.
+            </p>
             <p class="text-lg text-gray-300 leading-relaxed">
-                Jamu Healing is dedicated to the art and science of traditional Indonesian herbal medicine known as Jamu. 
-                Our mission is to promote health and wellness through 100% natural remedies made from local ingredients 
-                that have been used for centuries.
+                Javanese Therapy by Evi Sudarto is a traditional healing practice based on Jamu herbal medicine and manual body therapy. 
+                The unique methodology combines modern osteopathy, herbal medicine, naturopathy, and traditional Javanese healing techniques.
             </p>
         </div>
     </div>
@@ -47,14 +50,21 @@ title: "Welcome to Jamu Healing"
     
     <!-- Therapy Services -->
     <div class="mb-12">
-        <h3 class="text-2xl font-bold mb-6 text-primary">Therapy Services</h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h3 class="text-2xl font-bold mb-6 text-primary">Therapy Services : Body Healing</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
                 <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                 </svg>
                 <h4 class="text-lg font-bold mb-2">Osteopathy</h4>
                 <p class="text-gray-400 text-sm">Manual therapy for musculoskeletal issues</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Chiropractic</h4>
+                <p class="text-gray-400 text-sm">Spinal adjustment and alignment</p>
             </div>
             <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
                 <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,12 +88,21 @@ title: "Welcome to Jamu Healing"
                 <p class="text-gray-400 text-sm">Recovery support after childbirth</p>
             </div>
         </div>
+        <div class="mt-6">
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl inline-block">
+                <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Traditional Beauty Care</h4>
+                <p class="text-gray-400 text-sm">Natural beauty treatments using traditional methods</p>
+            </div>
+        </div>
     </div>
     
     <!-- Jamu Herbal Medicines -->
     <div class="mb-12">
-        <h3 class="text-2xl font-bold mb-6 text-primary">Jamu Herbal Medicines</h3>
-        <div class="grid md:grid-cols-3 gap-6">
+        <h3 class="text-2xl font-bold mb-6 text-primary">Jamu : Herbal Medicines</h3>
+        <div class="grid md:grid-cols-4 gap-6">
             <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
                 <svg class="w-10 h-10 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -102,8 +121,15 @@ title: "Welcome to Jamu Healing"
                 <svg class="w-10 h-10 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                 </svg>
-                <h4 class="text-lg font-bold mb-2">Products</h4>
-                <p class="text-gray-400 text-sm">Ready-made herbal products</p>
+                <h4 class="text-lg font-bold mb-2">Wellness Products</h4>
+                <p class="text-gray-400 text-sm">Health and wellness products</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Natural Cosmetics</h4>
+                <p class="text-gray-400 text-sm">Natural beauty and cosmetic products</p>
             </div>
         </div>
     </div>
@@ -174,33 +200,68 @@ title: "Welcome to Jamu Healing"
 <!-- Contact Section -->
 <section id="contact" class="py-16">
     <h2 class="text-4xl font-bold mb-12 text-center">Contact Us</h2>
-    <div class="max-w-2xl mx-auto">
-        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl">
-            <p class="text-center text-gray-300 mb-8">
-                Have questions or comments? We'd love to hear from you!
-            </p>
-            <div class="space-y-4">
-                <div class="flex items-center gap-4">
-                    <span class="text-2xl">📧</span>
-                    <div>
-                        <p class="text-gray-400 text-sm">Email</p>
-                        <p class="font-semibold">contact@jamuhealing.com</p>
+    <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Contact Info -->
+            <div class="bg-gray-800 rounded-2xl p-8 shadow-xl">
+                <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">📱</span>
+                        <div>
+                            <p class="text-gray-400 text-sm">Phone</p>
+                            <p class="font-semibold">+62 857-3886-7684</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">📍</span>
+                        <div>
+                            <p class="text-gray-400 text-sm">Address</p>
+                            <p class="font-semibold">Jl. Blong Keker, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🕐</span>
+                        <div>
+                            <p class="text-gray-400 text-sm">Hours</p>
+                            <p class="font-semibold">Open 24 hours</p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <span class="text-2xl">📱</span>
-                    <div>
-                        <p class="text-gray-400 text-sm">Phone</p>
-                        <p class="font-semibold">+62-123-456-7890</p>
+                <!-- Social Links -->
+                <div class="mt-8">
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@osteopathbali" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
                     </div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <span class="text-2xl">📍</span>
-                    <div>
-                        <p class="text-gray-400 text-sm">Address</p>
-                        <p class="font-semibold">Jamu Healing, Jl. Herbal No. 1, Jakarta, Indonesia</p>
-                    </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="bg-gray-800 rounded-2xl p-8 shadow-xl">
+                <h3 class="text-2xl font-bold mb-6">Location</h3>
+                <div class="aspect-video rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.0!2d115.1667!3d-8.7984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2427c56b1f681%3A0xaf379d0ddf25d606!2sOsteopath+at+Bali%2C+Evi+Sudarto+massage+classes!5e0!3m2!1sen!2sid!4v1"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
+                <p class="text-gray-400 text-sm mt-4">
+                    <strong>Rating:</strong> 5.0/5 (Google Reviews) · <strong>Open:</strong> 24 hours
+                </p>
             </div>
         </div>
     </div>
