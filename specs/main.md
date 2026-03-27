@@ -14,22 +14,20 @@
 
 ### Services (3 Main Directions)
 
-#### 1. Therapy Services
-- Osteopathy
-- Chiropractic
+#### 1. Therapy Services : Body Healing
+- Osteopathy, Chiropractic, Manual Therapy
 - Hijama (Cupping Therapy)
 - Visceral Therapy
 - Traditional Beauty Care
 - Postnatal Rehabilitation
-- Manual Therapy
 
-#### 2. Jamu Herbal Medicines
+#### 2. Jamu : Herbal Medicines
 - Traditional Javanese herbal medicine
 - Natural remedies
-- Wellness products
+- Wellness products, natural cosmetics
 - Individual consultations
 
-#### 3. Massage Classes
+#### 3. Massage Classes : Javanese massage lessons
 - Traditional Javanese massage training
 - Professional courses (5 lessons, 10 days)
 - Private lessons for professionals and beginners
@@ -220,9 +218,9 @@
 
 ## TODO: Discover Additional Resources
 
-- [ ] Find Telegram channel
-- [ ] Find Teletype blog
-- [ ] Find BlogPost articles
-- [ ] Verify Google Business "Massage Classes" profile
-- [ ] Get coordinates for Google Maps
-- [ ] Collect photos for website
+- [ ] Find Telegram channels and chat (3 urls) and save results in file.
+- [ ] Find Teletype blogs (4 urls) and save results in file.
+- [ ] Find BlogPost articles and pagesand save results in file.
+- [ ] Find all bio.site accounts by query "Evi Sudarto", "javanese therapy", "osteopath bali", "остеопат бали" and save results in file.
+- [ ] make extended searches by queries : "Evi Sudarto", "javanese therapy", "osteopath bali", "остеопат бали", "яванская медицина" and save results in file.
+- [ ] Collect photos and logos (all) save results in folder
