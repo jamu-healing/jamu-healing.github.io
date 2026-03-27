@@ -1,3 +1,20 @@
-title: "Your Site Title"
-description: "Your repository description"
-theme: "dark"
+title: "Jamu Healing"
+description: "Javanese Therapy by Evi Sudarto at Bali, Indonesia. Jamu, traditional Javanese medicine, ostheo, wellness"
+baseurl: ""
+url: "https://jamu-healing.github.io"
+theme: minima
+author: "Evi Sudarto"
+email: "evi.sudarto@example.com"
+
+minima:
+  skin: dark
+  social_links:
+    - platform: github
+      user_url: "https://github.com/jamu-healing"
+
+collections:
+  hdn:
+    output: true
+    permalink: /hdn/:path/
+
+exclude_from_home: ["hdn"]
