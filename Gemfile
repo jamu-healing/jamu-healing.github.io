@@ -1,3 +1,5 @@
 source 'https://rubygems.org'
-gem 'jekyll'
-gem 'minima'
+gem 'jekyll', '~> 4.3'
+gem 'jekyll-paginate'
+gem 'jekyll-feed'
+gem 'jekyll-seo-tag'
