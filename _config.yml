@@ -12,9 +12,4 @@ minima:
     - platform: github
       user_url: "https://github.com/jamu-healing"
 
-collections:
-  hdn:
-    output: true
-    permalink: /hdn/:path/
-
 exclude_from_home: ["hdn"]

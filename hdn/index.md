@@ -92,19 +92,23 @@ layout: default
 This is the index page for hidden posts.
 
 <ul class="post-list">
-{% for post in site.hdn %}
+{% for page in site.pages %}
+{% if page.url contains '/hdn/' and page.url != '/hdn/' %}
     <li class="post-item">
         <div class="post-info">
             <h3 class="post-title">
-                <a href="{{ post.url }}">{{ post.title }}</a>
+                <a href="{{ page.url }}">{{ page.title }}</a>
             </h3>
-            <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+            {% if page.date %}
+            <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
+            {% endif %}
         </div>
-        <button class="copy-url-btn" onclick="copyUrl('{{ post.url }}')">
+        <button class="copy-url-btn" onclick="copyUrl('{{ page.url }}')">
             <span class="material-icons">content_copy</span>
             Copy URL
         </button>
     </li>
+{% endif %}
 {% endfor %}
 </ul>
 
