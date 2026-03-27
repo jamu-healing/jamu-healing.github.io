@@ -44,21 +44,95 @@ title: "Welcome to Jamu Healing"
 <!-- Services Section -->
 <section id="services" class="py-16">
     <h2 class="text-4xl font-bold mb-12 text-center">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
-            <div class="text-4xl mb-4">💊</div>
-            <h3 class="text-xl font-bold mb-3">Consultations</h3>
-            <p class="text-gray-400">Personalized wellness plans and consultations to meet your health needs.</p>
+    
+    <!-- Therapy Services -->
+    <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 text-primary">Therapy Services</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Osteopathy</h4>
+                <p class="text-gray-400 text-sm">Manual therapy for musculoskeletal issues</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Hijama</h4>
+                <p class="text-gray-400 text-sm">Traditional cupping therapy</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Visceral Therapy</h4>
+                <p class="text-gray-400 text-sm">Internal organ manipulation</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Postnatal Care</h4>
+                <p class="text-gray-400 text-sm">Recovery support after childbirth</p>
+            </div>
         </div>
-        <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
-            <div class="text-4xl mb-4">📚</div>
-            <h3 class="text-xl font-bold mb-3">Workshops</h3>
-            <p class="text-gray-400">Interactive sessions where you learn how to prepare your own Jamu medicine.</p>
+    </div>
+    
+    <!-- Jamu Herbal Medicines -->
+    <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 text-primary">Jamu Herbal Medicines</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Traditional Remedies</h4>
+                <p class="text-gray-400 text-sm">Natural herbal medicine from Java</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Consultations</h4>
+                <p class="text-gray-400 text-sm">Personalized herbal medicine advice</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Products</h4>
+                <p class="text-gray-400 text-sm">Ready-made herbal products</p>
+            </div>
         </div>
-        <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
-            <div class="text-4xl mb-4">🛒</div>
-            <h3 class="text-xl font-bold mb-3">Product Sales</h3>
-            <p class="text-gray-400">A range of carefully crafted Jamu products available for purchase directly from our site.</p>
+    </div>
+    
+    <!-- Massage Classes -->
+    <div>
+        <h3 class="text-2xl font-bold mb-6 text-primary">Massage Classes</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-purple-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Professional Courses</h4>
+                <p class="text-gray-400 text-sm">5 lessons over 10 days training</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-purple-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Private Lessons</h4>
+                <p class="text-gray-400 text-sm">One-on-one training sessions</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all transform hover:-translate-y-2 shadow-xl">
+                <svg class="w-10 h-10 text-purple-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                </svg>
+                <h4 class="text-lg font-bold mb-2">Body Therapy</h4>
+                <p class="text-gray-400 text-sm">Learn traditional Javanese massage</p>
+            </div>
         </div>
     </div>
 </section>
