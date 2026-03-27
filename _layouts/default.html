@@ -1,37 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#bb86fc',
+                        secondary: '#03dac6',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        a {
-            color: #bb86fc;
-        }
-        /* Additional dark theme styles */
-    </style>
 </head>
-<body>
-    <header>
-        <h1>{{ site.title }}</h1>
-        <nav>
-            <ul>
-                {% for page in site.pages %}
-                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
-            </ul>
+<body class="bg-gray-900 text-white min-h-screen">
+    <header class="bg-gray-800 shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">{{ site.title }}</a>
+                <ul class="flex space-x-6">
+                    {% for page in site.pages %}
+                    {% if page.title %}
+                    <li><a href="{{ page.url }}" class="hover:text-primary transition-colors">{{ page.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
+    <main class="container mx-auto px-4 py-8">
         {{ content }}
     </main>
-    <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    <footer class="bg-gray-800 mt-auto">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-400">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
