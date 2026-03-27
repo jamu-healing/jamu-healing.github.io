@@ -1,0 +1,38 @@
+.dark-linux {
+    background-color: #1e1e1e;
+    color: #c5c8c6;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark-linux h1,
+.dark-linux h2,
+.dark-linux h3 {
+    color: #81a2be;
+}
+
+.dark-linux a {
+    color: #b5bd68;
+}
+
+.dark-linux a:hover {
+    color: #f8f8f2;
+}
+
+.dark-linux pre {
+    background-color: #272727;
+    border-left: 3px solid #b5bd68;
+    padding: 5px;
+}
+
+.dark-linux code {
+    color: #f8f8f2;
+}
+
+.dark-linux button {
+    background-color: #373b41;
+    color: #c5c8c6;
+}
+
+.dark-linux button:hover {
+    background-color: #1e1e1e;
+}
