@@ -1,6 +1,7 @@
 # Specs and documentation (developer files)
 specs/
 .clinerules/
+.static-output/
 
 # OS files
 .DS_Store
