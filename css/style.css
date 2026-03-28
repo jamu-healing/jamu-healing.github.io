@@ -300,6 +300,17 @@ section:last-child { border-bottom: none; }
 }
 .relative { position: relative; }
 
+/* ─── SERVICE BLOCKS (Services Page) ─────────────────────── */
+.service-block {
+  border-radius: var(--radius); border: 1px solid var(--border);
+  overflow: hidden; margin-bottom: 3.2rem;
+  transition: border-color 0.2s;
+}
+.service-block.featured { border-color: rgba(249,38,114,0.45); background: rgba(249,38,114,0.04); }
+.service-block-inner { padding: 4rem; display: grid; gap: 4rem; grid-template-columns: 1fr; }
+@media (min-width:1024px) { .service-block-inner { grid-template-columns: 1fr 1fr; } }
+.featured-bar { height: 2px; background: linear-gradient(to right, transparent, var(--primary), transparent); }
+
 /* ─── AUTHORITY ───────────────────────────────────────────── */
 .authority-grid { display: grid; gap: 6rem; grid-template-columns: 1fr; align-items: center; }
 @media (min-width: 1024px) { .authority-grid { grid-template-columns: 1fr 1fr; } }
