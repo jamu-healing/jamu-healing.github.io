@@ -6,7 +6,7 @@ show_header: false
 ---
 
 <!-- ═══ HERO ════════════════════════════════════════════════ -->
-<section class="hero" style="border-bottom: 1px solid var(--border); padding-bottom:0;">
+<section class="hero border-b-0 pb-0">
   <div class="container">
     <div class="hero-body">
       <div class="hero-badge">
@@ -17,7 +17,7 @@ show_header: false
       <p class="hero-sub">by <strong>Evi Sudarto</strong></p>
       <p>A unified system of manual therapy, herbal medicine, and professional mastery.
          We specialize in <strong>Deep Systemic Release via Minimal Intervention</strong> —
-         resolving complex issues in just <span style="color:var(--primary);font-weight:600;">1–2 sessions</span>.</p>
+         resolving complex issues in just <span class="text-primary font-semibold">1–2 sessions</span>.</p>
       <div class="hero-actions">
         <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           Book Now <i class="bi bi-arrow-right"></i>
@@ -45,7 +45,7 @@ show_header: false
 <section>
   <div class="container">
     <p class="section-label">02 — Problems & Solutions</p>
-    <h2 style="margin-bottom:4rem;">What We Resolve</h2>
+    <h2 class="mb-16">What We Resolve</h2>
     <div class="grid-3">
 
       <div class="card solution-card">
@@ -55,7 +55,7 @@ show_header: false
         <p>Structural Decay & Chronic Compression. Locked body, persistent tension, and restricted blood flow that common massage fails to release.</p>
         <hr class="solution-divider" />
         <span class="solution-label">Solution</span>
-        <p style="color:rgba(248,248,242,0.85)">Body Balance Restoration. High-precision intervention using the "Fork Effect": minimal, targeted correction that delivers 80% of the result by triggering a systemic release.</p>
+        <p class="text-85">Body Balance Restoration. High-precision intervention using the "Fork Effect": minimal, targeted correction that delivers 80% of the result by triggering a systemic release.</p>
       </div>
 
       <div class="card solution-card">
@@ -65,7 +65,7 @@ show_header: false
         <p>Metabolic Chaos. Dependency on synthetic supplements and chronic GI distress that "premium" vitamins can no longer fix.</p>
         <hr class="solution-divider" />
         <span class="solution-label">Solution</span>
-        <p style="color:rgba(248,248,242,0.85)">Native Chemical Re-tuning (Jamu). Low-level metabolic recalibration using traditional Javanese phytotherapy to reactivate natural self-regulation.</p>
+        <p class="text-85">Native Chemical Re-tuning (Jamu). Low-level metabolic recalibration using traditional Javanese phytotherapy to reactivate natural self-regulation.</p>
       </div>
 
       <div class="card solution-card">
@@ -75,7 +75,7 @@ show_header: false
         <p>Skill Stagnation. Standard techniques lacking depth, leaving practitioners at a professional ceiling.</p>
         <hr class="solution-divider" />
         <span class="solution-label">Solution</span>
-        <p style="color:rgba(248,248,242,0.85)">Mastery Through Systemic Practice. Anatomy-based training focused on high-precision manual skills and injury-free impact.</p>
+        <p class="text-85">Mastery Through Systemic Practice. Anatomy-based training focused on high-precision manual skills and injury-free impact.</p>
       </div>
 
     </div>
@@ -86,25 +86,25 @@ show_header: false
 <section class="bg-alt">
   <div class="container">
     <p class="section-label">03 — Solutions Matrix</p>
-    <h2 style="margin-bottom:4rem;">Choose Your Path</h2>
+    <h2 class="mb-16">Choose Your Path</h2>
     <div class="grid-3">
 
       <!-- Manual Therapy -->
       <div class="card service-card">
-        <div class="icon-box" style="margin-bottom:1.6rem;"><i class="bi bi-heart-pulse"></i></div>
-        <p style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem;">Body Balance Restoration</p>
-        <h3 style="font-size:2.4rem;margin-bottom:1.2rem;">Manual Therapy</h3>
-        <p style="margin-bottom:2rem;">Minimal, targeted correction resolving complex issues in 1–2 sessions.</p>
-        <ul class="check-list" style="margin-bottom:auto;">
+        <div class="icon-box mb-6"><i class="bi bi-heart-pulse"></i></div>
+        <p class="font-mono text-sm text-muted mb-2">Body Balance Restoration</p>
+        <h3 class="text-2xl mb-4">Manual Therapy</h3>
+        <p class="mb-6">Minimal, targeted correction resolving complex issues in 1–2 sessions.</p>
+        <ul class="check-list flex-grow">
           <li><i class="bi bi-check-circle-fill"></i> Osteopathy</li>
           <li><i class="bi bi-check-circle-fill"></i> Chiropractic</li>
           <li><i class="bi bi-check-circle-fill"></i> Myofascial Release</li>
           <li><i class="bi bi-check-circle-fill"></i> Visceral Manipulation</li>
         </ul>
-        <div style="border-top:1px solid var(--border);margin-top:2.4rem;padding-top:2.4rem;">
+        <div class="border-t mt-8 pt-8">
           <div class="price">IDR 6.4M</div>
           <p class="price-note">2 sessions / 5-day program</p>
-          <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;justify-content:center;">
+          <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline w-full justify-center">
             Book via WhatsApp <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -113,19 +113,19 @@ show_header: false
       <!-- Herbal Medicine (featured) -->
       <div class="card card-featured service-card relative">
         <div class="popular-badge">Most Popular</div>
-        <div class="icon-box primary" style="margin-bottom:1.6rem;"><i class="bi bi-flower1"></i></div>
-        <p style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem;">Native Chemical Re-tuning</p>
-        <h3 style="font-size:2.4rem;margin-bottom:1.2rem;">Herbal Medicine</h3>
-        <p style="margin-bottom:2rem;">Restoring hormonal and digestive balance by clearing cellular receptors with organic Javanese formulas.</p>
-        <ul class="check-list" style="margin-bottom:auto;">
+        <div class="icon-box primary mb-6"><i class="bi bi-flower1"></i></div>
+        <p class="font-mono text-sm text-muted mb-2">Native Chemical Re-tuning</p>
+        <h3 class="text-2xl mb-4">Herbal Medicine</h3>
+        <p class="mb-6">Restoring hormonal and digestive balance by clearing cellular receptors with organic Javanese formulas.</p>
+        <ul class="check-list flex-grow">
           <li><i class="bi bi-check-circle-fill"></i> Javanese Naturopathy</li>
           <li><i class="bi bi-check-circle-fill"></i> Custom Herbal Protocols</li>
           <li><i class="bi bi-check-circle-fill"></i> Detox Programs</li>
         </ul>
-        <div style="border-top:1px solid var(--border);margin-top:2.4rem;padding-top:2.4rem;">
+        <div class="border-t mt-8 pt-8">
           <div class="price">IDR 4M</div>
           <p class="price-note">2-month program</p>
-          <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;justify-content:center;">
+          <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full justify-center">
             Book via WhatsApp <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -133,19 +133,19 @@ show_header: false
 
       <!-- Professional Classes -->
       <div class="card service-card">
-        <div class="icon-box" style="margin-bottom:1.6rem;"><i class="bi bi-journal-text"></i></div>
-        <p style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem;">Java Massage Mastery</p>
-        <h3 style="font-size:2.4rem;margin-bottom:1.2rem;">Professional Classes</h3>
-        <p style="margin-bottom:2rem;">Tangible manual craft with immediate professional results.</p>
-        <ul class="check-list" style="margin-bottom:auto;">
+        <div class="icon-box mb-6"><i class="bi bi-journal-text"></i></div>
+        <p class="font-mono text-sm text-muted mb-2">Java Massage Mastery</p>
+        <h3 class="text-2xl mb-4">Professional Classes</h3>
+        <p class="mb-6">Tangible manual craft with immediate professional results.</p>
+        <ul class="check-list flex-grow">
           <li><i class="bi bi-check-circle-fill"></i> 5 lessons / 12 days</li>
           <li><i class="bi bi-check-circle-fill"></i> Certificate included</li>
           <li><i class="bi bi-check-circle-fill"></i> Web Registration</li>
         </ul>
-        <div style="border-top:1px solid var(--border);margin-top:2.4rem;padding-top:2.4rem;">
+        <div class="border-t mt-8 pt-8">
           <div class="price">IDR 12M</div>
           <p class="price-note">Full basic course</p>
-          <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;justify-content:center;">
+          <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline w-full justify-center">
             Book via WhatsApp <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -173,12 +173,12 @@ show_header: false
       </div>
       <div>
         <p class="section-label">04 — The Authority</p>
-        <h2 style="margin-bottom:1.6rem;">Evi Sudarto</h2>
-        <p style="font-size:1.7rem;margin-bottom:1.6rem;">
+        <h2 class="mb-6">Evi Sudarto</h2>
+        <p class="text-lg mb-4">
           Senior osteopath and manual therapist with <strong>30+ years of experience</strong>.
           Architect of a high-precision methodology combining modern osteopathy and traditional Javanese medicine.
         </p>
-        <p style="margin-bottom:3.2rem;">
+        <p class="mb-8">
           Javanese Therapy by Evi Sudarto functions as a systemic healing practice,
           integrating manual therapy, Jamu, and naturopathy into a unified, anatomy-based framework.
         </p>
@@ -188,7 +188,7 @@ show_header: false
           <div class="stat-card-sm"><div class="val">5.0★</div><div class="lbl">Google Rating</div></div>
           <div class="stat-card-sm"><div class="val">2</div><div class="lbl">Locations in Bali</div></div>
         </div>
-        <ul class="check-list" style="margin-top:3.2rem;">
+        <ul class="check-list mt-8">
           <li><i class="bi bi-check-circle-fill"></i> Evidence Base: 5,000+ documented patient cases</li>
           <li><i class="bi bi-check-circle-fill"></i> No guesswork — anatomy-based diagnostic mapping</li>
           <li><i class="bi bi-check-circle-fill"></i> Trusted by the international community in Bali</li>
@@ -203,11 +203,11 @@ show_header: false
 <section class="bg-alt text-center">
   <div class="container">
     <p class="section-label">05 — Verified Results</p>
-    <h2 style="margin-bottom:1.2rem;">Real Outcomes. Documented.</h2>
-    <p style="max-width:60rem;margin:0 auto 5rem;">
+    <h2 class="mb-4">Real Outcomes. Documented.</h2>
+    <p class="max-w-2xl mx-auto mb-12">
       Every case is recorded. Every outcome is traceable. No guesswork — just systematic healing with measurable results.
     </p>
-    <div class="grid-3" style="margin-bottom:4rem;">
+    <div class="grid-3 mb-8">
       <div class="card result-card">
         <div class="icon-wrap"><i class="bi bi-bar-chart-line"></i></div>
         <div class="val">5,000+</div>
@@ -236,15 +236,15 @@ show_header: false
 <!-- ═══ CONTACT ══════════════════════════════════════════════ -->
 <section>
   <div class="container">
-    <div class="text-center" style="margin-bottom:5rem;">
+    <div class="text-center mb-12">
       <p class="section-label">06 — Contact & Connect</p>
       <h2>Start Your Healing</h2>
     </div>
     <div class="grid-3">
 
       <div class="card">
-        <h3 style="margin-bottom:2rem;">Direct Messengers</h3>
-        <div style="display:flex;flex-direction:column;gap:0.8rem;">
+        <h3 class="mb-6">Direct Messengers</h3>
+        <div class="flex flex-col gap-3">
           <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-telephone-fill accent"></i> WhatsApp
           </a>
@@ -258,8 +258,8 @@ show_header: false
       </div>
 
       <div class="card">
-        <h3 style="margin-bottom:2rem;">Social & Community</h3>
-        <div style="display:flex;flex-direction:column;gap:0.8rem;">
+        <h3 class="mb-6">Social & Community</h3>
+        <div class="flex flex-col gap-3">
           <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-instagram primary"></i> @healerdewi (Live Cases)
           </a>
@@ -273,24 +273,24 @@ show_header: false
       </div>
 
       <div class="card">
-        <h3 style="margin-bottom:2rem;">Locations</h3>
-        <div style="display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2rem;">
+        <h3 class="mb-6">Locations</h3>
+        <div class="flex flex-col gap-3 mb-6">
           <a href="https://g.page/r/CYm5pvsYVkpkEBM/" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-geo-alt-fill primary"></i>
             <div>
-              <div style="font-size:1.5rem;font-weight:500;color:var(--fg);">Ubud</div>
-              <div style="font-size:1.2rem;color:var(--fg-muted);"><i class="bi bi-star-fill" style="color:var(--accent);font-size:1rem;"></i> 5.0 on Google Maps</div>
+              <div class="text-lg font-medium">Ubud</div>
+              <div class="text-sm text-muted"><i class="bi bi-star-fill accent text-xs"></i> 5.0 on Google Maps</div>
             </div>
           </a>
           <a href="https://g.page/r/CQbWJd8NnTevEBM/" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-geo-alt-fill primary"></i>
             <div>
-              <div style="font-size:1.5rem;font-weight:500;color:var(--fg);">Canggu</div>
-              <div style="font-size:1.2rem;color:var(--fg-muted);"><i class="bi bi-star-fill" style="color:var(--accent);font-size:1rem;"></i> 5.0 on Google Maps</div>
+              <div class="text-lg font-medium">Canggu</div>
+              <div class="text-sm text-muted"><i class="bi bi-star-fill accent text-xs"></i> 5.0 on Google Maps</div>
             </div>
           </a>
         </div>
-        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;justify-content:center;">
+        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full justify-center">
           Book Now via WhatsApp <i class="bi bi-arrow-right"></i>
         </a>
       </div>
@@ -300,9 +300,9 @@ show_header: false
 </section>
 
 <!-- ═══ BLOG PREVIEW ═════════════════════════════════════════ -->
-<section style="border-bottom:none;">
+<section class="border-b-0">
   <div class="container">
-    <div class="flex items-center justify-between" style="margin-bottom:4rem;">
+    <div class="flex items-center justify-between mb-8">
       <div>
         <p class="section-label">Knowledge</p>
         <h2>Latest Articles</h2>
@@ -311,9 +311,9 @@ show_header: false
         View all <i class="bi bi-arrow-right"></i>
       </a>
     </div>
-    <p style="color:var(--fg-muted);font-family:var(--font-mono);font-size:1.4rem;text-align:center;padding:4rem 0;">
+    <p class="text-muted font-mono text-sm text-center py-12">
       Articles on traditional Javanese healing, osteopathy, and herbal medicine.
-      <a href="/pages/blog/" style="color:var(--primary);margin-left:0.8rem;">Read the blog <i class="bi bi-arrow-right"></i></a>
+      <a href="/pages/blog/" class="text-primary ml-2">Read the blog <i class="bi bi-arrow-right"></i></a>
     </p>
   </div>
 </section>
