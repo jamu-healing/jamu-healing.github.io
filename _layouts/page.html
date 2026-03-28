@@ -1,21 +1,22 @@
 ---
 layout: default
 ---
-<article class="py-16">
-  <div class="container mx-auto px-4">
-    <!-- Breadcrumb -->
-    <nav class="mb-8 text-sm">
-      <a href="/" class="text-gray-400 hover:text-white">Home</a>
-      <span class="mx-2 text-gray-600">/</span>
-      <span class="text-purple-400">{{ page.title }}</span>
-    </nav>
-    
-    <!-- Page Title -->
-    <h1 class="text-4xl md:text-5xl font-bold mb-8">{{ page.title }}</h1>
-    
-    <!-- Page Content -->
-    <div class="prose prose-invert max-w-none">
+<article>
+  {% if page.show_header != false %}
+  <section class="page-header">
+    <div class="container">
+      <p class="section-label">{{ page.section_label | default: "" }}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p>{{ page.description }}</p>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section style="border-bottom:none;">
+    <div class="container">
       {{ content }}
     </div>
-  </div>
+  </section>
 </article>

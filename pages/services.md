@@ -1,61 +1,194 @@
 ---
 layout: page
-title: "Our Services"
-permalink: /services/
-description: "Explore our range of traditional Javanese healing services including body therapy, herbal medicine, and massage classes."
+title: "Services"
+description: "Manual therapy, Jamu herbal medicine, and professional massage classes. Three paths to deep systemic healing in Bali."
+section_label: "Solutions"
 ---
 
-## Our Services
-
-At Jamu Healing, we offer a comprehensive range of traditional Javanese healing services tailored to your individual needs.
-
-<div class="grid md:grid-cols-3 gap-8 mt-12">
-  <!-- Body Healing Card -->
-  <a href="/services/body" class="service-card block group">
-    <div class="text-center">
-      <svg class="w-16 h-16 mx-auto mb-4 text-purple-400 group-hover:text-purple-300 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-      </svg>
-      <h3 class="text-2xl font-bold mb-2">Body Healing</h3>
-      <p class="text-gray-400 mb-4">Osteopathy, chiropractic, hijama cupping, visceral therapy, and postnatal care.</p>
-      <span class="text-purple-400 group-hover:text-purple-300 font-semibold">Learn More →</span>
-    </div>
-  </a>
-
-  <!-- Herbal Medicine Card -->
-  <a href="/services/herbal" class="service-card block group">
-    <div class="text-center">
-      <svg class="w-16 h-16 mx-auto mb-4 text-green-400 group-hover:text-green-300 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-      </svg>
-      <h3 class="text-2xl font-bold mb-2">Herbal Medicine</h3>
-      <p class="text-gray-400 mb-4">Traditional Jamu remedies, herbal courses, and personalized consultations.</p>
-      <span class="text-green-400 group-hover:text-green-300 font-semibold">Learn More →</span>
-    </div>
-  </a>
-
-  <!-- Massage Classes Card -->
-  <a href="/services/classes" class="service-card block group">
-    <div class="text-center">
-      <svg class="w-16 h-16 mx-auto mb-4 text-pink-400 group-hover:text-pink-300 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-      </svg>
-      <h3 class="text-2xl font-bold mb-2">Massage Classes</h3>
-      <p class="text-gray-400 mb-4">Professional courses, private lessons, and body therapy training.</p>
-      <span class="text-pink-400 group-hover:text-pink-300 font-semibold">Learn More →</span>
-    </div>
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:4rem;">
+  <div>
+    <p style="font-size:1.8rem;font-family:var(--font-serif);margin-top:1rem;max-width:55rem;">
+      Three integrated paths to deep healing — body, chemistry, and professional skill.
+    </p>
+  </div>
+  <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+    Book Now <i class="bi bi-arrow-right"></i>
   </a>
 </div>
 
-## Why Choose Our Services?
+<!-- 01 Manual Therapy -->
+<div class="service-block" style="border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:3.2rem;transition:border-color 0.2s;">
+  <div class="service-block-inner" style="padding:4rem;display:grid;gap:4rem;grid-template-columns:1fr;">
+    <div>
+      <div style="display:flex;align-items:center;gap:1.6rem;margin-bottom:2.4rem;">
+        <div class="icon-box"><i class="bi bi-heart-pulse"></i></div>
+        <div>
+          <span style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);">01</span>
+        </div>
+      </div>
+      <p style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem;">Body Balance Restoration</p>
+      <h2 style="font-size:3.6rem;margin-bottom:0.8rem;">Manual Therapy</h2>
+      <p style="font-size:1.5rem;color:var(--primary);font-family:var(--font-serif);font-style:italic;margin-bottom:2rem;">
+        The Pareto Effect — 80% result from 20% precise intervention.
+      </p>
+      <p style="font-size:1.6rem;margin-bottom:2.4rem;">
+        High-precision structural correction using the "Fork Effect": a minimal, targeted intervention
+        at the root imbalance point that triggers a full systemic release.
+        Complex issues resolved in 1–2 sessions.
+      </p>
+      <div style="padding:2.4rem;border-radius:var(--radius-sm);background:rgba(248,248,242,0.03);border:1px solid var(--border);">
+        <div style="font-family:var(--font-serif);font-size:3.6rem;font-weight:700;color:var(--fg);">IDR 6.4M</div>
+        <p style="font-size:1.4rem;margin-bottom:2rem;">2 sessions · 5-day program</p>
+        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Book via WhatsApp <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:3.2rem;">
+        <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Methods</p>
+        <ul class="check-list">
+          <li><i class="bi bi-check-circle-fill"></i> Osteopathy</li>
+          <li><i class="bi bi-check-circle-fill"></i> Chiropractic Adjustment</li>
+          <li><i class="bi bi-check-circle-fill"></i> Myofascial Release</li>
+          <li><i class="bi bi-check-circle-fill"></i> Visceral Manipulation</li>
+          <li><i class="bi bi-check-circle-fill"></i> Structural Diagnostics</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Indicated For</p>
+        <ul class="dot-list">
+          <li>Chronic back & neck pain</li>
+          <li>Restricted mobility</li>
+          <li>Persistent tension & headaches</li>
+          <li>Post-injury recovery</li>
+          <li>Compressed joints & nerves</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-- **30+ Years Experience**: Traditional methods refined over decades
-- **Personalized Care**: Each treatment tailored to your needs
-- **Natural Approach**: Drug-free, holistic healing methods
-- **Bilingual Services**: Available in English and Russian
+<!-- 02 Herbal Medicine (featured) -->
+<div class="service-block featured relative" style="border-radius:var(--radius);border:1px solid rgba(249,38,114,0.45);background:rgba(249,38,114,0.04);overflow:hidden;margin-bottom:3.2rem;">
+  <div style="height:2px;background:linear-gradient(to right, transparent, var(--primary), transparent);"></div>
+  <div class="service-block-inner" style="padding:4rem;display:grid;gap:4rem;grid-template-columns:1fr;">
+    <div>
+      <div style="display:flex;align-items:center;gap:1.6rem;margin-bottom:2.4rem;">
+        <div class="icon-box primary"><i class="bi bi-flower1"></i></div>
+        <div>
+          <span style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);">02</span>
+          <span style="margin-left:1.2rem;padding:0.3rem 1.2rem;border-radius:2em;background:rgba(249,38,114,0.18);color:var(--primary);font-size:1.2rem;font-weight:600;">Featured</span>
+        </div>
+      </div>
+      <p style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem;">Native Chemical Re-tuning (Jamu)</p>
+      <h2 style="font-size:3.6rem;margin-bottom:0.8rem;">Herbal Medicine</h2>
+      <p style="font-size:1.5rem;color:var(--primary);font-family:var(--font-serif);font-style:italic;margin-bottom:2rem;">
+        Restoring the body's natural chemistry with traditional Javanese phytotherapy.
+      </p>
+      <p style="font-size:1.6rem;margin-bottom:2.4rem;">
+        Organic Javanese herbal formulas are used to clear cellular receptors and restore hormonal
+        and digestive balance. Low-level metabolic recalibration to reactivate natural self-regulation.
+      </p>
+      <div style="padding:2.4rem;border-radius:var(--radius-sm);background:rgba(248,248,242,0.03);border:1px solid rgba(249,38,114,0.2);">
+        <div style="font-family:var(--font-serif);font-size:3.6rem;font-weight:700;color:var(--fg);">IDR 4M</div>
+        <p style="font-size:1.4rem;margin-bottom:2rem;">2-month program</p>
+        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Book via WhatsApp <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:3.2rem;">
+        <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Methods</p>
+        <ul class="check-list">
+          <li><i class="bi bi-check-circle-fill"></i> Javanese Naturopathy</li>
+          <li><i class="bi bi-check-circle-fill"></i> Customized Herbal Protocols</li>
+          <li><i class="bi bi-check-circle-fill"></i> Detox Programs</li>
+          <li><i class="bi bi-check-circle-fill"></i> Hormonal Rebalancing</li>
+          <li><i class="bi bi-check-circle-fill"></i> Digestive Restoration</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Indicated For</p>
+        <ul class="dot-list">
+          <li>Chronic GI distress</li>
+          <li>Hormonal imbalance</li>
+          <li>Supplement dependency</li>
+          <li>Metabolic fatigue</li>
+          <li>Inflammatory conditions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Book Your Session
+<!-- 03 Professional Classes -->
+<div class="service-block" style="border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:3.2rem;">
+  <div class="service-block-inner" style="padding:4rem;display:grid;gap:4rem;grid-template-columns:1fr;">
+    <div>
+      <div style="display:flex;align-items:center;gap:1.6rem;margin-bottom:2.4rem;">
+        <div class="icon-box"><i class="bi bi-journal-text"></i></div>
+        <div>
+          <span style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);">03</span>
+        </div>
+      </div>
+      <p style="font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem;">Java Massage Mastery</p>
+      <h2 style="font-size:3.6rem;margin-bottom:0.8rem;">Professional Classes</h2>
+      <p style="font-size:1.5rem;color:var(--primary);font-family:var(--font-serif);font-style:italic;margin-bottom:2rem;">
+        Anatomy-based training for high-precision manual practitioners.
+      </p>
+      <p style="font-size:1.6rem;margin-bottom:2.4rem;">
+        Comprehensive professional development course focused on systemic practice methods.
+        Provides practitioners with tangible manual craft, immediate professional results,
+        and deep anatomical understanding.
+      </p>
+      <div style="padding:2.4rem;border-radius:var(--radius-sm);background:rgba(248,248,242,0.03);border:1px solid var(--border);">
+        <div style="font-family:var(--font-serif);font-size:3.6rem;font-weight:700;color:var(--fg);">IDR 12M</div>
+        <p style="font-size:1.4rem;margin-bottom:2rem;">Full basic course</p>
+        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Book via WhatsApp <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:3.2rem;">
+        <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Course Structure</p>
+        <ul class="check-list">
+          <li><i class="bi bi-check-circle-fill"></i> 5 intensive lessons / 12 days</li>
+          <li><i class="bi bi-check-circle-fill"></i> Anatomy-based curriculum</li>
+          <li><i class="bi bi-check-circle-fill"></i> High-precision technique training</li>
+          <li><i class="bi bi-check-circle-fill"></i> Certificate upon completion</li>
+          <li><i class="bi bi-check-circle-fill"></i> Web registration for graduates</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Intended For</p>
+        <ul class="dot-list">
+          <li>Massage therapists</li>
+          <li>Manual therapy practitioners</li>
+          <li>Physiotherapists</li>
+          <li>Healthcare professionals</li>
+          <li>Anyone seeking professional mastery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-Ready to experience the healing power of traditional Javanese medicine?
+## Ready to Begin?
 
-[Contact Us](/contacts/) to schedule your appointment.
+<div class="text-center bg-alt" style="margin:4rem -2.4rem -8rem;padding:4rem 2.4rem;">
+  <p style="max-width:55rem;margin:0 auto 3.2rem;">
+    Most complex issues are resolved within 1–2 sessions. Reach out directly to discuss your case
+    and book your first appointment.
+  </p>
+  <div style="display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;">
+    <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      <i class="bi bi-telephone-fill"></i> Book via WhatsApp
+    </a>
+    <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+      <i class="bi bi-send-fill"></i> Telegram
+    </a>
+  </div>
+</div>
