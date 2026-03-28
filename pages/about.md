@@ -5,31 +5,31 @@ description: "Learn about Evi Sudarto, senior osteopath and traditional Javanese
 section_label: "The Healer"
 ---
 
-<div class="authority-grid" style="margin-top:2rem;">
+<div class="authority-grid mt-8">
   <div>
-    <div class="authority-photo" style="max-width:40rem;aspect-ratio:3/4;">
+    <div class="authority-photo max-w-lg aspect-3-4">
       <img src="/images/evi-sudarto.jpg" alt="Evi Sudarto" />
     </div>
   </div>
   <div>
-    <h1 style="margin-bottom:0.4rem;">Evi Sudarto</h1>
-    <p style="font-size:2rem;font-family:var(--font-serif);font-style:italic;color:var(--fg-muted);margin-bottom:2.4rem;">
+    <h1 class="mb-2">Evi Sudarto</h1>
+    <p class="text-2xl font-serif italic text-muted mb-6">
       Osteopath · Jamu Practitioner · Teacher
     </p>
-    <p style="font-size:1.7rem;margin-bottom:1.6rem;">
+    <p class="text-lg mb-4">
       Senior osteopath and manual therapist with <strong>30+ years of experience</strong>.
       Architect of a high-precision methodology combining modern osteopathy and traditional Javanese medicine.
     </p>
-    <p style="margin-bottom:3.2rem;">
+    <p class="mb-8">
       Javanese Therapy by Evi Sudarto functions as a systemic healing practice,
       integrating manual therapy, Jamu, and naturopathy into a unified, anatomy-based framework.
-      Her approach is simple: <em style="color:var(--fg);font-style:normal;font-weight:500;">correct the root cause, not the symptom.</em>
+      Her approach is simple: <em class="text-normal font-medium">correct the root cause, not the symptom.</em>
     </p>
-    <p style="font-family:var(--font-mono);font-size:1.4rem;color:var(--fg-muted);margin-bottom:2.4rem;">
-      <i class="bi bi-geo-alt-fill" style="color:var(--primary);"></i>
+    <p class="font-mono text-sm text-muted mb-6">
+      <i class="bi bi-geo-alt-fill primary"></i>
       Ubud & Canggu, Bali, Indonesia
     </p>
-    <div style="display:flex;flex-wrap:wrap;gap:1.2rem;">
+    <div class="flex flex-wrap gap-4">
       <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
         <i class="bi bi-telephone-fill"></i> WhatsApp
       </a>
@@ -42,9 +42,9 @@ section_label: "The Healer"
 
 ## Methodology & Philosophy
 
-<div class="grid-2" style="margin-top:3.2rem;">
+<div class="grid-2 mt-8">
   <div>
-    <p style="font-size:1.65rem;margin-bottom:1.6rem;">
+    <p class="text-lg mb-4">
       The core principle is <strong>"The Fork Effect"</strong>: a minimal, precisely applied intervention
       at the structural root point that triggers a systemic release — delivering 80% of the healing
       result through a single, targeted correction.
@@ -55,13 +55,13 @@ section_label: "The Healer"
     </p>
   </div>
   <div>
-    <p style="margin-bottom:2rem;">
+    <p class="mb-6">
       Traditional Javanese Jamu is integrated as a <strong>Native Chemical Re-tuning system</strong> —
       using organic plant formulas to restore hormonal and digestive balance.
     </p>
-    <div style="display:flex;align-items:flex-start;gap:1.6rem;padding:2rem;border-radius:1rem;background:rgba(249,38,114,0.07);border:1px solid rgba(249,38,114,0.2);">
-      <i class="bi bi-quote" style="font-size:2.4rem;color:var(--primary);flex-shrink:0;"></i>
-      <p style="font-size:1.5rem;color:rgba(248,248,242,0.85);font-family:var(--font-serif);font-style:italic;">
+    <div class="quote-box">
+      <i class="bi bi-quote primary text-2xl flex-shrink-0"></i>
+      <p class="text-lg text-85 font-serif italic">
         Time-tested Javanese methodology. Contemporary viewpoint. Anatomy-based diagnostics. Root-cause resolution.
       </p>
     </div>
@@ -70,38 +70,38 @@ section_label: "The Healer"
 
 ## Trust & Authority
 
-<div class="grid-2" style="margin-top:3.2rem;">
-  <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-    <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-    <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">30+ years of high-skill private practice</span>
+<div class="grid-2 mt-8">
+  <div class="card flex items-start gap-4">
+    <i class="bi bi-check-circle-fill accent text-lg flex-shrink-0 mt-1"></i>
+    <span class="text-base text-85">30+ years of high-skill private practice</span>
   </div>
-  <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-    <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-    <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">Architecture of high-precision methodology combining osteopathy and Javanese medicine</span>
+  <div class="card flex items-start gap-4">
+    <i class="bi bi-check-circle-fill accent text-lg flex-shrink-0 mt-1"></i>
+    <span class="text-base text-85">Architecture of high-precision methodology combining osteopathy and Javanese medicine</span>
   </div>
-  <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-    <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-    <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">5,000+ documented patient cases in searchable database</span>
+  <div class="card flex items-start gap-4">
+    <i class="bi bi-check-circle-fill accent text-lg flex-shrink-0 mt-1"></i>
+    <span class="text-base text-85">5,000+ documented patient cases in searchable database</span>
   </div>
-  <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-    <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-    <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">Evidence-based practices validated by clinical research (PubMed)</span>
+  <div class="card flex items-start gap-4">
+    <i class="bi bi-check-circle-fill accent text-lg flex-shrink-0 mt-1"></i>
+    <span class="text-base text-85">Evidence-based practices validated by clinical research (PubMed)</span>
   </div>
-  <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-    <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-    <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">Trusted practitioner for the international community in Bali and worldwide</span>
+  <div class="card flex items-start gap-4">
+    <i class="bi bi-check-circle-fill accent text-lg flex-shrink-0 mt-1"></i>
+    <span class="text-base text-85">Trusted practitioner for the international community in Bali and worldwide</span>
   </div>
-  <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-    <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-    <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">5.0 rating across Ubud & Canggu locations</span>
+  <div class="card flex items-start gap-4">
+    <i class="bi bi-check-circle-fill accent text-lg flex-shrink-0 mt-1"></i>
+    <span class="text-base text-85">5.0 rating across Ubud & Canggu locations</span>
   </div>
 </div>
 
 ## Areas of Practice
 
-<div class="grid-3" style="margin-top:3.2rem;">
+<div class="grid-3 mt-8">
   <div class="card">
-    <h3 style="margin-bottom:2rem;">Manual Therapy</h3>
+    <h3 class="mb-6">Manual Therapy</h3>
     <ul class="dot-list">
       <li>Osteopathy</li>
       <li>Chiropractic</li>
@@ -111,7 +111,7 @@ section_label: "The Healer"
     </ul>
   </div>
   <div class="card">
-    <h3 style="margin-bottom:2rem;">Herbal Medicine</h3>
+    <h3 class="mb-6">Herbal Medicine</h3>
     <ul class="dot-list">
       <li>Javanese Naturopathy</li>
       <li>Custom Herbal Protocols</li>
@@ -121,7 +121,7 @@ section_label: "The Healer"
     </ul>
   </div>
   <div class="card">
-    <h3 style="margin-bottom:2rem;">Education</h3>
+    <h3 class="mb-6">Education</h3>
     <ul class="dot-list">
       <li>Java Massage Masterclass</li>
       <li>Anatomy-Based Training</li>
@@ -133,9 +133,9 @@ section_label: "The Healer"
 
 ## Connect with Evi
 
-<div class="text-center" style="margin-top:4rem;">
-  <p style="max-width:55rem;margin:0 auto 3.2rem;">Follow daily case studies, book a session, or reach out directly.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;">
+<div class="text-center mt-12">
+  <p class="max-w-2xl mx-auto mb-8">Follow daily case studies, book a session, or reach out directly.</p>
+  <div class="flex flex-wrap gap-4 justify-center">
     <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
       <i class="bi bi-instagram"></i> @healerdewi
     </a>
