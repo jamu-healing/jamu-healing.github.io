@@ -6,7 +6,6 @@ author: "Evi Sudarto"
 
 # Build settings
 markdown: kramdown
-permalink: none
 
 # Collections
 collections:
