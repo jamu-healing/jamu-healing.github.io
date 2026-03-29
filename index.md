@@ -47,7 +47,6 @@ show_header: false
     <p class="section-label">02 — Problems & Solutions</p>
     <h2 class="mb-16">What We Resolve</h2>
     <div class="grid-3">
-
       <div class="card solution-card">
         <div class="solution-no">01</div>
         <h3>Body Healing</h3>
@@ -57,7 +56,6 @@ show_header: false
         <span class="solution-label">Solution</span>
         <p class="text-85">Body Balance Restoration. High-precision intervention using the "Fork Effect": minimal, targeted correction that delivers 80% of the result by triggering a systemic release.</p>
       </div>
-
       <div class="card solution-card">
         <div class="solution-no">02</div>
         <h3>Herbal Medicine</h3>
@@ -67,7 +65,6 @@ show_header: false
         <span class="solution-label">Solution</span>
         <p class="text-85">Native Chemical Re-tuning (Jamu). Low-level metabolic recalibration using traditional Javanese phytotherapy to reactivate natural self-regulation.</p>
       </div>
-
       <div class="card solution-card">
         <div class="solution-no">03</div>
         <h3>Education & Classes</h3>
@@ -77,7 +74,6 @@ show_header: false
         <span class="solution-label">Solution</span>
         <p class="text-85">Mastery Through Systemic Practice. Anatomy-based training focused on high-precision manual skills and injury-free impact.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -88,7 +84,6 @@ show_header: false
     <p class="section-label">03 — Solutions Matrix</p>
     <h2 class="mb-16">Choose Your Path</h2>
     <div class="grid-3">
-
       <!-- Manual Therapy -->
       <div class="card service-card">
         <div class="icon-box mb-6"><i class="bi bi-heart-pulse"></i></div>
@@ -109,7 +104,6 @@ show_header: false
           </a>
         </div>
       </div>
-
       <!-- Herbal Medicine (featured) -->
       <div class="card card-featured service-card relative">
         <div class="popular-badge">Most Popular</div>
@@ -130,7 +124,6 @@ show_header: false
           </a>
         </div>
       </div>
-
       <!-- Professional Classes -->
       <div class="card service-card">
         <div class="icon-box mb-6"><i class="bi bi-journal-text"></i></div>
@@ -150,7 +143,6 @@ show_header: false
           </a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -234,14 +226,13 @@ show_header: false
 </section>
 
 <!-- ═══ CONTACT ══════════════════════════════════════════════ -->
-<section>
+<section class="section-full-height">
   <div class="container">
-    <div class="text-center mb-12">
+    <div class="text-center mb-16">
       <p class="section-label">06 — Contact & Connect</p>
       <h2>Start Your Healing</h2>
     </div>
     <div class="grid-3">
-
       <div class="card">
         <h3 class="mb-6">Direct Messengers</h3>
         <div class="flex flex-col gap-3">
@@ -251,29 +242,33 @@ show_header: false
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-send-fill icon-telegram"></i> @jamu_healing (Telegram)
           </a>
+          <a href="https://t.me/bali_med" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <i class="bi bi-send-fill icon-telegram"></i> @bali_med (Medical Chat)
+          </a>
           <a href="mailto:evi.sudarto@gmail.com" class="contact-link">
             <i class="bi bi-envelope-fill primary"></i> evi.sudarto@gmail.com
           </a>
         </div>
       </div>
-
       <div class="card">
         <h3 class="mb-6">Social & Community</h3>
         <div class="flex flex-col gap-3">
           <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-instagram primary"></i> @healerdewi (Live Cases)
           </a>
+          <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <i class="bi bi-facebook primary"></i> Facebook
+          </a>
           <a href="https://www.youtube.com/@osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-youtube accent"></i> @osteopathbali (Educational)
+            <i class="bi bi-youtube icon-youtube"></i> @osteopathbali (Educational)
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-send-fill icon-telegram"></i> Telegram Channel
           </a>
         </div>
       </div>
-
       <div class="card">
-        <h3 class="mb-6">Locations</h3>
+        <h3 class="mb-6">Google Business Profiles</h3>
         <div class="flex flex-col gap-3 mb-6">
           <a href="https://g.page/r/CYm5pvsYVkpkEBM/" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-geo-alt-fill primary"></i>
@@ -290,11 +285,12 @@ show_header: false
             </div>
           </a>
         </div>
-        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full justify-center">
-          Book Now via WhatsApp <i class="bi bi-arrow-right"></i>
-        </a>
+        <div class="mt-6">
+          <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full justify-center">
+            Book Now via WhatsApp <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
