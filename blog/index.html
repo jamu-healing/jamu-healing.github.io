@@ -22,7 +22,6 @@ section_label: "Knowledge"
 
 <section class="section-no-border">
   <div class="container">
-    {% include blog-search.html %}
     <div class="blog-layout">
       <!-- MAIN COLUMN -->
       <div class="blog-main">
@@ -78,6 +77,13 @@ section_label: "Knowledge"
 
       <!-- SIDEBAR -->
       <aside class="blog-sidebar">
+        <div class="search-box mb-8">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" placeholder="Search posts..." class="search-input">
+            <i class="bi bi-search search-icon"></i>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
         <!-- Mobile toggle -->
         <button class="filter-toggle" id="filterToggle" aria-expanded="false">
           <span><i class="bi bi-funnel"></i> Filters</span>
@@ -120,6 +126,25 @@ section_label: "Knowledge"
 
 <script>
 (function(){
+  // SEARCH
+  var searchInput = document.getElementById('search-input');
+  var searchResults = document.getElementById('search-results');
+  if (searchInput && searchResults) {
+    var posts = [
+      {% for post in site.posts %}
+      {title: "{{ post.title | escape }}", url: "{{ post.url | relative_url }}", date: "{{ post.date | date: '%B %d, %Y' }}", excerpt: "{{ post.excerpt | strip_html | truncatewords: 20 | escape }}", tags: "{{ post.tags | join: ', ' | escape }}"}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+    searchInput.addEventListener('input', function() {
+      var q = this.value.toLowerCase().trim();
+      if (q.length < 2) { searchResults.innerHTML = ''; return; }
+      var r = posts.filter(function(p) { return p.title.toLowerCase().indexOf(q) !== -1 || p.excerpt.toLowerCase().indexOf(q) !== -1 || p.tags.toLowerCase().indexOf(q) !== -1; });
+      if (r.length === 0) { searchResults.innerHTML = '<p class="search-no-results">No posts found.</p>'; return; }
+      searchResults.innerHTML = r.map(function(p) { return '<article class="search-result-item"><h3><a href="' + p.url + '">' + p.title + '</a></h3><time>' + p.date + '</time><p>' + p.excerpt + '</p></article>'; }).join('');
+    });
+  }
+
+  // FILTERS
   var tagBtns    = document.querySelectorAll('.tag-btn');
   var catBtns    = document.querySelectorAll('.cat-btn');
   var blogCards  = document.querySelectorAll('.blog-card');
