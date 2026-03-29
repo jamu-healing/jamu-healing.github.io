@@ -49,11 +49,12 @@ section_label: "Knowledge"
         <div class="pagination">
           {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path }}" class="btn btn-outline">
-              <i class="bi bi-arrow-left"></i> Previous
+              <i class="bi bi-arrow-left"></i> RWD
             </a>
           {% else %}
             <span class="btn btn-outline pagination-btn-disabled">
-              <i class="bi bi-arrow-left"></i> Previous
+              <i class="bi bi-arrow-left"></i>
+              RWD
             </span>
           {% endif %}
 
@@ -63,11 +64,11 @@ section_label: "Knowledge"
 
           {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path }}" class="btn btn-outline">
-              Next <i class="bi bi-arrow-right"></i>
+              FWD <i class="bi bi-arrow-right"></i>
             </a>
           {% else %}
             <span class="btn btn-outline pagination-btn-disabled">
-              Next <i class="bi bi-arrow-right"></i>
+              FWD <i class="bi bi-arrow-right"></i>
             </span>
           {% endif %}
         </div>
