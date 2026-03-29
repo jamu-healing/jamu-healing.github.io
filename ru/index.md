@@ -336,7 +336,7 @@ lang: ru
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.0!2d115.1667!3d-8.7984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2427c56b1f681%3A0xaf379d0ddf25d606!2sOsteopath+at+Bali%2C+Evi+Sudarto+massage+classes!5e0!3m2!1sen!2sid!4v1"
                         width="100%" 
                         height="100%" 
-                        style="border:0;" 
+                        class="iframe-embed" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">

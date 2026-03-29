@@ -18,7 +18,7 @@ section_label: "Contact & Connect"
         <i class="bi bi-telephone-fill accent"></i> WhatsApp
       </a>
       <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-        <i class="bi bi-send-fill" style="color:#29b6f6;"></i> @jamu_healing (Telegram)
+        <i class="bi bi-send-fill icon-telegram"></i> @jamu_healing (Telegram)
       </a>
       <a href="mailto:evi.sudarto@gmail.com" class="contact-link">
         <i class="bi bi-envelope-fill primary"></i> evi.sudarto@gmail.com
@@ -36,7 +36,7 @@ section_label: "Contact & Connect"
         <i class="bi bi-youtube accent"></i> @osteopathbali (Educational)
       </a>
       <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-        <i class="bi bi-send-fill" style="color:#29b6f6;"></i> Telegram Channel
+        <i class="bi bi-send-fill icon-telegram"></i> Telegram Channel
       </a>
     </div>
   </div>

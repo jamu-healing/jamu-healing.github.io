@@ -12,28 +12,28 @@ layout: default
     </div>
   </section>
 
-  <section style="border-bottom:none;">
+  <section class="section-no-border">
     <div class="container">
-      <div class="grid-2" style="gap:4rem;">
+      <div class="grid-2 gap-6">
         <div>
           {{ content }}
         </div>
         <div>
           {% if page.price %}
-            <div class="card" style="padding:2.4rem;">
-              <div style="font-family:var(--font-serif);font-size:3rem;font-weight:700;color:var(--fg);margin-bottom:0.8rem;">{{ page.price }}</div>
+            <div class="card card-padding-sm">
+              <div class="text-price">{{ page.price }}</div>
               {% if page.price_note %}
-                <p style="font-size:1.4rem;margin-bottom:2rem;">{{ page.price_note }}</p>
+                <p class="text-price-note">{{ page.price_note }}</p>
               {% endif %}
-              <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;justify-content:center;">
+              <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
                 Book via WhatsApp <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           {% endif %}
 
           {% if page.methods %}
-            <div style="margin-top:2.4rem;">
-              <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Methods</p>
+            <div class="mt-6">
+              <p class="label-section">Methods</p>
               <ul class="check-list">
                 {% for method in page.methods %}
                   <li><i class="bi bi-check-circle-fill"></i> {{ method }}</li>
@@ -43,8 +43,8 @@ layout: default
           {% endif %}
 
           {% if page.indications %}
-            <div style="margin-top:2.4rem;">
-              <p style="font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem;">Indicated For</p>
+            <div class="mt-6">
+              <p class="label-section">Indicated For</p>
               <ul class="dot-list">
                 {% for indication in page.indications %}
                   <li>{{ indication }}</li>
