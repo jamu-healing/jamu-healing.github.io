@@ -407,6 +407,7 @@ section:last-child { border-bottom: none; }
 .text-center { text-align: center; }
 .mb-4 { margin-bottom: 1.6rem; }
 .mb-8 { margin-bottom: 3.2rem; }
+.mb-16 { margin-bottom: 6.4rem; }
 .mb-12 { margin-bottom: 4.8rem; }
 .mt-4 { margin-top: 1.6rem; }
 .mt-8 { margin-top: 3.2rem; }
@@ -673,6 +674,8 @@ section:last-child { border-bottom: none; }
 .jc-between { justify-content: space-between; }
 .icon-telegram { color: #29b6f6; }
 .iframe-embed { border: 0; border-radius: 12px; }
+.section-full-height { min-height: 720px; display: flex; align-items: center; }
+.icon-youtube { color: #ff0000; }
 .section-no-border { border-bottom: none; }
 .gap-6 { gap: 4rem; }
 .card-padding-sm { padding: 2.4rem; }
