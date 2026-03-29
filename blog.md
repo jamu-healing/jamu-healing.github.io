@@ -9,13 +9,9 @@ section_label: "Knowledge"
 <div class="debug-toaster">
   <strong>Paginator Debug:</strong><br>
   page: <strong>{{ paginator.page }}</strong><br>
-  per_page: {{ paginator.per_page }}<br>
-  total_posts: <strong>{{ paginator.total_posts }}</strong><br>
   total_pages: <strong>{{ paginator.total_pages }}</strong><br>
   previous_page: {{ paginator.previous_page }}<br>
-  next_page: {{ paginator.next_page }}<br>
-  previous_page_path: {{ paginator.previous_page_path }}<br>
-  next_page_path: {{ paginator.next_page_path }}
+  next_page: {{ paginator.next_page }}
 </div>
 
 <div class="blog-layout">
