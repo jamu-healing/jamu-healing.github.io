@@ -57,9 +57,6 @@ exclude:
   - vendor
   - node_modules
 
-# Include files
-include:
-  - _pages
 
 # Sass configuration
 sass:
