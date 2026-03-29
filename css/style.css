@@ -418,6 +418,11 @@ section:last-child { border-bottom: none; }
   flex-wrap: wrap;
   gap: 0.8rem;
 }
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .blog-posts {
   display: flex;
   flex-direction: column;
