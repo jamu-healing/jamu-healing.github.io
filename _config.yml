@@ -50,7 +50,6 @@ feed:
 # Exclude from build
 exclude:
   - specs/
-  - 4-70-16/
   - .gitignore
   - README.md
   - Gemfile
