@@ -111,19 +111,25 @@ section:last-child { border-bottom: none; }
 .nav-toggle i { font-size: 1.4rem; display: block; }
 .nav-toggle i:first-child { opacity: 0.5; }
 .nav-toggle.open { color: var(--primary); border-color: rgba(249,38,114,0.4); }
+.nav-toggle i { transition: transform 0.4s ease; }
 .nav-toggle.open i { transform: rotate(180deg); }
 .nav-toggle.open i:first-child { opacity: 0.5; }
 
 /* Dropdown nav panel */
 .nav-dropdown {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
   position: absolute; top: 100%; left: 0; right: 0;
   background: rgba(26,27,24,0.97);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
-  padding: 1.2rem 0; z-index: 40;
+  padding: 0; z-index: 40;
 }
-.nav-dropdown.open { display: block; }
+.nav-dropdown.open {
+  max-height: 60rem;
+  padding: 1.2rem 0;
+}
 .nav-dropdown ul { list-style: none; max-width: 1200px; margin: 0 auto; padding: 0 2.4rem; }
 .nav-dropdown ul li a {
   display: flex; align-items: center; gap: 1rem;
@@ -442,10 +448,14 @@ section:last-child { border-bottom: none; }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.2rem;
   margin-top: 4rem;
   padding-top: 2.4rem;
   border-top: 1px solid var(--border);
+}
+.pagination .btn {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.4rem;
 }
 .pagination-btn-disabled {
   opacity: 0.5;
@@ -454,8 +464,23 @@ section:last-child { border-bottom: none; }
 }
 .pagination-info {
   font-family: var(--font-mono);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--fg-muted);
+}
+@media (max-width: 360px) {
+  .pagination {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .pagination .btn {
+    padding: 0.6rem 1rem;
+    font-size: 1.3rem;
+  }
+  .pagination-info {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* ─── DEBUG TOASTER ──────────────────────────────────────── */
@@ -516,6 +541,35 @@ section:last-child { border-bottom: none; }
   letter-spacing: 0.1em;
   margin-bottom: 1.6rem;
 }
+
+/* ─── FILTER TABS ────────────────────────────────────────── */
+.filter-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.filter-tab {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  background: transparent;
+  border: none;
+  color: var(--fg-muted);
+  font-size: 1.35rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.filter-tab:first-child { border-right: 1px solid var(--border); }
+.filter-tab:hover { color: var(--fg); background: rgba(248,248,242,0.04); }
+.filter-tab.active { color: var(--primary); background: rgba(249,38,114,0.08); }
+.filter-panel { display: none; }
+.filter-panel.active { display: block; }
 
 /* ─── COLLAPSIBLE FILTERS (MOBILE) ───────────────────────── */
 .filter-toggle {
