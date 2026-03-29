@@ -539,6 +539,9 @@ section:last-child { border-bottom: none; }
 }
 
 /* ─── MISC UTILITIES ─────────────────────────────────────── */
+.is-hidden { display: none !important; }
+.is-disabled { opacity: 0.5; pointer-events: none; }
+.jc-between { justify-content: space-between; }
 .icon-telegram { color: #29b6f6; }
 .iframe-embed { border: 0; border-radius: 12px; }
 .section-no-border { border-bottom: none; }
