@@ -369,6 +369,37 @@ section:last-child { border-bottom: none; }
 .contact-link .primary { color: var(--primary); }
 .contact-link .accent { color: var(--accent); }
 
+/* ─── CONTACT LINK VERTICAL ──────────────────────────────── */
+.contact-link-v {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  background: rgba(248,248,242,0.04);
+  color: var(--fg-muted);
+  transition: background 0.2s, color 0.2s;
+}
+.contact-link-v:hover { background: rgba(248,248,242,0.08); color: var(--fg); }
+.contact-link-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.contact-link-icon { font-size: 2.4rem; flex-shrink: 0; }
+.contact-link-phone {
+  padding-left: 3.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.contact-link-desc {
+  padding-left: 3.6rem;
+  font-size: 1.3rem;
+  color: var(--fg-muted);
+  line-height: 1.5;
+}
+
 /* ─── GMB CARDS ──────────────────────────────────────────── */
 .gmb-card {
   display: block;
