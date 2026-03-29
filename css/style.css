@@ -368,6 +368,28 @@ section:last-child { border-bottom: none; }
 .contact-link .primary { color: var(--primary); }
 .contact-link .accent { color: var(--accent); }
 
+/* ─── GMB CARDS ──────────────────────────────────────────── */
+.gmb-card {
+  display: block;
+  padding: 1.6rem;
+  border-radius: var(--radius-sm);
+  background: rgba(248,248,242,0.04);
+  border: 1px solid var(--border);
+  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.gmb-card:hover {
+  background: rgba(248,248,242,0.08);
+  border-color: rgba(248,248,242,0.2);
+}
+.gmb-card .icon-box {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+}
+
 /* ─── BLOG CARDS ──────────────────────────────────────────── */
 .blog-card {
   display: flex; gap: 2.4rem; padding: 3.2rem;
