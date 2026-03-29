@@ -234,16 +234,16 @@ show_header: false
     </div>
     <div class="grid-3">
       <div class="card">
-        <h3 class="mb-6">Direct Messengers</h3>
+        <h3 class="mb-6">Direct Contacts</h3>
         <div class="flex flex-col gap-3">
           <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-telephone-fill accent"></i> WhatsApp
+            <i class="bi bi-whatsapp accent"></i> WhatsApp
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-send-fill icon-telegram"></i> @jamu_healing (Telegram)
+            <i class="bi bi-telegram icon-telegram"></i> @jamu_healing (Booking)
           </a>
           <a href="https://t.me/bali_med" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-send-fill icon-telegram"></i> @bali_med (Medical Chat)
+            <i class="bi bi-telegram icon-telegram"></i> @bali_med (Public Chat)
           </a>
           <a href="mailto:evi.sudarto@gmail.com" class="contact-link">
             <i class="bi bi-envelope-fill primary"></i> evi.sudarto@gmail.com
@@ -254,34 +254,47 @@ show_header: false
         <h3 class="mb-6">Social & Community</h3>
         <div class="flex flex-col gap-3">
           <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-instagram primary"></i> @healerdewi (Live Cases)
+            <i class="bi bi-instagram primary"></i> @healerdewi (since 2016)
           </a>
           <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="bi bi-facebook primary"></i> Facebook
           </a>
           <a href="https://www.youtube.com/@osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-youtube icon-youtube"></i> @osteopathbali (Educational)
+            <i class="bi bi-youtube icon-youtube"></i> @osteopathbali (12K subscribers)
           </a>
-          <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-send-fill icon-telegram"></i> Telegram Channel
+          <a href="https://t.me/osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <i class="bi bi-telegram icon-telegram"></i> Telegram Channel
           </a>
         </div>
       </div>
       <div class="card">
-        <h3 class="mb-6">Google Business Profiles</h3>
-        <div class="flex flex-col gap-3 mb-6">
-          <a href="https://g.page/r/CYm5pvsYVkpkEBM/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-geo-alt-fill primary"></i>
-            <div>
-              <div class="text-lg font-medium">Ubud</div>
-              <div class="text-sm text-muted"><i class="bi bi-star-fill accent text-xs"></i> 5.0 on Google Maps</div>
+        <h3 class="mb-6">Google My Business</h3>
+        <div class="flex flex-col gap-4 mb-6">
+          <a href="https://g.page/r/CYm5pvsYVkpkEBM/" target="_blank" rel="noopener noreferrer" class="gmb-card">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="icon-box"><i class="bi bi-flower1"></i></div>
+              <div>
+                <div class="font-medium">Javanese Therapy by Evi Sudarto</div>
+                <div class="text-xs text-muted">Physical Therapist · Traditional Healing</div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1 text-sm text-muted">
+              <div><i class="bi bi-geo-alt primary text-xs"></i> Jl. Blong Keker, Jimbaran, Bali</div>
+              <div><i class="bi bi-clock primary text-xs"></i> Open 24 hours</div>
+              <div><i class="bi bi-star-fill accent text-xs"></i> 5.0 / 5 on Google</div>
             </div>
           </a>
-          <a href="https://g.page/r/CQbWJd8NnTevEBM/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-geo-alt-fill primary"></i>
-            <div>
-              <div class="text-lg font-medium">Canggu</div>
-              <div class="text-sm text-muted"><i class="bi bi-star-fill accent text-xs"></i> 5.0 on Google Maps</div>
+          <a href="https://g.page/r/CQbWJd8NnTevEBM/" target="_blank" rel="noopener noreferrer" class="gmb-card">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="icon-box"><i class="bi bi-journal-text"></i></div>
+              <div>
+                <div class="font-medium">Massage Classes by Evi Sudarto</div>
+                <div class="text-xs text-muted">Educational · Massage Training</div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1 text-sm text-muted">
+              <div><i class="bi bi-geo-alt primary text-xs"></i> Jimbaran, Bali</div>
+              <div><i class="bi bi-star-fill accent text-xs"></i> Professional Javanese Massage Courses</div>
             </div>
           </a>
         </div>
