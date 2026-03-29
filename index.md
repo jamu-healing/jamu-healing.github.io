@@ -276,7 +276,7 @@ show_header: false
               <span class="font-medium">@healerdewi</span>
             </div>
             <div class="contact-link-desc">1.6K+ followers, 430+ posts — live cases, therapy sessions, educational content</div>
-            <div><small class="badge badge-success">since 2016</small></div>
+            <span class="contact-link-badge">since 2016</span>
           </a>
           <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
@@ -284,7 +284,7 @@ show_header: false
               <span class="font-medium">Facebook</span>
             </div>
             <div class="contact-link-desc">Videos, photos, patient stories</div>
-            <div><small class="badge badge-success">since 2016</small></div>
+            <span class="contact-link-badge">since 2016</span>
           </a>
           <a href="https://sites.google.com/view/jamu-healing" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
@@ -292,7 +292,7 @@ show_header: false
               <span class="font-medium">Google Sites</span>
             </div>
             <div class="contact-link-desc">Official website with detailed information</div>
-            <div><small class="badge badge-success">since 2016</small></div>
+            <span class="contact-link-badge">since 2016</span>
           </a>
           <a href="https://www.youtube.com/@osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
