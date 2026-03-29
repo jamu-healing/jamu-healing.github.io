@@ -389,6 +389,14 @@ section:last-child { border-bottom: none; }
   border-radius: 1rem;
   font-size: 1.8rem;
 }
+.gmb-logo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  object-fit: contain;
+  background: rgba(248,248,242,0.06);
+  flex-shrink: 0;
+}
 
 /* ─── BLOG CARDS ──────────────────────────────────────────── */
 .blog-card {
