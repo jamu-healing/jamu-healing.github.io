@@ -410,6 +410,8 @@ section:last-child { border-bottom: none; }
 .mb-12 { margin-bottom: 4.8rem; }
 .mt-4 { margin-top: 1.6rem; }
 .mt-8 { margin-top: 3.2rem; }
+.flex-col { flex-direction: column; }
+.gap-3 { gap: 1.2rem; }
 .gap-4 { gap: 1.6rem; }
 .flex { display: flex; }
 .flex-wrap { flex-wrap: wrap; }
