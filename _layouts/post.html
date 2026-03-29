@@ -4,7 +4,7 @@ layout: default
 <article>
   <div class="post-header">
     <div class="container">
-      <div class="blog-meta" style="margin-bottom:1.6rem;">
+      <div class="blog-meta blog-meta-spacing">
         <span><i class="bi bi-calendar3"></i> {{ page.date | date: "%B %d, %Y" }}</span>
         {% if page.categories.size > 0 %}
           <span class="cat">{{ page.categories | join: ", " }}</span>
@@ -15,21 +15,21 @@ layout: default
       </div>
       <h1>{{ page.title }}</h1>
       {% if page.description %}
-        <p style="font-size:1.8rem;max-width:65rem;margin-top:1.2rem;">{{ page.description }}</p>
+        <p class="text-description">{{ page.description }}</p>
       {% endif %}
     </div>
   </div>
 
-  <section style="border-bottom:none;">
+  <section class="section-no-border">
     <div class="container">
       <div class="prose">
         {{ content }}
       </div>
 
       {% if page.tags.size > 0 %}
-        <div style="margin-top:4rem;padding-top:2.4rem;border-top:1px solid var(--border);">
-          <p style="font-family:var(--font-mono);font-size:1.3rem;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.2rem;">Tags</p>
-          <div style="display:flex;flex-wrap:wrap;gap:0.8rem;">
+        <div class="tags-container">
+          <p class="tags-label">Tags</p>
+          <div class="tags-list">
             {% for tag in page.tags %}
               <span class="badge badge-outline">{{ tag }}</span>
             {% endfor %}
@@ -38,7 +38,7 @@ layout: default
       {% endif %}
 
       <!-- Post Navigation -->
-      <div style="margin-top:4rem;padding-top:2.4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div class="post-nav">
         {% if page.previous %}
           <a href="{{ page.previous.url }}" class="btn btn-outline">
             <i class="bi bi-arrow-left"></i> {{ page.previous.title | truncate: 30 }}

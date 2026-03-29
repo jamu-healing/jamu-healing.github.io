@@ -410,3 +410,177 @@ section:last-child { border-bottom: none; }
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
+
+/* ─── BLOG FILTERS & LAYOUT ──────────────────────────────── */
+.tag-filter-container { margin-bottom: 3.2rem; }
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.blog-card .card-arrow {
+  color: var(--fg-muted);
+  font-size: 2rem;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* ─── PAGINATION ──────────────────────────────────────────── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 4rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--border);
+}
+.pagination-btn-disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.pagination-info {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--fg-muted);
+}
+
+/* ─── DEBUG TOASTER ──────────────────────────────────────── */
+.debug-toaster {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.85);
+  color: #0f0;
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  z-index: 9999;
+  max-width: 36rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.debug-toaster strong { color: var(--primary); }
+
+/* ─── FOOTER LABELS ──────────────────────────────────────── */
+.footer-label {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.2rem;
+}
+.footer-desc {
+  margin-top: 0.8rem;
+  max-width: 32rem;
+}
+
+/* ─── BLOG SIDEBAR (STICKY) ──────────────────────────────── */
+.blog-layout {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr 28rem;
+  }
+}
+.blog-sidebar {
+  position: sticky;
+  top: 9rem;
+  max-height: calc(100vh - 11rem);
+  overflow-y: auto;
+  align-self: start;
+}
+.blog-sidebar-title {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.6rem;
+}
+
+/* ─── COLLAPSIBLE FILTERS (MOBILE) ───────────────────────── */
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--fg-muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.filter-toggle:hover { color: var(--fg); border-color: rgba(248,248,242,0.25); }
+.filter-toggle i { transition: transform 0.3s; }
+.filter-toggle.open i { transform: rotate(180deg); }
+.filter-content {
+  display: none;
+  padding-top: 1.2rem;
+}
+.filter-content.open { display: block; }
+@media (min-width: 1024px) {
+  .filter-toggle { display: none; }
+  .filter-content { display: block; padding-top: 0; }
+}
+
+/* ─── MISC UTILITIES ─────────────────────────────────────── */
+.icon-telegram { color: #29b6f6; }
+.iframe-embed { border: 0; border-radius: 12px; }
+.section-no-border { border-bottom: none; }
+.gap-6 { gap: 4rem; }
+.card-padding-sm { padding: 2.4rem; }
+.text-price {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.8rem;
+}
+.text-price-note { font-size: 1.4rem; margin-bottom: 2rem; }
+.btn-full { width: 100%; justify-content: center; }
+.mt-6 { margin-top: 2.4rem; }
+.label-section {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.6rem;
+}
+.blog-meta-spacing { margin-bottom: 1.6rem; }
+.text-description { font-size: 1.8rem; max-width: 65rem; margin-top: 1.2rem; }
+.tags-container { margin-top: 4rem; padding-top: 2.4rem; border-top: 1px solid var(--border); }
+.tags-label {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.2rem;
+}
+.tags-list { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.post-nav {
+  margin-top: 4rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}

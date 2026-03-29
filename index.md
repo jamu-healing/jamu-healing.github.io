@@ -249,7 +249,7 @@ show_header: false
             <i class="bi bi-telephone-fill accent"></i> WhatsApp
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-send-fill" style="color:#29b6f6;"></i> @jamu_healing (Telegram)
+            <i class="bi bi-send-fill icon-telegram"></i> @jamu_healing (Telegram)
           </a>
           <a href="mailto:evi.sudarto@gmail.com" class="contact-link">
             <i class="bi bi-envelope-fill primary"></i> evi.sudarto@gmail.com
@@ -267,7 +267,7 @@ show_header: false
             <i class="bi bi-youtube accent"></i> @osteopathbali (Educational)
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-send-fill" style="color:#29b6f6;"></i> Telegram Channel
+            <i class="bi bi-send-fill icon-telegram"></i> Telegram Channel
           </a>
         </div>
       </div>
@@ -307,13 +307,13 @@ show_header: false
         <p class="section-label">Knowledge</p>
         <h2>Latest Articles</h2>
       </div>
-      <a href="/pages/blog/" class="btn btn-outline btn-sm">
+      <a href="/blog/" class="btn btn-outline btn-sm">
         View all <i class="bi bi-arrow-right"></i>
       </a>
     </div>
     <p class="text-muted font-mono text-sm text-center py-12">
       Articles on traditional Javanese healing, osteopathy, and herbal medicine.
-      <a href="/pages/blog/" class="text-primary ml-2">Read the blog <i class="bi bi-arrow-right"></i></a>
+      <a href="/blog/" class="text-primary ml-2">Read the blog <i class="bi bi-arrow-right"></i></a>
     </p>
   </div>
 </section>
