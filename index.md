@@ -237,32 +237,32 @@ show_header: false
         <h3 class="mb-6">Direct Contacts</h3>
         <div class="flex flex-col gap-4">
           <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-whatsapp accent"></i>
-            <div>
-              <div class="font-medium">WhatsApp</div>
-              <div class="text-xs text-muted">Direct contact for appointments and consultations</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-whatsapp accent" style="font-size:2.4rem;"></i>
+              <span class="font-medium">WhatsApp</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">+62 857-3886-7684 — direct contact for appointments and consultations</div>
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-telegram icon-telegram"></i>
-            <div>
-              <div class="font-medium">@jamu_healing</div>
-              <div class="text-xs text-muted">Booking & Appointments — in-person and online sessions</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-telegram icon-telegram" style="font-size:2.4rem;"></i>
+              <span class="font-medium">@jamu_healing</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Booking & Appointments — in-person and online sessions</div>
           </a>
           <a href="https://t.me/bali_med" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-telegram icon-telegram"></i>
-            <div>
-              <div class="font-medium">@bali_med</div>
-              <div class="text-xs text-muted">Medical Help Chat — public community for health questions in Bali</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-telegram icon-telegram" style="font-size:2.4rem;"></i>
+              <span class="font-medium">@bali_med</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Medical Help Chat — public community for health questions in Bali</div>
           </a>
           <a href="mailto:evi.sudarto@gmail.com" class="contact-link">
-            <i class="bi bi-envelope-fill primary"></i>
-            <div>
-              <div class="font-medium">evi.sudarto@gmail.com</div>
-              <div class="text-xs text-muted">Email for inquiries, collaborations, and consultations</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-envelope-fill primary" style="font-size:2.4rem;"></i>
+              <span class="font-medium">evi.sudarto@gmail.com</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Email for inquiries, collaborations, and consultations</div>
           </a>
         </div>
       </div>
@@ -270,46 +270,49 @@ show_header: false
         <h3 class="mb-6">Social & Community</h3>
         <div class="flex flex-col gap-4">
           <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-instagram primary"></i>
-            <div>
-              <div class="font-medium">@healerdewi <small class="badge badge-primary">since 2016</small></div>
-              <div class="text-xs text-muted">Live cases, therapy sessions, educational content</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-instagram primary" style="font-size:2.4rem;"></i>
+              <span class="font-medium">@healerdewi</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">1.6K+ followers, 430+ posts — live cases, therapy sessions, educational content</div>
+            <div class="mt-2" style="padding-left:3.2rem;"><small class="badge badge-success">since 2016</small></div>
           </a>
           <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-facebook primary"></i>
-            <div>
-              <div class="font-medium">Facebook <small class="badge badge-primary">since 2016</small></div>
-              <div class="text-xs text-muted">Videos, photos, patient stories</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-facebook primary" style="font-size:2.4rem;"></i>
+              <span class="font-medium">Facebook</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Videos, photos, patient stories</div>
+            <div class="mt-2" style="padding-left:3.2rem;"><small class="badge badge-success">since 2016</small></div>
           </a>
           <a href="https://sites.google.com/view/jamu-healing" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-globe primary"></i>
-            <div>
-              <div class="font-medium">Google Sites <small class="badge badge-primary">since 2016</small></div>
-              <div class="text-xs text-muted">Official website with detailed information</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-globe primary" style="font-size:2.4rem;"></i>
+              <span class="font-medium">Google Sites</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Official website with detailed information</div>
+            <div class="mt-2" style="padding-left:3.2rem;"><small class="badge badge-success">since 2016</small></div>
           </a>
           <a href="https://www.youtube.com/@osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-youtube icon-youtube"></i>
-            <div>
-              <div class="font-medium">@osteopathbali</div>
-              <div class="text-xs text-muted">Educational videos, therapy demonstrations</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-youtube icon-youtube" style="font-size:2.4rem;"></i>
+              <span class="font-medium">@osteopathbali</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Educational videos, therapy demonstrations</div>
           </a>
           <a href="https://t.me/osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-telegram icon-telegram"></i>
-            <div>
-              <div class="font-medium">Telegram Channel</div>
-              <div class="text-xs text-muted">Health updates and wellness tips for Bali</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-telegram icon-telegram" style="font-size:2.4rem;"></i>
+              <span class="font-medium">Telegram Channel</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Health updates and wellness tips for Bali</div>
           </a>
           <a href="https://osteopathbali.blogspot.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <i class="bi bi-journal primary"></i>
-            <div>
-              <div class="font-medium">Blogspot</div>
-              <div class="text-xs text-muted">Blog with articles and case studies</div>
+            <div class="flex items-center gap-4">
+              <i class="bi bi-journal primary" style="font-size:2.4rem;"></i>
+              <span class="font-medium">Blogspot</span>
             </div>
+            <div class="text-sm text-muted mt-2" style="padding-left:3.2rem;">Blog with articles and case studies</div>
           </a>
         </div>
       </div>
