@@ -5,18 +5,25 @@ description: "Manual therapy, Jamu herbal medicine, and professional massage cla
 section_label: "Solutions"
 ---
 
-<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-  <div>
-    <p class="text-lg font-serif mt-4 max-w-2xl">
-      Three integrated paths to deep healing — body, chemistry, and professional skill.
-    </p>
+<section class="section-no-border">
+  <div class="container">
+    <div class="flex flex-wrap justify-between gap-6">
+      <div>
+        <p class="text-description font-serif">
+          Three integrated paths to deep healing — body, chemistry, and professional skill.
+        </p>
+      </div>
+      <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary flex-shrink-0">
+        Book Now <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
   </div>
-  <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-    Book Now <i class="bi bi-arrow-right"></i>
-  </a>
-</div>
+</section>
 
-<!-- 01 Manual Therapy -->
+<section class="section-no-border">
+  <div class="container">
+
+    <!-- 01 Manual Therapy -->
 <div class="service-block">
   <div class="service-block-inner">
     <div>
@@ -172,23 +179,26 @@ section_label: "Solutions"
           <li>Anyone seeking professional mastery</li>
         </ul>
       </div>
+      </div>
     </div>
   </div>
 </div>
+</section>
 
-## Ready to Begin?
-
-<div class="text-center bg-alt">
-  <p class="max-w-2xl mx-auto mb-8">
-    Most complex issues are resolved within 1–2 sessions. Reach out directly to discuss your case
-    and book your first appointment.
-  </p>
-  <div class="flex flex-wrap gap-4 justify-center">
-    <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-      <i class="bi bi-telephone-fill"></i> Book via WhatsApp
-    </a>
-    <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-      <i class="bi bi-send-fill"></i> Telegram
-    </a>
+<section class="section-no-border bg-alt text-center">
+  <div class="container">
+    <h2 class="mb-4">Ready to Begin?</h2>
+    <p class="max-w-2xl mx-auto mb-8">
+      Most complex issues are resolved within 1–2 sessions. Reach out directly to discuss your case
+      and book your first appointment.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <i class="bi bi-telephone-fill"></i> Book via WhatsApp
+      </a>
+      <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <i class="bi bi-send-fill"></i> Telegram
+      </a>
+    </div>
   </div>
-</div>
+</section>

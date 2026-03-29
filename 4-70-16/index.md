@@ -93,7 +93,7 @@ This is the index page for hidden posts.
 
 <ul class="post-list">
 {% for page in site.pages %}
-{% if page.url contains '/hdn/' and page.url != '/hdn/' %}
+{% if page.url contains '/4-70-16/' and page.url != '/4-70-16/' %}
     <li class="post-item">
         <div class="post-info">
             <h3 class="post-title">

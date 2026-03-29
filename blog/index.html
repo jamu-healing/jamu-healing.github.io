@@ -91,9 +91,14 @@ section_label: "Knowledge"
         </button>
 
         <div class="filter-content" id="filterContent">
+          <!-- TAB SWITCHER -->
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter-tab="tags">Tags</button>
+            <button class="filter-tab" data-filter-tab="categories">Categories</button>
+          </div>
+
           <!-- BY TAG -->
-          <div class="mb-8">
-            <p class="blog-sidebar-title">By Tag</p>
+          <div class="filter-panel active" id="filter-tags">
             <div id="tag-filter" class="tag-filter">
               <button class="btn btn-sm tag-btn active" data-tag="all">All</button>
               {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
@@ -106,8 +111,7 @@ section_label: "Knowledge"
           </div>
 
           <!-- BY CATEGORY -->
-          <div class="mb-8">
-            <p class="blog-sidebar-title">By Category</p>
+          <div class="filter-panel" id="filter-categories">
             <div id="category-filter" class="tag-filter">
               <button class="btn btn-sm cat-btn active" data-category="all">All</button>
               {% assign all_categories = site.posts | map: "categories" | join: "," | split: "," | uniq | sort %}
@@ -143,6 +147,20 @@ section_label: "Knowledge"
       searchResults.innerHTML = r.map(function(p) { return '<article class="search-result-item"><h3><a href="' + p.url + '">' + p.title + '</a></h3><time>' + p.date + '</time><p>' + p.excerpt + '</p></article>'; }).join('');
     });
   }
+
+  // FILTER TABS
+  var filterTabs   = document.querySelectorAll('[data-filter-tab]');
+  var filterPanels = document.querySelectorAll('.filter-panel');
+  filterTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var target = this.getAttribute('data-filter-tab');
+      filterTabs.forEach(function(t) { t.classList.remove('active'); });
+      filterPanels.forEach(function(p) { p.classList.remove('active'); });
+      this.classList.add('active');
+      var panel = document.getElementById('filter-' + target);
+      if (panel) panel.classList.add('active');
+    });
+  });
 
   // FILTERS
   var tagBtns    = document.querySelectorAll('.tag-btn');
