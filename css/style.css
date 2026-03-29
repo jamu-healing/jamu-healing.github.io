@@ -405,6 +405,25 @@ section:last-child { border-bottom: none; }
 /* ─── BG ALTERNATE ────────────────────────────────────────── */
 .bg-alt { background: rgba(33,35,32,0.35); }
 .text-center { text-align: center; }
+.text-muted { color: var(--fg-muted); }
+.text-primary { color: var(--primary); }
+.text-sm { font-size: 1.4rem; }
+.text-xs { font-size: 1.2rem; }
+.text-lg { font-size: 1.8rem; }
+.text-2xl { font-size: 2.2rem; }
+.text-85 { font-size: 85%; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.flex-grow { flex-grow: 1; }
+.w-full { width: 100%; }
+.max-w-2xl { max-width: 42rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.ml-2 { margin-left: 0.8rem; }
+.mb-2 { margin-bottom: 0.8rem; }
+.mt-8 { margin-top: 3.2rem; }
+.pb-0 { padding-bottom: 0; }
+.pt-8 { padding-top: 3.2rem; }
+.py-12 { padding-top: 4.8rem; padding-bottom: 4.8rem; }
 .mb-4 { margin-bottom: 1.6rem; }
 .mb-6 { margin-bottom: 2.4rem; }
 .mb-8 { margin-bottom: 3.2rem; }
