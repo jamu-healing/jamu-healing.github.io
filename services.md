@@ -13,7 +13,7 @@ section_label: "Solutions"
           Three integrated paths to deep healing — body, chemistry, and professional skill.
         </p>
       </div>
-      <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary flex-shrink-0">
+      <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary flex-shrink-0">
         Book Now <i class="bi bi-arrow-right"></i>
       </a>
     </div>
@@ -33,20 +33,18 @@ section_label: "Solutions"
           <span class="font-mono text-sm text-muted">01</span>
         </div>
       </div>
-      <p class="font-mono text-sm text-muted mb-2">Body Balance Restoration</p>
-      <h2 class="text-3xl mb-4">Manual Therapy</h2>
+      <p class="font-mono text-sm text-muted mb-2">{{ site.data.site.services.manual_therapy.subtitle }}</p>
+      <h2 class="text-3xl mb-4">{{ site.data.site.services.manual_therapy.name }}</h2>
       <p class="text-lg text-primary font-serif italic mb-6">
         The Pareto Effect — 80% result from 20% precise intervention.
       </p>
       <p class="text-base mb-6">
-        High-precision structural correction using the "Fork Effect": a minimal, targeted intervention
-        at the root imbalance point that triggers a full systemic release.
-        Complex issues resolved in 1–2 sessions.
+        {{ site.data.site.services.manual_therapy.description }}
       </p>
       <div class="card-sm">
-        <div class="text-3xl font-bold mb-2">IDR 6.4M</div>
-        <p class="text-sm mb-4">2 sessions · 5-day program</p>
-        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <div class="text-3xl font-bold mb-2">{{ site.data.site.services.manual_therapy.price }}</div>
+        <p class="text-sm mb-4">{{ site.data.site.services.manual_therapy.price_note }}</p>
+        <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
           Book via WhatsApp <i class="bi bi-arrow-right"></i>
         </a>
       </div>
@@ -55,11 +53,9 @@ section_label: "Solutions"
       <div class="mb-8">
         <p class="font-mono text-sm font-semibold text-muted uppercase tracking-wider mb-4">Methods</p>
         <ul class="check-list">
-          <li><i class="bi bi-check-circle-fill"></i> Osteopathy</li>
-          <li><i class="bi bi-check-circle-fill"></i> Chiropractic Adjustment</li>
-          <li><i class="bi bi-check-circle-fill"></i> Myofascial Release</li>
-          <li><i class="bi bi-check-circle-fill"></i> Visceral Manipulation</li>
-          <li><i class="bi bi-check-circle-fill"></i> Structural Diagnostics</li>
+          {% for method in site.data.site.services.manual_therapy.methods %}
+          <li><i class="bi bi-check-circle-fill"></i> {{ method }}</li>
+          {% endfor %}
         </ul>
       </div>
       <div>
@@ -88,19 +84,18 @@ section_label: "Solutions"
           <span class="badge badge-primary ml-3">Featured</span>
         </div>
       </div>
-      <p class="font-mono text-sm text-muted mb-2">Native Chemical Re-tuning (Jamu)</p>
-      <h2 class="text-3xl mb-4">Herbal Medicine</h2>
+      <p class="font-mono text-sm text-muted mb-2">{{ site.data.site.services.herbal_medicine.subtitle }}</p>
+      <h2 class="text-3xl mb-4">{{ site.data.site.services.herbal_medicine.name }}</h2>
       <p class="text-lg text-primary font-serif italic mb-6">
         Restoring the body's natural chemistry with traditional Javanese phytotherapy.
       </p>
       <p class="text-base mb-6">
-        Organic Javanese herbal formulas are used to clear cellular receptors and restore hormonal
-        and digestive balance. Low-level metabolic recalibration to reactivate natural self-regulation.
+        {{ site.data.site.services.herbal_medicine.description }}
       </p>
       <div class="card-sm border-primary">
-        <div class="text-3xl font-bold mb-2">IDR 4M</div>
-        <p class="text-sm mb-4">2-month program</p>
-        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <div class="text-3xl font-bold mb-2">{{ site.data.site.services.herbal_medicine.price }}</div>
+        <p class="text-sm mb-4">{{ site.data.site.services.herbal_medicine.price_note }}</p>
+        <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           Book via WhatsApp <i class="bi bi-arrow-right"></i>
         </a>
       </div>
@@ -109,11 +104,9 @@ section_label: "Solutions"
       <div class="mb-8">
         <p class="font-mono text-sm font-semibold text-muted uppercase tracking-wider mb-4">Methods</p>
         <ul class="check-list">
-          <li><i class="bi bi-check-circle-fill"></i> Javanese Naturopathy</li>
-          <li><i class="bi bi-check-circle-fill"></i> Customized Herbal Protocols</li>
-          <li><i class="bi bi-check-circle-fill"></i> Detox Programs</li>
-          <li><i class="bi bi-check-circle-fill"></i> Hormonal Rebalancing</li>
-          <li><i class="bi bi-check-circle-fill"></i> Digestive Restoration</li>
+          {% for method in site.data.site.services.herbal_medicine.methods %}
+          <li><i class="bi bi-check-circle-fill"></i> {{ method }}</li>
+          {% endfor %}
         </ul>
       </div>
       <div>
@@ -140,20 +133,18 @@ section_label: "Solutions"
           <span class="font-mono text-sm text-muted">03</span>
         </div>
       </div>
-      <p class="font-mono text-sm text-muted mb-2">Java Massage Mastery</p>
-      <h2 class="text-3xl mb-4">Professional Classes</h2>
+      <p class="font-mono text-sm text-muted mb-2">{{ site.data.site.services.professional_classes.subtitle }}</p>
+      <h2 class="text-3xl mb-4">{{ site.data.site.services.professional_classes.name }}</h2>
       <p class="text-lg text-primary font-serif italic mb-6">
         Anatomy-based training for high-precision manual practitioners.
       </p>
       <p class="text-base mb-6">
-        Comprehensive professional development course focused on systemic practice methods.
-        Provides practitioners with tangible manual craft, immediate professional results,
-        and deep anatomical understanding.
+        {{ site.data.site.services.professional_classes.description }}
       </p>
       <div class="card-sm">
-        <div class="text-3xl font-bold mb-2">IDR 12M</div>
-        <p class="text-sm mb-4">Full basic course</p>
-        <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <div class="text-3xl font-bold mb-2">{{ site.data.site.services.professional_classes.price }}</div>
+        <p class="text-sm mb-4">{{ site.data.site.services.professional_classes.price_note }}</p>
+        <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
           Book via WhatsApp <i class="bi bi-arrow-right"></i>
         </a>
       </div>
@@ -162,11 +153,9 @@ section_label: "Solutions"
       <div class="mb-8">
         <p class="font-mono text-sm font-semibold text-muted uppercase tracking-wider mb-4">Course Structure</p>
         <ul class="check-list">
-          <li><i class="bi bi-check-circle-fill"></i> 5 intensive lessons / 12 days</li>
-          <li><i class="bi bi-check-circle-fill"></i> Anatomy-based curriculum</li>
-          <li><i class="bi bi-check-circle-fill"></i> High-precision technique training</li>
-          <li><i class="bi bi-check-circle-fill"></i> Certificate upon completion</li>
-          <li><i class="bi bi-check-circle-fill"></i> Web registration for graduates</li>
+          {% for method in site.data.site.services.professional_classes.methods %}
+          <li><i class="bi bi-check-circle-fill"></i> {{ method }}</li>
+          {% endfor %}
         </ul>
       </div>
       <div>
@@ -193,10 +182,10 @@ section_label: "Solutions"
       and book your first appointment.
     </p>
     <div class="flex flex-wrap gap-4 justify-center">
-      <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
         <i class="bi bi-telephone-fill"></i> Book via WhatsApp
       </a>
-      <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+      <a href="{{ site.data.site.contact.telegram.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
         <i class="bi bi-send-fill"></i> Telegram
       </a>
     </div>

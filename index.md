@@ -22,7 +22,7 @@ show_header: false
         <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           Book Now <i class="bi bi-arrow-right"></i>
         </a>
-        <a href="/pages/services/" class="btn btn-outline">
+        <a href="/services" class="btn btn-outline">
           View Services
         </a>
       </div>
@@ -239,31 +239,24 @@ show_header: false
           <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
               <i class="bi bi-whatsapp accent contact-link-icon"></i>
-              <span class="font-medium">WhatsApp</span>
+              <span class="font-medium contact-link-title">WhatsApp</span>
             </div>
+            <div class="contact-link-sub">Booking & Appointments</div>
             <div class="contact-link-phone accent">+62 857-3886-7684</div>
-            <div class="contact-link-desc">Direct contact for appointments and consultations</div>
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
               <i class="bi bi-telegram icon-telegram contact-link-icon"></i>
-              <span class="font-medium">@jamu_healing</span>
+              <span class="font-medium contact-link-title">Telegram</span>
             </div>
-            <div class="contact-link-desc">Booking & Appointments — in-person and online sessions</div>
-          </a>
-          <a href="https://t.me/bali_med" target="_blank" rel="noopener noreferrer" class="contact-link-v">
-            <div class="contact-link-header">
-              <i class="bi bi-telegram icon-telegram contact-link-icon"></i>
-              <span class="font-medium">@bali_med</span>
-            </div>
-            <div class="contact-link-desc">Medical Help Chat — public community for health questions in Bali</div>
+            <div class="contact-link-sub">@jamu_healing — Booking & Appointments</div>
           </a>
           <a href="mailto:evi.sudarto@gmail.com" class="contact-link-v">
             <div class="contact-link-header">
               <i class="bi bi-envelope-fill primary contact-link-icon"></i>
-              <span class="font-medium">evi.sudarto@gmail.com</span>
+              <span class="font-medium contact-link-title">Gmail Evi Sudarto</span>
             </div>
-            <div class="contact-link-desc">Email for inquiries, collaborations, and consultations</div>
+            <div class="contact-link-sub">evi.sudarto@gmail.com</div>
           </a>
         </div>
       </div>
@@ -273,53 +266,51 @@ show_header: false
           <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
               <i class="bi bi-instagram primary contact-link-icon"></i>
-              <span class="font-medium">@healerdewi</span>
+              <span class="font-medium contact-link-title">@healerdewi</span>
             </div>
+            <div class="contact-link-sub">Instagram — Live Cases</div>
             <div class="contact-link-desc">1.6K+ followers, 430+ posts — live cases, therapy sessions, educational content</div>
             <span class="contact-link-badge">since 2016</span>
           </a>
           <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
               <i class="bi bi-facebook primary contact-link-icon"></i>
-              <span class="font-medium">Facebook</span>
+              <span class="font-medium contact-link-title">Facebook</span>
             </div>
+            <div class="contact-link-sub">Community Page</div>
             <div class="contact-link-desc">Videos, photos, patient stories</div>
-            <span class="contact-link-badge">since 2016</span>
-          </a>
-          <a href="https://sites.google.com/view/jamu-healing" target="_blank" rel="noopener noreferrer" class="contact-link-v">
-            <div class="contact-link-header">
-              <i class="bi bi-globe primary contact-link-icon"></i>
-              <span class="font-medium">Google Sites</span>
-            </div>
-            <div class="contact-link-desc">Official website with detailed information</div>
             <span class="contact-link-badge">since 2016</span>
           </a>
           <a href="https://www.youtube.com/@osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
               <i class="bi bi-youtube icon-youtube contact-link-icon"></i>
-              <span class="font-medium">@osteopathbali</span>
+              <span class="font-medium contact-link-title">@osteopathbali</span>
             </div>
+            <div class="contact-link-sub">YouTube — Educational</div>
             <div class="contact-link-desc">Educational videos, therapy demonstrations</div>
           </a>
           <a href="https://t.me/osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-link-v">
             <div class="contact-link-header">
               <i class="bi bi-telegram icon-telegram contact-link-icon"></i>
-              <span class="font-medium">Telegram Channel</span>
+              <span class="font-medium contact-link-title">Telegram Channel</span>
             </div>
+            <div class="contact-link-sub">Health Updates</div>
             <div class="contact-link-desc">Health updates and wellness tips for Bali</div>
-          </a>
-          <a href="https://osteopathbali.blogspot.com/" target="_blank" rel="noopener noreferrer" class="contact-link-v">
-            <div class="contact-link-header">
-              <i class="bi bi-journal primary contact-link-icon"></i>
-              <span class="font-medium">Blogspot</span>
-            </div>
-            <div class="contact-link-desc">Blog with articles and case studies</div>
           </a>
         </div>
       </div>
       <div class="card">
         <h3 class="mb-6">Google My Business</h3>
         <div class="flex flex-col gap-4 mb-6">
+          <a href="https://sites.google.com/view/jamu-healing" target="_blank" rel="noopener noreferrer" class="contact-link-v">
+            <div class="contact-link-header">
+              <i class="bi bi-globe primary contact-link-icon"></i>
+              <span class="font-medium contact-link-title">Google Sites</span>
+            </div>
+            <div class="contact-link-sub">Official Website</div>
+            <div class="contact-link-desc">Detailed information about services and methodology</div>
+            <span class="contact-link-badge">since 2016</span>
+          </a>
           <a href="https://g.page/r/CYm5pvsYVkpkEBM/" target="_blank" rel="noopener noreferrer" class="gmb-card">
             <div class="flex items-center gap-3 mb-2">
               <img src="/images/logo-javanese-therapy.png" alt="Javanese Therapy" class="gmb-logo" />

@@ -53,6 +53,12 @@ em { font-style: italic; }
 /* ─── LAYOUT ─────────────────────────────────────────────── */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2.4rem; }
 @media (min-width: 1024px) { .container { padding: 0 3.2rem; } }
+@media (max-width: 1280px) {
+  .container { padding: 0 1.6rem; }
+  section { padding: 6rem 0; }
+  .card { padding: 2.4rem; }
+  .hero { padding: 8rem 0 0; }
+}
 main { flex: 1; }
 section { padding: 8rem 0; border-bottom: 1px solid var(--border); }
 section:last-child { border-bottom: none; }
@@ -250,7 +256,8 @@ section:last-child { border-bottom: none; }
   padding: 10rem 0 0;
   position: relative; overflow: hidden;
 }
-.hero-body { max-width: 75rem; }
+.hero > .container { justify-items: center; }
+.hero-body { max-width: 92rem; width: 100%; }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 1rem;
   padding: 0.6rem 1.6rem; border-radius: 2em;
@@ -389,6 +396,20 @@ section:last-child { border-bottom: none; }
   gap: 1.2rem;
 }
 .contact-link-icon { font-size: 2.4rem; flex-shrink: 0; }
+.contact-link-title {
+  color: var(--accent);
+}
+.contact-link-v:hover .contact-link-title {
+  color: var(--fg);
+}
+.contact-link-sub {
+  font-size: 1.2rem;
+  color: var(--fg-muted);
+  padding-left: 0;
+}
+.contact-link-v:hover .contact-link-sub {
+  color: var(--fg);
+}
 .contact-link-phone {
   padding-left: 3.6rem;
   font-size: 1.5rem;
@@ -398,7 +419,7 @@ section:last-child { border-bottom: none; }
   font-size: 1.3rem;
   color: var(--fg-muted);
   line-height: 1.5;
-  width: 100%;
+  margin-bottom: 2rem;
 }
 .contact-link-badge {
   position: absolute;
@@ -565,19 +586,23 @@ section:last-child { border-bottom: none; }
   color: var(--fg-muted);
 }
 @media (max-width: 360px) {
-  .pagination {
-    gap: 0.8rem;
-    flex-wrap: wrap;
-  }
-  .pagination .btn {
-    padding: 0.6rem 1rem;
-    font-size: 1.3rem;
-  }
-  .pagination-info {
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
-  }
+  .container { padding: 0 0.4rem; }
+  section { padding: 4rem 0; }
+  .card { padding: 1.6rem; }
+  .btn { padding: 1rem 1.6rem; font-size: 1.4rem; }
+  .btn-sm { padding: 0.6rem 1.2rem; font-size: 1.2rem; }
+  .hero { padding: 6rem 0 0; }
+  .hero-body { max-width: 100%; }
+  .grid-3 { gap: 1.6rem; }
+  .contact-link-v { padding: 1.2rem; }
+  .gmb-card { padding: 1.2rem; }
+  .section-no-border .container { padding: 0 0.4rem; }
+  .pagination { gap: 0.8rem; flex-wrap: nowrap; }
+  .pagination .btn { padding: 0.6rem 1rem; font-size: 1.3rem; }
+  .pagination-info { font-size: 1.2rem; }
+  h1 { font-size: clamp(3rem, 8vw, 7.2rem); }
+  h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); }
+  h3 { font-size: clamp(1.8rem, 3vw, 2.8rem); }
 }
 
 /* ─── DEBUG TOASTER ──────────────────────────────────────── */

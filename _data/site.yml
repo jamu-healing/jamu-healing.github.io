@@ -1,0 +1,109 @@
+# ═══════════════════════════════════════════════════════════
+# Jamu Healing - Single Source of Truth (SSoT)
+# All contact, pricing, and service data in one place
+# ═══════════════════════════════════════════════════════════
+
+# Business Information
+business:
+  name: "Javanese Therapy by Evi Sudarto"
+  short_name: "Jamu Healing"
+  founder: "Evi Sudarto"
+  experience: "30+ years"
+  rating: "5.0"
+  location: "Ubud & Canggu, Bali, Indonesia"
+  address: "Jl. Blong Keker, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361"
+  hours: "Open 24 hours"
+
+# Contact Information
+contact:
+  phone: "+62 857-3886-7684"
+  email: "evi.sudarto@gmail.com"
+  whatsapp:
+    url: "https://wa.me/message/EPF44RLLBUY4D1"
+    label: "Book via WhatsApp"
+  telegram:
+    url: "https://t.me/jamu_healing"
+    label: "@jamu_healing"
+    channel: "https://t.me/osteopathbali"
+
+# Social Media
+social:
+  instagram:
+    primary:
+      url: "https://www.instagram.com/healerdewi/"
+      handle: "@healerdewi"
+      followers: "1.6K+"
+      posts: "430+"
+      since: "2016"
+    secondary:
+      url: "https://www.instagram.com/osteopathbali/"
+      handle: "@osteopathbali"
+  facebook:
+    url: "https://www.facebook.com/Jamu.Healing/"
+    since: "2016"
+  youtube:
+    url: "https://www.youtube.com/@osteopathbali"
+    handle: "@osteopathbali"
+  telegram_channel:
+    url: "https://t.me/osteopathbali"
+
+# Google Business
+google_business:
+  sites_url: "https://sites.google.com/view/jamu-healing"
+  locations:
+    - name: "Javanese Therapy"
+      gmb_url: "https://g.page/r/CYm5pvsYVkpkEBM/"
+      logo: "/images/logo-javanese-therapy.png"
+      address: "Jl. Blong Keker, Jimbaran, Bali"
+      hours: "Open 24 hours"
+      rating: "5.0 / 5 on Google"
+    - name: "Massage Classes"
+      gmb_url: "https://g.page/r/CQbWJd8NnTevEBM/"
+      logo: "/images/logo-massage-classes.webp"
+      address: "Jimbaran, Bali"
+      description: "Professional Javanese Massage Courses"
+
+# Services
+services:
+  manual_therapy:
+    name: "Manual Therapy"
+    subtitle: "Body Balance Restoration"
+    description: "Minimal, targeted correction resolving complex issues in 1-2 sessions."
+    price: "IDR 6.4M"
+    price_note: "2 sessions / 5-day program"
+    methods:
+      - "Osteopathy"
+      - "Chiropractic"
+      - "Myofascial Release"
+      - "Visceral Manipulation"
+    featured: false
+  herbal_medicine:
+    name: "Herbal Medicine"
+    subtitle: "Native Chemical Re-tuning (Jamu)"
+    description: "Restoring hormonal and digestive balance by clearing cellular receptors with organic Javanese formulas."
+    price: "IDR 4M"
+    price_note: "2-month program"
+    methods:
+      - "Javanese Naturopathy"
+      - "Custom Herbal Protocols"
+      - "Detox Programs"
+    featured: true
+  professional_classes:
+    name: "Professional Classes"
+    subtitle: "Java Massage Mastery"
+    description: "Tangible manual craft with immediate professional results."
+    price: "IDR 12M"
+    price_note: "Full basic course"
+    methods:
+      - "5 lessons / 12 days"
+      - "Certificate included"
+      - "Web Registration"
+    featured: false
+
+# Statistics
+stats:
+  years_experience: "30+"
+  patient_cases: "5,000+"
+  google_rating: "5.0"
+  sessions_to_result: "1-2"
+  locations: "2"
