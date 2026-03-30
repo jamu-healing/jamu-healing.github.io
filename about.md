@@ -5,31 +5,31 @@ description: "Learn about Evi Sudarto, senior osteopath and traditional Javanese
 section_label: "The Healer"
 ---
 
-<div class="authority-grid">
+<div class="about-hero-grid">
   <div>
-    <div class="authority-photo" style="max-width:40rem;aspect-ratio:3/4;">
+    <div class="authority-photo about-photo-wrap">
       <img src="/images/evi-sudarto.jpg" alt="{{ site.data.site.business.founder }}" />
     </div>
   </div>
   <div>
-    <h1 style="margin-bottom:0.4rem;">{{ site.data.site.business.founder }}</h1>
-    <p style="font-size:2rem;font-family:var(--font-serif);font-style:italic;color:var(--fg-muted);margin-bottom:2.4rem;">
+    <h1 class="about-title">{{ site.data.site.business.founder }}</h1>
+    <p class="about-subtitle">
       Osteopath · Jamu Practitioner · Teacher
     </p>
-    <p style="font-size:1.7rem;margin-bottom:1.6rem;">
+    <p class="about-desc-lg">
       Senior osteopath and manual therapist with <strong>{{ site.data.site.business.experience }} of experience</strong>.
       Architect of a high-precision methodology combining modern osteopathy and traditional Javanese medicine.
     </p>
-    <p style="margin-bottom:3.2rem;">
+    <p class="about-desc">
       {{ site.data.site.business.name }} functions as a systemic healing practice,
       integrating manual therapy, Jamu, and naturopathy into a unified, anatomy-based framework.
-      Her approach is simple: <em style="color:var(--fg);font-style:normal;font-weight:500;">correct the root cause, not the symptom.</em>
+      Her approach is simple: <em class="about-emphasis">correct the root cause, not the symptom.</em>
     </p>
-    <p style="font-family:var(--font-mono);font-size:1.4rem;color:var(--fg-muted);margin-bottom:2.4rem;">
-      <i class="bi bi-geo-alt-fill" style="color:var(--primary);"></i>
+    <p class="about-location">
+      <i class="bi bi-geo-alt-fill"></i>
       {{ site.data.site.business.location }}
     </p>
-    <div style="display:flex;flex-wrap:wrap;gap:1.2rem;">
+    <div class="about-actions">
       <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
         <i class="bi bi-telephone-fill"></i> WhatsApp
       </a>
@@ -44,7 +44,7 @@ section_label: "The Healer"
 
 <div class="grid-2">
   <div>
-    <p style="font-size:1.65rem;margin-bottom:1.6rem;">
+    <p class="about-methodology-text">
       The core principle is <strong>"The Fork Effect"</strong>: a minimal, precisely applied intervention
       at the structural root point that triggers a systemic release — delivering 80% of the healing
       result through a single, targeted correction.
@@ -55,13 +55,13 @@ section_label: "The Healer"
     </p>
   </div>
   <div>
-    <p style="margin-bottom:2rem;">
+    <p class="mb-8">
       Traditional Javanese Jamu is integrated as a <strong>Native Chemical Re-tuning system</strong> —
       using organic plant formulas to restore hormonal and digestive balance.
     </p>
-    <div style="display:flex;align-items:flex-start;gap:1.6rem;padding:2rem;border-radius:1rem;background:rgba(249,38,114,0.07);border:1px solid rgba(249,38,114,0.2);">
-      <i class="bi bi-quote" style="font-size:2.4rem;color:var(--primary);flex-shrink:0;"></i>
-      <p style="font-size:1.5rem;color:rgba(248,248,242,0.85);font-family:var(--font-serif);font-style:italic;">
+    <div class="about-quote-box">
+      <i class="bi bi-quote about-quote-icon"></i>
+      <p class="about-quote-text">
         Time-tested Javanese methodology. Contemporary viewpoint. Anatomy-based diagnostics. Root-cause resolution.
       </p>
     </div>

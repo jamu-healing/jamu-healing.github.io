@@ -314,6 +314,23 @@ section:last-child { border-bottom: none; }
 }
 .relative { position: relative; }
 
+/* ─── SERVICES PAGE ──────────────────────────────────────── */
+.services-header { display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem; }
+.services-desc { font-size:1.8rem;font-family:var(--font-serif);margin-top:1rem;max-width:55rem; }
+.service-block-header { display:flex;align-items:center;gap:1.6rem;margin-bottom:2.4rem; }
+.service-block-number { font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted); }
+.service-block-featured-badge { margin-left:1.2rem;padding:0.3rem 1.2rem;border-radius:2em;background:rgba(249,38,114,0.18);color:var(--primary);font-size:1.2rem;font-weight:600; }
+.service-block-subtitle { font-family:var(--font-mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem; }
+.service-block-title { font-size:3.6rem;margin-bottom:0.8rem; }
+.service-block-tagline { font-size:1.5rem;color:var(--primary);font-family:var(--font-serif);font-style:italic;margin-bottom:2rem; }
+.service-block-description { font-size:1.6rem;margin-bottom:2.4rem; }
+.service-block-price-box { padding:2.4rem;border-radius:var(--radius-sm);background:rgba(248,248,242,0.03);border:1px solid var(--border); }
+.service-block-price-box.featured { border-color:rgba(249,38,114,0.2); }
+.service-block-price { font-family:var(--font-serif);font-size:3.6rem;font-weight:700;color:var(--fg); }
+.service-block-price-note { font-size:1.4rem;margin-bottom:2rem; }
+.service-block-methods-title { font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem; }
+.service-block-indications-title { font-family:var(--font-mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem; }
+
 /* ─── SERVICE BLOCKS (Services Page) ─────────────────────── */
 .service-block {
   border-radius: var(--radius); border: 1px solid var(--border);
@@ -326,6 +343,23 @@ section:last-child { border-bottom: none; }
 .featured-bar { height: 2px; background: linear-gradient(to right, transparent, var(--primary), transparent); }
 .tag-list { display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.8rem; }
 .tag { padding:0.3rem 1rem;border-radius:2em;border:1px solid var(--border);font-size:1.3rem;color:var(--fg-muted);font-family:var(--font-mono); }
+
+/* ─── ABOUT PAGE ──────────────────────────────────────────── */
+.about-hero-grid { display: grid; gap: 6rem; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 1024px) { .about-hero-grid { grid-template-columns: 1fr 1fr; } }
+.about-photo-wrap { max-width: 40rem; aspect-ratio: 3/4; }
+.about-title { margin-bottom: 0.4rem; }
+.about-subtitle { font-size: 2rem; font-family: var(--font-serif); font-style: italic; color: var(--fg-muted); margin-bottom: 2.4rem; }
+.about-desc-lg { font-size: 1.7rem; margin-bottom: 1.6rem; }
+.about-desc { margin-bottom: 3.2rem; }
+.about-emphasis { color: var(--fg); font-style: normal; font-weight: 500; }
+.about-location { font-family: var(--font-mono); font-size: 1.4rem; color: var(--fg-muted); margin-bottom: 2.4rem; }
+.about-location i { color: var(--primary); }
+.about-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+.about-methodology-text { font-size: 1.65rem; margin-bottom: 1.6rem; }
+.about-quote-box { display: flex; align-items: flex-start; gap: 1.6rem; padding: 2rem; border-radius: 1rem; background: rgba(249,38,114,0.07); border: 1px solid rgba(249,38,114,0.2); }
+.about-quote-icon { font-size: 2.4rem; color: var(--primary); flex-shrink: 0; }
+.about-quote-text { font-size: 1.5rem; color: rgba(248,248,242,0.85); font-family: var(--font-serif); font-style: italic; }
 
 /* ─── AUTHORITY ───────────────────────────────────────────── */
 .authority-grid { display: grid; gap: 6rem; grid-template-columns: 1fr; align-items: center; }
@@ -536,6 +570,13 @@ section:last-child { border-bottom: none; }
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
+.flex-shrink-0 { flex-shrink: 0; }
+.uppercase { text-transform: uppercase; }
+.tracking-wider { letter-spacing: 0.05em; }
+.text-base { font-size: 1.6rem; }
+.ml-3 { margin-left: 1.2rem; }
+.card-sm { padding: 2.4rem; border-radius: var(--radius-sm); background: rgba(248,248,242,0.03); border: 1px solid var(--border); }
+.border-primary { border-color: rgba(249,38,114,0.2); }
 
 /* ─── BLOG FILTERS & LAYOUT ──────────────────────────────── */
 .tag-filter-container { margin-bottom: 3.2rem; }
