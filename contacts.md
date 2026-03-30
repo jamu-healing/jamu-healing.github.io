@@ -5,9 +5,28 @@ description: "Get in touch with Evi Sudarto for traditional Javanese medicine co
 section_label: "Contact & Connect"
 ---
 
-<div class="text-center mb-16">
-  <h2>Start Your Healing</h2>
-</div>
+<section class="page-header">
+  <div class="container">
+    <p class="section-label">Contact & Connect</p>
+    <div class="page-header-flex">
+      <div>
+        <h1>Contacts</h1>
+        <p class="page-header-desc">
+          Get in touch with Evi Sudarto for traditional Javanese medicine consultations in Bali.
+        </p>
+      </div>
+      <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Book Now <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-no-border">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2>Start Your Healing</h2>
+    </div>
 
 <div class="grid-3">
   <div class="card">
@@ -85,3 +104,5 @@ section_label: "Contact & Connect"
     <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full justify-center">Book Now via WhatsApp <i class="bi bi-arrow-right"></i></a>
   </div>
 </div>
+  </div>
+</section>
