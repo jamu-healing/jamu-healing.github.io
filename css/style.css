@@ -324,6 +324,8 @@ section:last-child { border-bottom: none; }
 .service-block-inner { padding: 4rem; display: grid; gap: 4rem; grid-template-columns: 1fr; }
 @media (min-width:1024px) { .service-block-inner { grid-template-columns: 1fr 1fr; } }
 .featured-bar { height: 2px; background: linear-gradient(to right, transparent, var(--primary), transparent); }
+.tag-list { display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.8rem; }
+.tag { padding:0.3rem 1rem;border-radius:2em;border:1px solid var(--border);font-size:1.3rem;color:var(--fg-muted);font-family:var(--font-mono); }
 
 /* ─── AUTHORITY ───────────────────────────────────────────── */
 .authority-grid { display: grid; gap: 6rem; grid-template-columns: 1fr; align-items: center; }
