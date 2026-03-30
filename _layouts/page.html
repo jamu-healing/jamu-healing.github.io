@@ -1,22 +1,6 @@
 ---
 layout: default
 ---
-<article>
-  {% if page.show_header != false %}
-  <section class="page-header">
-    <div class="container">
-      <p class="section-label">{{ page.section_label | default: "" }}</p>
-      <h1>{{ page.title }}</h1>
-      {% if page.description %}
-        <p>{{ page.description }}</p>
-      {% endif %}
-    </div>
-  </section>
-  {% endif %}
-
-  <section class="section-no-border">
-    <div class="container">
-      {{ content }}
-    </div>
-  </section>
-</article>
+<main>
+  {{ content }}
+</main>
