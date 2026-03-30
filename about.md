@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "About {{ site.data.site.business.founder }}"
-description: "Learn about {{ site.data.site.business.founder }}, senior osteopath and traditional Javanese medicine practitioner with {{ site.data.site.business.experience }} of experience in Bali."
+title: "About Evi Sudarto"
+description: "Learn about Evi Sudarto, senior osteopath and traditional Javanese medicine practitioner with 30+ years of experience in Bali."
 section_label: "The Healer"
 ---
 

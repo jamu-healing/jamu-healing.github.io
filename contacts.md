@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Contacts"
-description: "Get in touch with {{ site.data.site.business.founder }} for traditional Javanese medicine consultations in Bali."
+description: "Get in touch with Evi Sudarto for traditional Javanese medicine consultations in Bali."
 section_label: "Contact & Connect"
 ---
 
