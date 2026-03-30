@@ -5,6 +5,23 @@ description: "Manual therapy, Jamu herbal medicine, and professional massage cla
 section_label: "Solutions"
 ---
 
+<section class="page-header">
+  <div class="container">
+    <p class="section-label">Solutions</p>
+    <div class="page-header-flex">
+      <div>
+        <h1>Services</h1>
+        <p class="page-header-desc">
+          Three integrated paths to deep healing — body, chemistry, and professional skill.
+        </p>
+      </div>
+      <a href="{{ site.data.site.contact.whatsapp.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Book Now <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="section-no-border">
   <div class="container">
     <div class="flex flex-wrap justify-between gap-6">
