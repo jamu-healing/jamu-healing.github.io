@@ -162,7 +162,7 @@ section:last-child{border-bottom:none}
 .contact-card{display:flex;flex-direction:column;gap:0.4rem;padding:1.6rem;border-radius:1rem;background:rgba(248,248,242,0.04);transition:all 0.2s}
 .contact-card:hover{background:rgba(248,248,242,0.08)}
 .contact-header{display:flex;align-items:center;gap:1.2rem}
-.contact-icon{font-size:2.4rem;flex-shrink:0}
+.contact-icon{font-size:2.4rem;flex-shrink:0;color:var(--accent)}
 .contact-title{color:var(--accent);font-weight:500}
 .contact-card:hover .contact-title{color:var(--fg)}
 .contact-sub{font-size:1.2rem;color:var(--fg-muted)}
@@ -204,7 +204,6 @@ section:last-child{border-bottom:none}
 .relative{position:relative}.flex-shrink-0{flex-shrink:0}
 .section-full-height{min-height:80vh;display:flex;align-items:center}
 .section-no-border{border-bottom:none}
-.icon-telegram{color:#29b6f6}.icon-youtube{color:#ff0000}
 
 /* ═══ MEDIA QUERIES ═══ */
 @media(max-width:1280px){
