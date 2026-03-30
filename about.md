@@ -30,10 +30,10 @@ description: "Learn about Evi Sudarto, senior osteopath and traditional Javanese
 
 <section class="bg-alt">
   <div class="container">
-    <h2 style="margin-bottom:3.2rem;">Methodology & Philosophy</h2>
+    <h2 class="mb-12">Methodology & Philosophy</h2>
     <div class="grid-2">
       <div>
-        <p class="about-methodology-text">The core principle is <strong>"The Fork Effect"</strong>: a minimal, precisely applied intervention at the structural root point that triggers a systemic release — delivering 80% of the healing result through a single, targeted correction.</p>
+        <p class="about-desc-lg">The core principle is <strong>"The Fork Effect"</strong>: a minimal, precisely applied intervention at the structural root point that triggers a systemic release — delivering 80% of the healing result through a single, targeted correction.</p>
         <p>This is not symptomatic management. Every session is driven by anatomy-based diagnostic mapping, identifying the true origin of structural or metabolic imbalance.</p>
       </div>
       <div>
@@ -49,78 +49,43 @@ description: "Learn about Evi Sudarto, senior osteopath and traditional Javanese
 
 <section>
   <div class="container">
-    <h2 style="margin-bottom:3.2rem;">Trust & Authority</h2>
+    <h2 class="mb-12">Trust & Authority</h2>
     <div class="grid-2">
-      <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-        <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-        <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">{{ site.data.site.stats.years_experience }} years of high-skill private practice</span>
-      </div>
-      <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-        <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-        <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">Architecture of high-precision methodology combining osteopathy and Javanese medicine</span>
-      </div>
-      <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-        <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-        <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">{{ site.data.site.stats.patient_cases }} documented patient cases in searchable database</span>
-      </div>
-      <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-        <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-        <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">Evidence-based practices validated by clinical research (PubMed)</span>
-      </div>
-      <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-        <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-        <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">Trusted practitioner for the international community in Bali and worldwide</span>
-      </div>
-      <div class="card" style="display:flex;align-items:flex-start;gap:1.2rem;">
-        <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem;"></i>
-        <span style="font-size:1.55rem;color:rgba(248,248,242,0.85);">5.0 rating across {{ site.data.site.business.location }}</span>
-      </div>
+      <div class="card card-flex"><i class="bi bi-check-circle-fill card-icon-accent"></i><span class="card-text">{{ site.data.site.stats.years_experience }} years of high-skill private practice</span></div>
+      <div class="card card-flex"><i class="bi bi-check-circle-fill card-icon-accent"></i><span class="card-text">Architecture of high-precision methodology combining osteopathy and Javanese medicine</span></div>
+      <div class="card card-flex"><i class="bi bi-check-circle-fill card-icon-accent"></i><span class="card-text">{{ site.data.site.stats.patient_cases }} documented patient cases in searchable database</span></div>
+      <div class="card card-flex"><i class="bi bi-check-circle-fill card-icon-accent"></i><span class="card-text">Evidence-based practices validated by clinical research (PubMed)</span></div>
+      <div class="card card-flex"><i class="bi bi-check-circle-fill card-icon-accent"></i><span class="card-text">Trusted practitioner for the international community in Bali and worldwide</span></div>
+      <div class="card card-flex"><i class="bi bi-check-circle-fill card-icon-accent"></i><span class="card-text">5.0 rating across {{ site.data.site.business.location }}</span></div>
     </div>
   </div>
 </section>
 
 <section class="bg-alt">
   <div class="container">
-    <h2 style="margin-bottom:3.2rem;">Areas of Practice</h2>
+    <h2 class="mb-12">Areas of Practice</h2>
     <div class="grid-3">
       <div class="card">
-        <h3 style="margin-bottom:2rem;">Manual Therapy</h3>
-        <ul class="dot-list">
-          <li>Osteopathy</li>
-          <li>Chiropractic</li>
-          <li>Myofascial Release</li>
-          <li>Visceral Manipulation</li>
-          <li>Structural Correction</li>
-        </ul>
+        <h3 class="mb-6">Manual Therapy</h3>
+        <ul class="dot-list"><li>Osteopathy</li><li>Chiropractic</li><li>Myofascial Release</li><li>Visceral Manipulation</li><li>Structural Correction</li></ul>
       </div>
       <div class="card">
-        <h3 style="margin-bottom:2rem;">Herbal Medicine</h3>
-        <ul class="dot-list">
-          <li>Javanese Naturopathy</li>
-          <li>Custom Herbal Protocols</li>
-          <li>Jamu Formulation</li>
-          <li>Metabolic Recalibration</li>
-          <li>Detox Programs</li>
-        </ul>
+        <h3 class="mb-6">Herbal Medicine</h3>
+        <ul class="dot-list"><li>Javanese Naturopathy</li><li>Custom Herbal Protocols</li><li>Jamu Formulation</li><li>Metabolic Recalibration</li><li>Detox Programs</li></ul>
       </div>
       <div class="card">
-        <h3 style="margin-bottom:2rem;">Education</h3>
-        <ul class="dot-list">
-          <li>Java Massage Masterclass</li>
-          <li>Anatomy-Based Training</li>
-          <li>Professional Certification</li>
-          <li>Systemic Practice Methods</li>
-        </ul>
+        <h3 class="mb-6">Education</h3>
+        <ul class="dot-list"><li>Java Massage Masterclass</li><li>Anatomy-Based Training</li><li>Professional Certification</li><li>Systemic Practice Methods</li></ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="text-center" style="border-bottom:none;">
+<section class="text-center section-no-border">
   <div class="container">
-    <h2 style="margin-bottom:1.2rem;">Connect with Evi</h2>
-    <p style="max-width:55rem;margin:0 auto 3.2rem;">Follow daily case studies, book a session, or reach out directly.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;">
+    <h2 class="mb-4">Connect with Evi</h2>
+    <p class="max-w-2xl mx-auto mb-8">Follow daily case studies, book a session, or reach out directly.</p>
+    <div class="cta-section">
       <a href="{{ site.data.site.social.instagram.primary.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="bi bi-instagram"></i> {{ site.data.site.social.instagram.primary.handle }}</a>
       <a href="{{ site.data.site.social.youtube.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="bi bi-youtube"></i> {{ site.data.site.social.youtube.handle }}</a>
       <a href="{{ site.data.site.contact.telegram.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="bi bi-telegram"></i> Telegram</a>

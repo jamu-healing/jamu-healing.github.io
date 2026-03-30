@@ -205,6 +205,30 @@ section:last-child{border-bottom:none}
 .section-full-height{min-height:80vh;display:flex;align-items:center}
 .section-no-border{border-bottom:none}
 
+/* ═══ PAGE HEADER FLEX ═══ */
+.page-header-flex{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem}
+.page-header-desc{font-size:1.8rem;font-family:var(--serif);margin-top:1rem;max-width:55rem}
+
+/* ═══ SERVICE PAGE ═══ */
+.service-header-flex{display:flex;align-items:center;gap:1.6rem;margin-bottom:2.4rem}
+.service-number{font-family:var(--mono);font-size:1.2rem;color:var(--fg-muted)}
+.service-subtitle{font-family:var(--mono);font-size:1.2rem;color:var(--fg-muted);margin-bottom:0.4rem}
+.service-title{font-size:3.6rem;margin-bottom:0.8rem}
+.service-tagline{font-size:1.5rem;color:var(--primary);font-family:var(--serif);font-style:italic;margin-bottom:2rem}
+.service-description{font-size:1.6rem;margin-bottom:2.4rem}
+.price-box{padding:2.4rem;border-radius:var(--radius-sm);background:rgba(248,248,242,0.03);border:1px solid var(--border)}
+.price-box.featured-border{border-color:rgba(249,38,114,0.2)}
+.price{font-family:var(--serif);font-size:3.6rem;font-weight:700;color:var(--fg)}
+.price-note{font-size:1.4rem;margin-bottom:2rem}
+.methods-title,.indications-title,.structure-title{font-family:var(--mono);font-size:1.35rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem}
+.featured-badge{margin-left:1.2rem;padding:0.3rem 1.2rem;border-radius:2em;background:rgba(249,38,114,0.18);color:var(--primary);font-size:1.2rem;font-weight:600}
+.cta-section{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center}
+
+/* ═══ CARD FLEX ═══ */
+.card-flex{display:flex;align-items:flex-start;gap:1.2rem}
+.card-icon-accent{color:var(--accent);font-size:1.8rem;flex-shrink:0;margin-top:0.2rem}
+.card-text{font-size:1.55rem;color:rgba(248,248,242,0.85)}
+
 /* ═══ MEDIA QUERIES ═══ */
 @media(max-width:1280px){
   .container{padding:0 1.6rem}
