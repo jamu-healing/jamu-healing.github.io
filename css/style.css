@@ -177,6 +177,7 @@ section:last-child{border-bottom:none}
 
 /* ═══ BLOG CARDS ═══ */
 .blog-card{display:flex;gap:2.4rem;padding:3.2rem;border-radius:var(--radius);background:var(--bg-card);border:1px solid var(--border);transition:border-color 0.2s}
+.blog-card.is-hidden{display:none}
 .blog-card:hover{border-color:rgba(249,38,114,0.35)}
 .blog-card-body h3{font-size:2rem;margin-bottom:1rem;color:var(--fg)}
 .blog-card-body p{font-size:1.45rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
