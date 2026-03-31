@@ -241,8 +241,8 @@ show_header: false
             <div class="contact-desc">Detailed information about booking, appointments, services and methodology</div>
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><div><h3 class="contact-title">Telegram</h3><div class="contact-sub">@jamu_healing</div></div></div>
-            <div class="contact-desc">Fast response for booking and appointments</div>
+            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><div><h3 class="contact-title">Telegram</h3><div class="contact-sub">t.me/jamu_healing</div></div></div>
+            <div class="contact-desc">Booking and appointments</div>
           </a>
           <a href="https://x.com/EviSudarto" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-header"><i class="bi bi-twitter-x accent contact-icon"></i><div><h3 class="contact-title">X (Twitter)</h3><div class="contact-sub">@EviSudarto</div></div></div>
@@ -260,10 +260,10 @@ show_header: false
           <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-header"><i class="bi bi-instagram accent contact-icon"></i><div><h3 class="contact-title">Instagram</h3><div class="contact-sub">@healerdewi</div></div></div>
             <div class="contact-desc">1.6K+ followers, 430+ posts — DM for booking</div>
-            <div class="contact-badge">Fast Response · since 2016</div>
+            <div class="contact-badge">since 2016</div>
           </a>
           <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-facebook accent contact-icon"></i><div><h3 class="contact-title">Facebook</h3><div class="contact-sub">Community Page</div></div></div>
+            <div class="contact-header"><i class="bi bi-facebook accent contact-icon"></i><div><h3 class="contact-title">Facebook</h3><div class="contact-sub">fb.me/jamu-healing</div></div></div>
             <div class="contact-desc">3.6K followers, videos, photos, patient stories</div>
             <div class="contact-badge">since 2016</div>
           </a>
@@ -272,7 +272,7 @@ show_header: false
             <div class="contact-desc">Educational videos, therapy demonstrations</div>
           </a>
           <a href="https://t.me/osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><div><h3 class="contact-title">Telegram Channel</h3><div class="contact-sub">Health Updates</div></div></div>
+            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><div><h3 class="contact-title">Telegram Channel</h3><div class="contact-sub">t.me/osteopathbali</div></div></div>
             <div class="contact-desc">Health updates and wellness tips for Bali</div>
           </a>
         </div>
