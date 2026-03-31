@@ -1,5 +1,22 @@
 /* ═══ BLOG POST SPECIFIC STYLES ═══ */
 
+/* ═══ POST HEADER ═══ */
+.post-header{background:rgba(33,35,32,0.35);padding:8rem 0 4rem;border-bottom:1px solid var(--border)}
+.post-header .blog-meta{margin-bottom:1.6rem}
+.post-header h1{font-size:clamp(3rem,6vw,5rem);margin-bottom:1.6rem}
+.post-header .text-description{font-size:1.8rem;color:var(--fg-muted);max-width:65rem;margin-top:1rem}
+
+/* ═══ POST LAYOUT ═══ */
+.post-layout{display:grid;gap:4rem;grid-template-columns:1fr}
+@media(min-width:1024px){.post-layout{grid-template-columns:1fr 24rem}}
+
+/* ═══ TAGS ═══ */
+.tags-container{margin-top:4rem;padding-top:2.4rem;border-top:1px solid var(--border)}
+.tags-label{font-family:var(--mono);font-size:1.2rem;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.2rem}
+.tags-list{display:flex;flex-wrap:wrap;gap:0.8rem}
+.badge{display:inline-block;padding:0.4rem 1.2rem;border-radius:2em;font-size:1.2rem;font-family:var(--mono)}
+.badge-outline{background:transparent;border:1px solid var(--border);color:var(--fg-muted)}
+
 /* ═══ MARKDOWN TABLES ═══ */
 .post-content table{width:100%;border-collapse:collapse;margin:2.4rem 0;font-size:1.4rem}
 .post-content thead{background:rgba(248,248,242,0.06)}
