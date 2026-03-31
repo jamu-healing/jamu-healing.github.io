@@ -286,14 +286,14 @@ show_header: false
             <div class="contact-badge">since 2016</div>
           </a>
           <a href="https://g.page/r/CYm5pvsYVkpkEBM/" target="_blank" rel="noopener noreferrer" class="gmb-card">
-            <div class="flex items-center gap-3 mb-2">
-              <img src="/images/logo-javanese-therapy.png" alt="Javanese Therapy" class="gmb-logo" />
+            <div class="contact-header mb-2">
+              <img src="/images/logo-javanese-therapy.png" alt="Javanese Therapy" class="gmb-logo">
               <div>
                 <h3 class="text-lg mb-0">Javanese Therapy</h3>
                 <div class="text-xs font-mono text-primary">by Evi Sudarto</div>
               </div>
             </div>
-            <div class="flex flex-col gap-1 text-sm">
+            <div class="text-muted flex flex-col gap-1 text-xs">
               <div><i class="bi bi-geo-alt primary text-xs"></i> Jl. Blong Keker, Jimbaran, Bali</div>
               <div><i class="bi bi-clock accent text-xs"></i> Open 24 hours</div>
               <div><i class="bi bi-star-fill accent text-xs"></i> 5.0 / 5 on Google</div>
