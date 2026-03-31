@@ -162,17 +162,29 @@ section:last-child{border-bottom:none}
 .result-card .sub{font-size:1.4rem;color:var(--fg-muted)}
 
 /* ═══ CONTACT CARDS ═══ */
-.contact-card{display:flex;flex-direction:column;gap:0.4rem;padding:1.6rem;border-radius:1rem;background:rgba(248,248,242,0.04);transition:all 0.2s}
+.contact-card{display:flex;flex-direction:column;gap:0.4rem;padding:1.6rem;border-radius:1rem;background:rgba(248,248,242,0.04);transition:all 0.2s;}
 .contact-card:hover{background:rgba(248,248,242,0.08)}
-.contact-header{display:flex;align-items:center;gap:1.2rem}
-.contact-icon{font-size:2.4rem;flex-shrink:0;color:var(--accent)}
-.icon-google-colored{background:linear-gradient(136deg,#4285f4 0%,#4285f4 25%,#ea4335 25%,#ea4335 50%,#fbbc05 50%,#fbbc05 75%,#34a853 75%,#34a853 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;display:inline-block;vertical-align:middle;border:5px solid var(--border);border-radius:50%;opacity:0.8}
-.contact-title{color:var(--accent);font-weight:500}
+.contact-header{display:flex;align-items:flex-start;gap:1.2rem;}
+.contact-icon{font-size:2.4rem;flex-shrink:0;line-height:1;color:var(--accent);opacity:0.8;}
+.contact-title{/* color:var(--accent); */font-size:1.8rem;font-weight:300;}
 .contact-card:hover .contact-title{color:var(--fg)}
-.contact-sub{font-size:1.2rem;color:var(--fg-muted)}
+.contact-sub{font-size:1.2rem;color:var(--primary);white-space:nowrap;max-width:24rem;overflow-x:hidden;}
 .contact-card:hover .contact-sub{color:var(--fg)}
 .contact-desc{font-size:1.3rem;color:var(--fg-muted);line-height:1.5}
-.contact-badge{font-family:var(--mono);font-size:0.9rem;color:var(--accent);margin-top:auto}
+.contact-badge{font-family:var(--mono);font-size:0.9rem;color:var(--accent);margin-top:0.2rem;text-align:end;}
+
+.icon-google-colored{
+    background:linear-gradient(136deg,#4285f4 0%,#4285f4 25%,#ea4335 25%,#ea4335 50%,#fbbc05 50%,#fbbc05 75%,#34a853 75%,#34a853 100%);
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+    -webkit-text-fill-color:transparent;
+    color:transparent;
+    display:inline-block;
+    vertical-align:middle;
+    border:5px solid var(--border);
+    border-radius:50%;
+    opacity:0.8;
+}
 
 /* ═══ GMB CARDS ═══ */
 .gmb-card{display:block;padding:1.6rem;border-radius:var(--radius-sm);background:rgba(248,248,242,0.04);border:1px solid var(--border);transition:all 0.2s}
