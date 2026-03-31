@@ -166,6 +166,7 @@ section:last-child{border-bottom:none}
 .contact-card:hover{background:rgba(248,248,242,0.08)}
 .contact-header{display:flex;align-items:center;gap:1.2rem}
 .contact-icon{font-size:2.4rem;flex-shrink:0;color:var(--accent)}
+.icon-google-colored{background:linear-gradient(136deg,#4285f4 0%,#4285f4 25%,#ea4335 25%,#ea4335 50%,#fbbc05 50%,#fbbc05 75%,#34a853 75%,#34a853 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;display:inline-block;vertical-align:middle;border:5px solid var(--border);border-radius:50%;opacity:0.8}
 .contact-title{color:var(--accent);font-weight:500}
 .contact-card:hover .contact-title{color:var(--fg)}
 .contact-sub{font-size:1.2rem;color:var(--fg-muted)}
@@ -190,7 +191,8 @@ section:last-child{border-bottom:none}
 
 /* ═══ BLOG LAYOUT & SIDEBAR ═══ */
 .blog-layout{display:grid;gap:4rem;grid-template-columns:1fr}
-@media(min-width:1024px){.blog-layout{grid-template-columns:1fr 28rem}}
+.post-layout{display:grid;gap:4rem;grid-template-columns:1fr}
+@media(min-width:1024px){.blog-layout{grid-template-columns:1fr 28rem}.post-layout{grid-template-columns:1fr 24rem}}
 .blog-sidebar{position:sticky;top:9rem;max-height:calc(100vh - 11rem);overflow-y:auto;align-self:start}
 .blog-sidebar-title{font-family:var(--mono);font-size:1.3rem;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem}
 .blog-list,.blog-posts{display:flex;flex-direction:column;gap:2rem}

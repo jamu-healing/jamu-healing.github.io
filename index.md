@@ -237,8 +237,8 @@ show_header: false
         <h3 class="mb-6">Direct Contacts</h3>
         <div class="flex flex-col gap-4">
           <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-whatsapp accent contact-icon"></i><div><h3 class="contact-title">WhatsApp</h3><div class="contact-sub">+62 857 388 67 684</div></div></div>
-            <div class="contact-desc">Fast response for booking, appointments, services and methodology inquiries</div>
+            <div class="contact-header"><i class="bi bi-whatsapp contact-icon"></i><div><h3 class="text-lg" style="box-sizing:border-box;width:min-content;">WhatsApp</h3><div class="contact-sub">+62 857 388 67 684</div></div></div>
+            <div class="contact-desc">Detailed information about booking, appointments, services and methodology</div>
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><div><h3 class="contact-title">Telegram</h3><div class="contact-sub">@jamu_healing</div></div></div>
@@ -281,8 +281,7 @@ show_header: false
         <h3 class="mb-6">Google My Business</h3>
         <div class="flex flex-col gap-4 mb-6">
           <a href="https://sites.google.com/view/jamu-healing" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-globe accent contact-icon"></i><span class="contact-title">Google Sites</span></div>
-            <div class="contact-sub">Official Website</div>
+            <div class="contact-header"><i class="bi bi-google accent contact-icon icon-google-colored"></i><div><h3 class="text-lg mb-0">Google Sites</h3><div class="contact-sub">sites.google.com/view/jamu-healing</div></div></div>
             <div class="contact-desc">Detailed information about services and methodology</div>
             <div class="contact-badge">since 2016</div>
           </a>

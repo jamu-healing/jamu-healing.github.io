@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" href="/css/blogpost.css">
 <article>
   <div class="post-header">
     <div class="container">
@@ -22,8 +23,14 @@ layout: default
 
   <section class="section-no-border">
     <div class="container">
-      <div class="prose">
-        {{ content }}
+      <div class="post-layout">
+        <aside class="post-aside">
+          <p class="post-aside-title">Contents</p>
+          <nav id="toc"></nav>
+        </aside>
+        <div class="post-content prose">
+          {{ content }}
+        </div>
       </div>
 
       {% if page.tags.size > 0 %}
