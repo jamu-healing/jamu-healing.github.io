@@ -47,7 +47,10 @@ section:last-child{border-bottom:none}
 .footer-links{display:flex;flex-wrap:wrap;gap:0.8rem}
 .footer-links a{font-size:1.35rem;color:var(--fg-muted);padding:0.5rem 1.2rem;border-radius:0.7rem;border:1px solid var(--border)}
 .footer-links a:hover{color:var(--fg);border-color:rgba(248,248,242,0.2)}
-.footer-bottom{padding-top:2.4rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;font-size:1.3rem;color:var(--fg-muted);font-family:var(--mono)}
+.footer-social{display:flex;gap:1.2rem}
+.footer-social a{font-size:3.4rem;color:var(--fg-muted);transition:color 0.2s}
+.footer-social a:hover{color:var(--fg)}
+.footer-bottom{padding-top:3.2rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;font-size:1.3rem;color:var(--fg-muted);font-family:var(--mono)}
 @media(min-width:768px){.footer-inner{flex-direction:row;justify-content:space-between}}
 
 /* ═══ BUTTONS ═══ */
@@ -111,7 +114,7 @@ section:last-child{border-bottom:none}
 .solution-divider{border:none;border-top:1px solid var(--border);margin:1.6rem 0}
 
 /* ═══ SERVICE CARDS ═══ */
-.service-card{display:flex;flex-direction:column}
+.service-card{display:flex;flex-direction:column;justify-content:space-between}
 .service-card .price{font-family:var(--serif);font-size:3rem;font-weight:700;color:var(--fg);margin-top:auto}
 .service-card .price-note{font-size:1.35rem;color:var(--fg-muted);margin-bottom:2rem}
 .popular-badge{position:absolute;top:-1.4rem;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:0.4rem 1.6rem;border-radius:2em;font-size:1.2rem;font-weight:700}

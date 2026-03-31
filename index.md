@@ -237,16 +237,20 @@ show_header: false
         <h3 class="mb-6">Direct Contacts</h3>
         <div class="flex flex-col gap-4">
           <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-whatsapp accent contact-icon"></i><span class="contact-title">WhatsApp</span></div>
-            <div class="contact-sub">Booking & Appointments</div>
+            <div class="contact-header"><i class="bi bi-whatsapp accent contact-icon"></i><div><h3 class="contact-title">WhatsApp</h3><div class="contact-sub">+62 857 388 67 684</div></div></div>
+            <div class="contact-desc">Fast response for booking, appointments, services and methodology inquiries</div>
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><span class="contact-title">Telegram</span></div>
-            <div class="contact-sub">@jamu_healing — Booking & Appointments</div>
+            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><div><h3 class="contact-title">Telegram</h3><div class="contact-sub">@jamu_healing</div></div></div>
+            <div class="contact-desc">Fast response for booking and appointments</div>
+          </a>
+          <a href="https://x.com/EviSudarto" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-header"><i class="bi bi-twitter-x accent contact-icon"></i><div><h3 class="contact-title">X (Twitter)</h3><div class="contact-sub">@EviSudarto</div></div></div>
+            <div class="contact-desc">Updates and insights on traditional healing</div>
           </a>
           <a href="mailto:evi.sudarto@gmail.com" class="contact-card">
-            <div class="contact-header"><i class="bi bi-envelope-fill accent contact-icon"></i><span class="contact-title">Gmail Evi Sudarto</span></div>
-            <div class="contact-sub">evi.sudarto@gmail.com</div>
+            <div class="contact-header"><i class="bi bi-envelope-fill accent contact-icon"></i><div><h3 class="contact-title">Email</h3><div class="contact-sub">evi.sudarto@gmail.com</div></div></div>
+            <div class="contact-desc">For official correspondence and commercial proposals</div>
           </a>
         </div>
       </div>
@@ -254,25 +258,21 @@ show_header: false
         <h3 class="mb-6">Social & Community</h3>
         <div class="flex flex-col gap-4">
           <a href="https://www.instagram.com/healerdewi/" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-instagram accent contact-icon"></i><span class="contact-title">@healerdewi</span></div>
-            <div class="contact-sub">Instagram — Live Cases</div>
-            <div class="contact-desc">1.6K+ followers, 430+ posts</div>
-            <div class="contact-badge">since 2016</div>
+            <div class="contact-header"><i class="bi bi-instagram accent contact-icon"></i><div><h3 class="contact-title">Instagram</h3><div class="contact-sub">@healerdewi</div></div></div>
+            <div class="contact-desc">1.6K+ followers, 430+ posts — DM for booking</div>
+            <div class="contact-badge">Fast Response · since 2016</div>
           </a>
           <a href="https://www.facebook.com/Jamu.Healing/" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-facebook accent contact-icon"></i><span class="contact-title">Facebook</span></div>
-            <div class="contact-sub">Community Page</div>
-            <div class="contact-desc">Videos, photos, patient stories</div>
+            <div class="contact-header"><i class="bi bi-facebook accent contact-icon"></i><div><h3 class="contact-title">Facebook</h3><div class="contact-sub">Community Page</div></div></div>
+            <div class="contact-desc">3.6K followers, videos, photos, patient stories</div>
             <div class="contact-badge">since 2016</div>
           </a>
           <a href="https://www.youtube.com/@osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-youtube accent contact-icon"></i><span class="contact-title">@osteopathbali</span></div>
-            <div class="contact-sub">YouTube — Educational</div>
+            <div class="contact-header"><i class="bi bi-youtube accent contact-icon"></i><div><h3 class="contact-title">YouTube</h3><div class="contact-sub">@osteopathbali</div></div></div>
             <div class="contact-desc">Educational videos, therapy demonstrations</div>
           </a>
           <a href="https://t.me/osteopathbali" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><span class="contact-title">Telegram Channel</span></div>
-            <div class="contact-sub">Health Updates</div>
+            <div class="contact-header"><i class="bi bi-telegram accent contact-icon"></i><div><h3 class="contact-title">Telegram Channel</h3><div class="contact-sub">Health Updates</div></div></div>
             <div class="contact-desc">Health updates and wellness tips for Bali</div>
           </a>
         </div>
@@ -301,14 +301,14 @@ show_header: false
             </div>
           </a>
           <a href="https://g.page/r/CQbWJd8NnTevEBM/" target="_blank" rel="noopener noreferrer" class="gmb-card">
-            <div class="flex items-center gap-3 mb-2">
+            <div class="contact-header mb-2">
               <img src="/images/logo-massage-classes.webp" alt="Massage Classes" class="gmb-logo" />
               <div>
                 <h3 class="text-lg mb-0">Massage Classes</h3>
                 <div class="text-xs font-mono text-primary">by Evi Sudarto</div>
               </div>
             </div>
-            <div class="flex flex-col gap-1 text-sm">
+            <div class="text-muted flex flex-col gap-1 text-xs">
               <div><i class="bi bi-geo-alt primary text-xs"></i> Jimbaran, Bali</div>
               <div><i class="bi bi-bookmark accent text-xs"></i> Professional Javanese Massage Courses</div>
             </div>
