@@ -87,4 +87,27 @@ document.addEventListener('DOMContentLoaded', function() {
     toc.appendChild(ul);
   }
 });
+
+function copyCode(button) {
+  const codeBlock = button.closest('.code-block-wrapper').querySelector('code');
+  const text = codeBlock.textContent;
+  navigator.clipboard.writeText(text).then(function() {
+    button.innerHTML = '<i class="bi bi-check"></i> Copied!';
+    setTimeout(function() {
+      button.innerHTML = '<i class="bi bi-clipboard"></i> Copy';
+    }, 2000);
+  });
+}
+
+function downloadCode(button) {
+  const codeBlock = button.closest('.code-block-wrapper').querySelector('code');
+  const text = codeBlock.textContent;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'code.txt';
+  a.click();
+  URL.revokeObjectURL(url);
+}
 </script>

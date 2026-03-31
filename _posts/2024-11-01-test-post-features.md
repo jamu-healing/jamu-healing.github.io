@@ -27,6 +27,15 @@ Here is a comparison of different treatment methods:
 
 ### JavaScript Example
 
+<div class="code-block-wrapper">
+<div class="code-block-header">
+<span>javascript</span>
+<div class="code-block-actions">
+<button onclick="copyCode(this)"><i class="bi bi-clipboard"></i> Copy</button>
+<button onclick="downloadCode(this)"><i class="bi bi-download"></i> Download</button>
+</div>
+</div>
+
 ```javascript
 // Function to calculate treatment effectiveness
 function calculateEffectiveness(method, sessions) {
@@ -43,6 +52,7 @@ function calculateEffectiveness(method, sessions) {
 // Export the function
 module.exports = { calculateEffectiveness };
 ```
+</div>
 
 ### Python Example
 

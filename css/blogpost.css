@@ -45,14 +45,7 @@
 .code-block-actions button:hover{color:var(--fg);border-color:rgba(248,248,242,0.3);background:rgba(248,248,242,0.06)}
 
 /* ═══ CODE SYNTAX HIGHLIGHTING ═══ */
-.post-content .token.comment,.post-content .token.prolog,.post-content .token.doctype,.post-content .token.cdata{color:var(--fg-muted)}
-.post-content .token.punctuation{color:var(--fg-muted)}
-.post-content .token.property,.post-content .token.tag,.post-content .token.boolean,.post-content .token.number,.post-content .token.constant,.post-content .token.symbol,.post-content .token.deleted{color:var(--primary)}
-.post-content .token.selector,.post-content .token.attr-name,.post-content .token.string,.post-content .token.char,.post-content .token.builtin,.post-content .token.inserted{color:var(--accent)}
-.post-content .token.operator,.post-content .token.entity,.post-content .token.url{color:var(--fg-muted)}
-.post-content .token.atrule,.post-content .token.attr-value,.post-content .token.keyword{color:var(--primary)}
-.post-content .token.function,.post-content .token.class-name{color:var(--accent)}
-.post-content .token.regex,.post-content .token.important,.post-content .token.variable{color:var(--primary)}
+/* Let Prism.js theme handle syntax highlighting colors */
 
 /* ═══ BLOCKQUOTES ═══ */
 .post-content blockquote{margin:2.4rem 0;padding:2rem 2.4rem;border-left:4px solid var(--primary);background:rgba(249,38,114,0.06);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
