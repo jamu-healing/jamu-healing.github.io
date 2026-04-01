@@ -36,9 +36,9 @@
 
 /* ═══ LISTS ═══ */
 .post-content ul,.post-content ol{margin:1.6rem 0;padding-left:2.4rem}
-.post-content li{margin-bottom:0.8rem;color:var(--fg-muted);line-height:1.7}
+.post-content li{margin-bottom:0.8rem;color:var(--fg-muted);line-height:1.7;padding-left:0.5rem}
 .post-content li::marker{color:var(--primary)}
-.post-content ul li::marker{content:'•'}
+.post-content ul li::marker{content:'•';margin-right:0.5rem}
 .post-content ol li::marker{font-weight:600}
 
 /* ═══ HEADINGS IN POST ═══ */
