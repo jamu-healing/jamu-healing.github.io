@@ -128,6 +128,10 @@ paginate_path: "/blog/page:num/"
 
 ## Images and Links
 
+Here is an example image:
+
+![Evi Sudarto - Traditional Javanese Medicine Practitioner](/images/evi-sudarto.jpg)
+
 For more information, visit our [services page](/services) or contact us via [WhatsApp](https://wa.me/message/EPF44RLLBUY4D1).
 
 ## Conclusion

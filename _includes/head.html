@@ -13,6 +13,9 @@
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+{% if page.url contains '/4-70-16/' %}
+<link rel="stylesheet" href="{{ '/css/private.css' | relative_url }}">
+{% endif %}
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/images/favicon.png">

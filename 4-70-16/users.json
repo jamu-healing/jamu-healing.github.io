@@ -1,0 +1,16 @@
+{
+  "admin": {
+    "name": "Administrator",
+    "status": "System Access: Full",
+    "image": "/images/evi-sudarto.jpg",
+    "id_timecode": "20260329-001",
+    "postslist": ["index.md", "multable.md", "test-post.md"]
+  },
+  "debug": {
+    "name": "Debug User",
+    "status": "Testing Mode",
+    "image": "/images/evi-sudarto.jpg",
+    "id_timecode": "20260329-002",
+    "postslist": ["test-post.md"]
+  }
+}

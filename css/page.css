@@ -39,3 +39,10 @@
 .page-content blockquote{margin:2.4rem 0;padding:2rem 2.4rem;border-left:4px solid var(--primary);background:rgba(249,38,114,0.06);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
 .page-content blockquote p{color:var(--fg);font-style:italic;margin:0}
 .page-content blockquote p:last-child{margin-bottom:0}
+
+/* ═══ PAGE LAYOUT ═══ */
+.page-layout{display:grid;gap:4rem;grid-template-columns:1fr}
+@media(min-width:1024px){.page-layout{grid-template-columns:1fr 28rem}}
+.page-main{min-width:0}
+.page-sidebar{position:sticky;top:9rem;max-height:calc(100vh - 11rem);overflow-y:auto;align-self:start}
+.page-sidebar-title{font-family:var(--mono);font-size:1.3rem;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.6rem}
