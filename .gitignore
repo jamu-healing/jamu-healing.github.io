@@ -1,3 +1,10 @@
+# Private Keys & Local Secrets
+4-70-16/.local-keys.json
+4-70-16/.env
+.github/payload.json
+node_modules/
+*.log
+
 # Specs and documentation (developer files)
 specs/
 .clinerules/
@@ -13,9 +20,5 @@ Thumbs.db
 *.swp
 *.swo
 
-# Node modules (if any)
-node_modules/
-
 # Temporary files
 *.tmp
-*.log

@@ -1,16 +1,23 @@
 {
-  "admin": {
+  "u_8c6976": {
     "name": "Administrator",
-    "status": "System Access: Full",
+    "pubKey": "U52dBS+f/H5hIZ9tgm3ZGJFVABry+2lP3zQKTVdKxSk=",
+    "accessLevel": "admin",
     "image": "/images/evi-sudarto.jpg",
     "id_timecode": "20260329-001",
-    "postslist": ["index.md", "multable.md", "test-post.md"]
+    "postslist": [
+      "test-post.md",
+      "multable.md"
+    ]
   },
-  "debug": {
+  "u_0b8e9e": {
     "name": "Debug User",
-    "status": "Testing Mode",
+    "pubKey": "iei4oXo8sTG08K1X5r9hR/UXdIIG492IjpmOeXIOAKE=",
+    "accessLevel": "debug",
     "image": "/images/evi-sudarto.jpg",
     "id_timecode": "20260329-002",
-    "postslist": ["test-post.md"]
+    "postslist": [
+      "test-post.md"
+    ]
   }
 }

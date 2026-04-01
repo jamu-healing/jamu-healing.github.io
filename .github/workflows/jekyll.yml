@@ -26,6 +26,11 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
           
       - name: Setup Pages
         id: pages
@@ -35,6 +40,11 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+          
+      - name: Encrypt private posts
+        run: node scripts/encrypt-build.js
+        env:
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

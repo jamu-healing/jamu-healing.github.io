@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/css/blogpost.css">
+<article>
+  <div class="post-header">
+    <div class="container">
+      <div class="blog-meta blog-meta-spacing">
+        <span><i class="bi bi-lock"></i> Encrypted Content</span>
+        <span><i class="bi bi-calendar3"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+      </div>
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <section class="section-no-border">
+    <div class="container">
+      <div class="enc-warning">Encrypted content - enter passkey in /4-70-16/ to view</div>
+      <enc-box data-enc-pk="{{ page.pubKey }}" class="is-hidden">{{ content | remove_first: "---" | split: "enc::" | last | strip }}</enc-box>
+    </div>
+  </section>
+</article>
