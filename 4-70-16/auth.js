@@ -56,15 +56,18 @@ function checkAdminServices() {
       if (el) el.textContent = 'n8n: Offline';
     });
 
-  // WebDav - use no-cors to avoid CORS errors (OPTIONS returns 204)
+  // WebDav - GET with Basic auth, 401 = server responding (online)
   var auth = 'Basic ' + btoa('admin:admin');
   fetch('https://webdav-server.iguanodon-halosaur.ts.net/', {
-    method: 'OPTIONS',
-    mode: 'no-cors'
+    headers: { 'Authorization': auth }
   })
-    .then(() => {
+    .then(r => {
       var el = document.getElementById('webdav-stat');
-      if (el) el.textContent = 'WebDav: Online';
+      if (el) {
+        if (r.status === 200) el.textContent = 'WebDav: Connected (200 OK)';
+        else if (r.status === 401) el.textContent = 'WebDav: Online (401)';
+        else el.textContent = 'WebDav: Error ' + r.status;
+      }
     })
     .catch(() => {
       var el = document.getElementById('webdav-stat');
