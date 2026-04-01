@@ -30,14 +30,14 @@ title: "Private Access"
           </div>
           <div id="search-results" class="search-results"></div>
         </div>
-        <div id="user-card" class="user-card is-hidden">
-          <img id="u-img" src="" class="avatar" alt="User avatar">
-          <span id="u-name" class="user-name"></span>
+        <div id="user-card" class="user-card">
+          <img id="u-img" src="/images/person-slash.svg" class="avatar" alt="User avatar">
+          <span id="u-name" class="user-name">Guest</span>
         </div>
-        <div id="auth-controls" class="auth-controls">
+        <form id="auth-controls" class="auth-controls" autocomplete="off">
           <input type="password" id="passkey" placeholder="Enter passkey" class="passkey-input">
-          <button id="login-btn" class="btn btn-primary">Access</button>
-        </div>
+          <button type="submit" id="login-btn" class="btn btn-primary">Access</button>
+        </form>
       </aside>
 
       <main id="content-main" class="auth-main">

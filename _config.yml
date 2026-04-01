@@ -57,6 +57,10 @@ exclude:
   - vendor
   - node_modules
 
+# Include non-excluded directories
+include:
+  - 4-70-16
+
 
 # Sass configuration
 sass:

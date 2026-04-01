@@ -1,4 +1,5 @@
 const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4').then(f => f.load());
+const DEFAULT_AVATAR = '/images/person-slash.svg';
 
 async function authorize(key) {
   try {
@@ -19,7 +20,7 @@ async function authorize(key) {
         .map(file => `<li><a href="./${file}">${file}</a></li>`).join('');
       
       document.querySelectorAll('#auth-controls, #intro').forEach(el => el.classList.add('is-hidden'));
-      document.querySelectorAll('#user-card, #posts-render').forEach(el => el.classList.remove('is-hidden'));
+      document.querySelectorAll('#posts-render').forEach(el => el.classList.remove('is-hidden'));
 
       if (activeKey === 'admin') {
         checkAdminServices();
@@ -37,51 +38,48 @@ function checkAdminServices() {
   const existingPanel = document.getElementById('admin-info');
   if (existingPanel) return;
 
-  const adminPanel = `<section id="admin-info" class="admin-panel">
-    <div class="admin-title">Admin Services Status</div>
-    <div id="n8n-stat" class="admin-stat">n8n: checking...</div>
-    <div id="webdav-stat" class="admin-stat">WebDav: checking...</div>
-  </section>`;
+  const adminPanel = '<section id="admin-info" class="admin-panel">' +
+    '<div class="admin-title">Admin Services Status</div>' +
+    '<div id="n8n-stat" class="admin-stat">n8n: checking...</div>' +
+    '<div id="webdav-stat" class="admin-stat">WebDav: checking...</div>' +
+    '</section>';
   document.getElementById('content-main').insertAdjacentHTML('afterbegin', adminPanel);
 
-  fetch('https://n8n.iguanodon-halosaur.ts.net/', { mode: 'no-cors' })
+  // n8n - use webhook/sgn endpoint with no-cors (opaque response means success)
+  fetch('https://n8n.iguanodon-halosaur.ts.net/webhook/sgn', { mode: 'no-cors' })
     .then(() => {
-      const el = document.getElementById('n8n-stat');
+      var el = document.getElementById('n8n-stat');
       if (el) el.textContent = 'n8n: Online';
     })
     .catch(() => {
-      const el = document.getElementById('n8n-stat');
+      var el = document.getElementById('n8n-stat');
       if (el) el.textContent = 'n8n: Offline';
     });
 
-  const auth = 'Basic ' + btoa('admin:admin');
-  fetch('https://webdav-server.iguanodon-halosaur.ts.net', { headers: { 'Authorization': auth } })
-    .then(r => {
-      const el = document.getElementById('webdav-stat');
-      if (el) el.textContent = r.ok ? 'WebDav: Connected (200 OK)' : 'WebDav: Error';
+  // WebDav - use no-cors to avoid CORS errors (OPTIONS returns 204)
+  var auth = 'Basic ' + btoa('admin:admin');
+  fetch('https://webdav-server.iguanodon-halosaur.ts.net/', {
+    method: 'OPTIONS',
+    mode: 'no-cors'
+  })
+    .then(() => {
+      var el = document.getElementById('webdav-stat');
+      if (el) el.textContent = 'WebDav: Online';
     })
     .catch(() => {
-      const el = document.getElementById('webdav-stat');
+      var el = document.getElementById('webdav-stat');
       if (el) el.textContent = 'WebDav: Offline';
     });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  const loginBtn = document.getElementById('login-btn');
-  const passkeyInput = document.getElementById('passkey');
+  var authForm = document.getElementById('auth-controls');
 
-  if (loginBtn) {
-    loginBtn.addEventListener('click', function() {
-      const passkey = document.getElementById('passkey');
+  if (authForm) {
+    authForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var passkey = document.getElementById('passkey');
       if (passkey) authorize(passkey.value);
-    });
-  }
-
-  if (passkeyInput) {
-    passkeyInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        authorize(this.value);
-      }
     });
   }
 
