@@ -237,7 +237,7 @@ show_header: false
         <h3 class="mb-6">Direct Contacts</h3>
         <div class="flex flex-col gap-4">
           <a href="https://wa.me/message/EPF44RLLBUY4D1" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <div class="contact-header"><i class="bi bi-whatsapp contact-icon"></i><div><h3 class="text-lg" style="box-sizing:border-box;width:min-content;">WhatsApp</h3><div class="contact-sub">+62 857 388 67 684</div></div></div>
+            <div class="contact-header"><i class="bi bi-whatsapp contact-icon"></i><div><h3 class="text-lg">WhatsApp</h3><div class="contact-sub">+62 857 388 67 684</div></div></div>
             <div class="contact-desc">Detailed information about booking, appointments, services and methodology</div>
           </a>
           <a href="https://t.me/jamu_healing" target="_blank" rel="noopener noreferrer" class="contact-card">

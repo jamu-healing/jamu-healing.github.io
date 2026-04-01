@@ -77,7 +77,7 @@ section:last-child{border-bottom:none}
 .check-list li{display:flex;align-items:flex-start;gap:1rem;font-size:1.55rem;color:var(--fg-muted);padding:0.5rem 0}
 .check-list li i{color:var(--accent);flex-shrink:0;margin-top:0.3rem}
 .dot-list li{display:flex;align-items:center;gap:1rem;font-size:1.55rem;color:var(--fg-muted);padding:0.4rem 0}
-.dot-list li::before{content:'';width:0.6rem;height:0.6rem;border-radius:50%;background:var(--primary)}
+.dot-list li::before{content:'';width:0.6rem;height:0.6rem;border-radius:50%;background:var(--primary);margin-right:0.5rem}
 
 /* ═══ GRIDS ═══ */
 .grid-2{display:grid;gap:2.4rem;grid-template-columns:1fr}
@@ -210,6 +210,8 @@ section:last-child{border-bottom:none}
 .blog-list,.blog-posts{display:flex;flex-direction:column;gap:2rem}
 .tag-filter-container{margin-bottom:3.2rem}
 .tag-filter{display:flex;flex-wrap:wrap;gap:0.8rem;max-height:25vh;overflow-y:auto}
+.tag-btn,.cat-btn{transition:all 0.2s}
+.tag-btn.active,.cat-btn.active{background:var(--primary)!important;color:#fff!important;border-color:var(--primary)!important}
 
 /* ═══ FILTER TABS ═══ */
 .filter-tabs{display:flex;gap:0;margin-bottom:1.6rem;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
