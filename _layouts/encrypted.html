@@ -20,3 +20,53 @@ layout: default
     </div>
   </section>
 </article>
+<script>
+(function() {
+  var IV_LEN = 12;
+  var ITERATIONS = 100000;
+
+  async function deriveKey(passkey) {
+    var enc = new TextEncoder();
+    var salt = enc.encode(passkey);
+    var keyMaterial = await crypto.subtle.importKey('raw', enc.encode(passkey), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: salt, iterations: ITERATIONS, hash: 'SHA-256' },
+      keyMaterial,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['decrypt']
+    );
+  }
+
+  async function decrypt(base64, key) {
+    var buf = Uint8Array.from(atob(base64), function(c) { return c.charCodeAt(0); });
+    var iv = buf.slice(0, IV_LEN);
+    var cipher = buf.slice(IV_LEN);
+    var plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, key, cipher);
+    return new TextDecoder().decode(plain);
+  }
+
+  async function decryptPage() {
+    var box = document.querySelector('enc-box');
+    if (!box) return;
+    var encText = box.textContent.trim().replace(/^enc::/, '');
+    if (!encText) return;
+    var passkey = sessionStorage.getItem('passkey');
+    if (!passkey) {
+      var warn = document.querySelector('.enc-warning');
+      if (warn) warn.textContent = 'Passkey required - login at /4-70-16/ first';
+      return;
+    }
+    var key = await deriveKey(passkey);
+    try {
+      var html = await decrypt(encText, key);
+      box.classList.remove('is-hidden');
+      box.innerHTML = html;
+      var warn = document.querySelector('.enc-warning');
+      if (warn) warn.classList.add('is-hidden');
+    } catch (e) { console.error('Decrypt failed:', e); }
+  }
+
+  document.addEventListener('DOMContentLoaded', decryptPage);
+})();
+</script>
