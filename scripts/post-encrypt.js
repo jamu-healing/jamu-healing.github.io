@@ -34,7 +34,7 @@ if (!fs.existsSync(siteDir)) {
   process.exit(1);
 }
 
-const htmlFiles = fs.readdirSync(siteDir).filter(f => f.endsWith('.html'));
+const htmlFiles = fs.readdirSync(siteDir).filter(f => f.endsWith('.html') && f !== 'index.html');
 
 for (const file of htmlFiles) {
   const filePath = path.join(siteDir, file);
