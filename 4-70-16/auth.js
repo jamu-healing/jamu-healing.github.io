@@ -79,6 +79,7 @@ async function authorize(passkey) {
     if (matched) {
       localStorage.setItem('jamu_key_' + visitor.visitorId, inputKey);
       sessionStorage.setItem('access_level', matched.accessLevel);
+      sessionStorage.setItem('passkey', inputKey);
       SESSION.passkey = inputKey;
       SESSION.key = await deriveKey(inputKey);
       SESSION.access = matched.accessLevel;
