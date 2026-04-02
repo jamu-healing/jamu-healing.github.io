@@ -86,8 +86,6 @@ async function authorize(passkey) {
       setStatus(new Date().toLocaleTimeString() + ' | ' + matched.accessLevel);
       document.getElementById('u-name').textContent = matched.name;
       document.getElementById('u-img').src = matched.image;
-      document.getElementById('posts-render').innerHTML = matched.postslist
-        .map(function(f) { return '<li><a href="./' + f + '">' + f + '</a></li>'; }).join('');
       document.querySelectorAll('#auth-controls, #intro').forEach(function(el) { el.classList.add('is-hidden'); });
       document.querySelectorAll('#posts-container').forEach(function(el) { el.classList.remove('is-hidden'); });
 
