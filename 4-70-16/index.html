@@ -47,15 +47,6 @@ title: "Private Access"
           <p>Once you have the passkey, enter it in the field on the left to unlock your personalized content.</p>
         </div>
         <div id="posts-container" class="posts-cards is-hidden">
-          {% assign private_posts = site.pages | where_exp: "page", "page.path contains '4-70-16/' and page.path != '4-70-16/index.html' and page.path != '4-70-16/index.md.old'" %}
-          {% for post in private_posts %}
-          <a href="{{ post.url }}" class="post-card">
-            <h3 class="post-card-title">{{ post.title }}</h3>
-            {% if post.excerpt %}
-            <p class="post-card-excerpt">{{ post.excerpt }}</p>
-            {% endif %}
-          </a>
-          {% endfor %}
         </div>
       </main>
     </div>
