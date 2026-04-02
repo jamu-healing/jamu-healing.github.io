@@ -40,18 +40,17 @@ for (const file of htmlFiles) {
   const filePath = path.join(siteDir, file);
   let html = fs.readFileSync(filePath, 'utf8');
 
-  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
-  if (!mainMatch) continue;
+  // Find article content (includes CSS link, header, content)
+  const articleMatch = html.match(/<link rel="stylesheet"[^>]*>[\s\S]*?<article[^>]*>[\s\S]*?<\/article>/i);
+  if (!articleMatch) continue;
 
-  const mainContent = mainMatch[1];
-  const encrypted = encrypt(mainContent, keyBuffer);
+  const articleContent = articleMatch[0];
+  const encrypted = encrypt(articleContent, keyBuffer);
 
   html = html.replace(
-    mainMatch[0],
-    '<main id="content-main">\n' +
-    '      <div class="enc-warning">Encrypted content - enter passkey in /4-70-16/ to view</div>\n' +
-    '      <enc-box class="is-hidden">enc::' + encrypted + '</enc-box>\n' +
-    '    </main>'
+    articleContent,
+    '<div class="enc-warning">Encrypted content - enter passkey in /4-70-16/ to view</div>\n' +
+    '      <enc-box class="is-hidden">enc::' + encrypted + '</enc-box>'
   );
 
   var script = '\n<script>\n' +
