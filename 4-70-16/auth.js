@@ -89,7 +89,7 @@ async function authorize(passkey) {
       document.getElementById('posts-render').innerHTML = matched.postslist
         .map(function(f) { return '<li><a href="./' + f + '">' + f + '</a></li>'; }).join('');
       document.querySelectorAll('#auth-controls, #intro').forEach(function(el) { el.classList.add('is-hidden'); });
-      document.querySelectorAll('#posts-render').forEach(function(el) { el.classList.remove('is-hidden'); });
+      document.querySelectorAll('#posts-container').forEach(function(el) { el.classList.remove('is-hidden'); });
 
       if (matched.accessLevel === 'admin') {
         renderAdminUI();
