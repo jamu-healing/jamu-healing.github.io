@@ -39,7 +39,7 @@ const PROFILES = {
     name: 'Administrator',
     image: '/images/evi-sudarto.jpg',
     id_timecode: '20260329-001',
-    postslist: ['test-post.md', 'multable.md']
+    postslist: ['test-post.md', 'multable.md', 'new-test-post.md']
   },
   debug: {
     name: 'Debug User',

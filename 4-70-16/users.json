@@ -1,13 +1,14 @@
 {
   "u_8c6976": {
     "name": "Administrator",
-    "pubKey": "U52dBS+f/H5hIZ9tgm3ZGJFVABry+2lP3zQKTVdKxSk=",
+    "pubKey": "9YAKDZBjAcj++kx+gYcComg6mM9P/udI9JzjWo+qKJk=",
     "accessLevel": "admin",
     "image": "/images/evi-sudarto.jpg",
     "id_timecode": "20260329-001",
     "postslist": [
       "test-post.md",
-      "multable.md"
+      "multable.md",
+      "new-test-post.md"
     ]
   },
   "u_0b8e9e": {
