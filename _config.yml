@@ -32,6 +32,12 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+  - scope:
+      path: "4-70-16"
+      type: "pages"
+    values:
+      layout: "post"
+      author: "Evi Sudarto"
 
 # Plugins
 plugins:
@@ -60,7 +66,6 @@ exclude:
 # Include non-excluded directories
 include:
   - 4-70-16
-
 
 # Sass configuration
 sass:

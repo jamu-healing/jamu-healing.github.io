@@ -68,16 +68,16 @@ layout: default
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const toc = document.getElementById('toc');
-  const headings = document.querySelectorAll('.post-content h2, .post-content h3');
-  
+  var toc = document.getElementById('toc');
+  var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+
   if (toc && headings.length > 0) {
-    const ul = document.createElement('ul');
+    var ul = document.createElement('ul');
     headings.forEach(function(heading, index) {
-      const id = heading.id || 'heading-' + index;
+      var id = heading.id || 'heading-' + index;
       heading.id = id;
-      const li = document.createElement('li');
-      const a = document.createElement('a');
+      var li = document.createElement('li');
+      var a = document.createElement('a');
       a.href = '#' + id;
       a.textContent = heading.textContent;
       a.className = heading.tagName.toLowerCase() === 'h3' ? 'toc-h3' : 'toc-h2';
@@ -86,51 +86,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     toc.appendChild(ul);
   }
-});
 
-function copyCode(button) {
-  const codeBlock = button.closest('.code-block-wrapper').querySelector('code');
-  const text = codeBlock.textContent;
-  navigator.clipboard.writeText(text).then(function() {
-    button.innerHTML = '<i class="bi bi-check"></i> Copied!';
-    setTimeout(function() {
-      button.innerHTML = '<i class="bi bi-clipboard"></i> Copy';
-    }, 2000);
-  });
-}
-
-function downloadCode(button) {
-  const codeBlock = button.closest('.code-block-wrapper').querySelector('code');
-  const text = codeBlock.textContent;
-  const blob = new Blob([text], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'code.txt';
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-// Add code block headers dynamically
-document.addEventListener('DOMContentLoaded', function() {
-  const codeBlocks = document.querySelectorAll('pre');
+  var codeBlocks = document.querySelectorAll('pre');
   codeBlocks.forEach(function(pre) {
-    const code = pre.querySelector('code');
+    var code = pre.querySelector('code');
     if (!code) return;
-    
-    const langMatch = code.className.match(/language-(\w+)/);
-    const lang = langMatch ? langMatch[1] : 'code';
-    
-    const wrapper = document.createElement('div');
+
+    var langMatch = code.className.match(/language-(\w+)/);
+    var lang = langMatch ? langMatch[1] : 'code';
+
+    var wrapper = document.createElement('div');
     wrapper.className = 'code-block-wrapper';
-    
-    const header = document.createElement('div');
+
+    var header = document.createElement('div');
     header.className = 'code-block-header';
-    header.innerHTML = '<span>' + lang + '</span><div class="code-block-actions"><button onclick="copyCode(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg> Copy</button><button onclick="downloadCode(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg> Download</button></div>';
-    
+    header.innerHTML = '<span>' + lang + '</span>';
+
     pre.parentNode.insertBefore(wrapper, pre);
     wrapper.appendChild(header);
     wrapper.appendChild(pre);
   });
 });
 </script>
+
+{% if page.path contains '4-70-16/' %}
+<script>
+(function() {
+  var IV_LEN = 12, ITERATIONS = 100000;
+  async function deriveKey(pk) {
+    var enc = new TextEncoder();
+    var salt = enc.encode(pk);
+    var km = await crypto.subtle.importKey('raw', enc.encode(pk), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:ITERATIONS,hash:'SHA-256'}, km, {name:'AES-GCM',length:256}, false, ['decrypt']);
+  }
+  async function decrypt(b64, key) {
+    var buf = Uint8Array.from(atob(b64), function(c){return c.charCodeAt(0);});
+    var iv = buf.slice(0, IV_LEN);
+    var ct = buf.slice(IV_LEN);
+    var pt = await crypto.subtle.decrypt({name:'AES-GCM',iv:iv}, key, ct);
+    return new TextDecoder().decode(pt);
+  }
+  async function run() {
+    var box = document.querySelector('enc-box');
+    if (!box) return;
+    var encText = box.textContent.trim().replace(/^enc::/,'');
+    if (!encText) return;
+    var pk = sessionStorage.getItem('passkey');
+    if (!pk) { var w=document.querySelector('.enc-warning'); if(w) w.textContent='Passkey required - login at /4-70-16/ first'; return; }
+    var key = await deriveKey(pk);
+    try {
+      var html = await decrypt(encText, key);
+      box.classList.remove('is-hidden');
+      box.innerHTML = html;
+      var w=document.querySelector('.enc-warning');
+      if(w) w.classList.add('is-hidden');
+    } catch(e) { console.error('Decrypt failed:', e); }
+  }
+  document.addEventListener('DOMContentLoaded', run);
+})();
+</script>
+{% endif %}

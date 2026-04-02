@@ -211,3 +211,33 @@ enc-box {
   line-height: 1.7;
   color: var(--fg);
 }
+
+/* Post Cards */
+.posts-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.post-card {
+  display: block;
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.post-card:hover {
+  border-color: rgba(249,38,114,0.35);
+}
+.post-card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 0.8rem;
+}
+.post-card-excerpt {
+  font-size: 1.45rem;
+  color: var(--fg-muted);
+  line-height: 1.6;
+}
