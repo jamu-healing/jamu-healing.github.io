@@ -54,6 +54,12 @@ for (const file of htmlFiles) {
     '    </main>'
   );
 
+  var script = '\n<script>\n' +
+    '(function(){var IV_LEN=12,ITERATIONS=100000;async function deriveKey(pk){var enc=new TextEncoder();var salt=enc.encode(pk);var km=await crypto.subtle.importKey("raw",enc.encode(pk),"PBKDF2",false,["deriveKey"]);return crypto.subtle.deriveKey({name:"PBKDF2",salt:salt,iterations:ITERATIONS,hash:"SHA-256"},km,{name:"AES-GCM",length:256},false,["decrypt"]);}async function decrypt(b64,key){var buf=Uint8Array.from(atob(b64),function(c){return c.charCodeAt(0);});var iv=buf.slice(0,IV_LEN);var ct=buf.slice(IV_LEN);var pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:iv},key,ct);return new TextDecoder().decode(pt);}async function run(){var box=document.querySelector("enc-box");if(!box)return;var encText=box.textContent.trim().replace(/^enc::/,"");if(!encText)return;var pk=sessionStorage.getItem("passkey");if(!pk){var w=document.querySelector(".enc-warning");if(w)w.textContent="Passkey required - login at /4-70-16/ first";return;}var key=await deriveKey(pk);try{var html=await decrypt(encText,key);box.classList.remove("is-hidden");box.innerHTML=html;var w=document.querySelector(".enc-warning");if(w)w.classList.add("is-hidden");}catch(e){console.error("Decrypt failed:",e);}}document.addEventListener("DOMContentLoaded",run);})();\n' +
+    '<\/script>\n';
+
+  html = html.replace('</body>', script + '</body>');
+
   fs.writeFileSync(filePath, html);
   console.log('Encrypted:', file);
 }
