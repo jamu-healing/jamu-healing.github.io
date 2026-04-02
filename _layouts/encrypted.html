@@ -16,7 +16,7 @@ layout: default
   <section class="section-no-border">
     <div class="container">
       <div class="enc-warning">Encrypted content - enter passkey in /4-70-16/ to view</div>
-      <enc-box data-enc-pk="{{ page.pubKey }}" class="is-hidden">{{ content | remove_first: "---" | split: "enc::" | last | strip }}</enc-box>
+      <enc-box data-enc-pk="{{ page.pubKey }}" class="is-hidden">{{ content | split: "enc::" | last | strip }}</enc-box>
     </div>
   </section>
 </article>
