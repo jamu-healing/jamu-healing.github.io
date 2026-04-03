@@ -14,7 +14,10 @@ layout: default
 
   <section class="section-no-border">
     <div class="container">
-      {{ content | split: "enc::" | last | strip }}
+      <div class="enc-warning">Passkey required - login at /4-70-16/ first</div>
+      <div class="post-content prose">
+        {{ content | split: "enc::" | last | strip }}
+      </div>
     </div>
   </section>
 </article>
@@ -51,8 +54,6 @@ layout: default
     if (!encText) return;
     var passkey = sessionStorage.getItem('passkey');
     if (!passkey) {
-      var warn = document.querySelector('.enc-warning');
-      if (warn) warn.textContent = 'Passkey required - login at /4-70-16/ first';
       return;
     }
     var key = await deriveKey(passkey);
@@ -62,7 +63,11 @@ layout: default
       box.innerHTML = html;
       var warn = document.querySelector('.enc-warning');
       if (warn) warn.classList.add('is-hidden');
-    } catch (e) { console.error('Decrypt failed:', e); }
+    } catch (e) {
+      console.error('Decrypt failed:', e);
+      var warn = document.querySelector('.enc-warning');
+      if (warn) warn.textContent = 'Decryption failed - invalid passkey';
+    }
   }
 
   document.addEventListener('DOMContentLoaded', decryptPage);

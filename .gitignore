@@ -9,6 +9,8 @@ node_modules/
 specs/
 .clinerules/
 .static-output/
+4-70-16/docs/
+4-70-16/md-src/
 
 # OS files
 .DS_Store
