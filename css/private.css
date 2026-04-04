@@ -219,16 +219,27 @@ enc-box {
   gap: 1.6rem;
 }
 .post-card {
-  display: block;
   padding: 2rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  text-decoration: none;
   transition: border-color 0.2s;
 }
 .post-card:hover {
   border-color: rgba(249,38,114,0.35);
+}
+.post-card-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  color: var(--fg-muted);
+}
+.post-card-date,
+.post-card-author {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .post-card-title {
   font-size: 1.8rem;
@@ -236,8 +247,63 @@ enc-box {
   color: var(--fg);
   margin-bottom: 0.8rem;
 }
-.post-card-excerpt {
+.post-card-description {
   font-size: 1.45rem;
   color: var(--fg-muted);
   line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+.post-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--border);
+}
+.post-card-tags {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.copy-link-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1rem;
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.copy-link-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Admin Panel Additional Styles */
+.admin-title-spaced {
+  margin-top: 1.6rem;
+}
+.admin-actions-spaced {
+  margin-bottom: 1.2rem;
+}
+.admin-actions-top {
+  margin-top: 1.2rem;
+}
+.btn-danger {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+.btn-danger:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
+.admin-md-item .btn-danger {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+  margin-left: 0.4rem;
+}
+.admin-md-item .btn-danger:hover {
+  background: rgba(255, 107, 107, 0.1);
 }

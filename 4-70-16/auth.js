@@ -117,10 +117,16 @@ function renderAdminUI() {
       '<button id="save-pat" class="btn btn-primary btn-sm">Save PAT</button>' +
       '<button id="logout-btn" class="btn btn-outline btn-sm">Logout</button>' +
     '</div>' +
-    '<div class="admin-title" style="margin-top:1.6rem;">Encrypted Posts</div>' +
+    '<div class="admin-title admin-title-spaced">Encrypted Posts</div>' +
+    '<div class="admin-actions admin-actions-spaced">' +
+      '<button id="new-post-btn" class="btn btn-primary btn-sm">New Post</button>' +
+    '</div>' +
     '<ul id="md-list" class="admin-md-list"></ul>' +
-    '<textarea id="md-editor" class="admin-editor" placeholder="Select a file to edit..." disabled></textarea>' +
-    '<button id="md-save" class="btn btn-primary" disabled>Push to GitHub</button>' +
+    '<textarea id="md-editor" class="admin-editor" placeholder="Select a file to edit or create new..." disabled></textarea>' +
+    '<div class="admin-actions admin-actions-top">' +
+      '<button id="md-save" class="btn btn-primary" disabled>Push to GitHub</button>' +
+      '<button id="md-delete" class="btn btn-outline btn-danger" disabled>Delete</button>' +
+    '</div>' +
   '</section>';
   document.getElementById('content-main').insertAdjacentHTML('afterbegin', panel);
 
@@ -153,11 +159,23 @@ function renderAdminUI() {
   // MD list
   var files = ['test-post.md', 'multable.md'];
   document.getElementById('md-list').innerHTML = files.map(function(f) {
-    return '<li class="admin-md-item"><span>' + f + '</span><button class="btn btn-outline btn-sm" onclick="loadMd(\'' + f + '\')">Edit</button></li>';
+    return '<li class="admin-md-item"><span>' + f + '</span>' +
+      '<button class="btn btn-outline btn-sm" onclick="loadMd(\'' + f + '\')">Edit</button>' +
+      '<button class="btn btn-outline btn-sm btn-danger" onclick="deleteMd(\'' + f + '\')">Delete</button>' +
+      '</li>';
   }).join('');
 
   // Save button
   document.getElementById('md-save').onclick = function() { saveMd(); };
+
+  // New post button
+  document.getElementById('new-post-btn').onclick = function() { newPost(); };
+
+  // Delete button
+  document.getElementById('md-delete').onclick = function() {
+    var filename = document.getElementById('md-save').dataset.filename;
+    if (filename) deleteMd(filename);
+  };
 }
 
 /* ═══ MD EDITOR ═══ */
@@ -185,6 +203,37 @@ async function saveMd() {
   await pushToGitHub(pat, filename, frontMatter);
 }
 
+/* ═══ NEW POST ═══ */
+function newPost() {
+  var editor = document.getElementById('md-editor');
+  editor.value = '---\nlayout: encrypted\ntitle: "New Post"\ndate: ' + new Date().toISOString().split('T')[0] + '\ntags: []\nauthor: Admin\n---\n\nWrite your content here...';
+  editor.disabled = false;
+  document.getElementById('md-save').disabled = false;
+  document.getElementById('md-save').dataset.filename = '';
+  document.getElementById('md-delete').disabled = true;
+  editor.focus();
+}
+
+/* ═══ DELETE MD ═══ */
+async function deleteMd(filename) {
+  if (!filename) {
+    alert('No file selected');
+    return;
+  }
+
+  if (!confirm('Are you sure you want to delete ' + filename + '? This action cannot be undone.')) {
+    return;
+  }
+
+  var pat = await decrypt(localStorage.getItem('gh_pat_enc'), SESSION.key);
+  if (!pat) {
+    alert('Save GitHub PAT first');
+    return;
+  }
+
+  await deleteFromGitHub(pat, filename);
+}
+
 /* ═══ GITHUB API ═══ */
 async function getFileSHA(token, path) {
   var resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + path, {
@@ -209,9 +258,35 @@ async function pushToGitHub(token, filename, content) {
   });
   if (resp.ok) {
     alert('Pushed to GitHub');
+    // Refresh file list
+    location.reload();
   } else {
     var err = await resp.json();
     alert('Push failed: ' + (err.message || 'Unknown'));
+  }
+}
+
+async function deleteFromGitHub(token, filename) {
+  var sha = await getFileSHA(token, filename);
+  if (!sha) {
+    alert('File not found');
+    return;
+  }
+
+  var body = { message: 'Delete encrypted ' + filename, sha: sha, branch: 'redesign/static-css' };
+
+  var resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + filename, {
+    method: 'DELETE',
+    headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (resp.ok) {
+    alert('Deleted from GitHub');
+    // Refresh file list
+    location.reload();
+  } else {
+    var err = await resp.json();
+    alert('Delete failed: ' + (err.message || 'Unknown'));
   }
 }
 
@@ -259,6 +334,24 @@ function logout() {
   document.querySelectorAll('#posts-container, #admin-panel').forEach(function(el) { el.classList.add('is-hidden'); });
 }
 
+/* ═══ COPY LINK ═══ */
+function initCopyLinkButtons() {
+  var buttons = document.querySelectorAll('.copy-link-btn');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var url = btn.getAttribute('data-url');
+      var fullUrl = window.location.origin + url;
+      navigator.clipboard.writeText(fullUrl).then(function() {
+        var originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check"></i>';
+        setTimeout(function() {
+          btn.innerHTML = originalHTML;
+        }, 2000);
+      });
+    });
+  });
+}
+
 /* ═══ INIT ═══ */
 document.addEventListener('DOMContentLoaded', function() {
   var authForm = document.getElementById('auth-controls');
@@ -271,4 +364,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   authorize();
   decryptPage();
+  initCopyLinkButtons();
 });
