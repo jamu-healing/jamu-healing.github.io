@@ -33,7 +33,7 @@ layout: default
         </aside>
         <div class="post-content prose">
           <div class="enc-warning">Encrypted content - enter passkey in /4-70-16/ to view</div>
-          {{ content }}
+          {% raw %}<enc-box class="is-hidden">{{ content }}</enc-box>{% endraw %}
         </div>
       </div>
 
