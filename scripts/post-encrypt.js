@@ -73,12 +73,6 @@ try {
         '    </div>'
       );
 
-      // Add exit_code script tag
-      const exitCodeScript = `<script type="application/ld+json">
-${JSON.stringify(exitCode)}
-</script>`;
-      html = html.replace('</head>', `${exitCodeScript}</head>`);
-
       fs.writeFileSync(filePath, html);
       console.log('Encrypted:', file);
     } catch (e) {
@@ -86,6 +80,32 @@ ${JSON.stringify(exitCode)}
       exitCode.exit_code.error = e.message;
       console.error('Failed:', file, e.message);
     }
+  }
+
+  // Add exit_code script tag to all processed HTML files
+  for (const file of htmlFiles) {
+    const filePath = path.join(siteDir, file);
+    let html = fs.readFileSync(filePath, 'utf8');
+
+    // Check if exit_code script already exists
+    if (html.includes('"exit_code"')) {
+      continue;
+    }
+
+    const exitCodeScript = `<script type="application/ld+json">
+${JSON.stringify(exitCode)}
+</script>`;
+
+    // Try to add before </head>
+    if (html.includes('</head>')) {
+      html = html.replace('</head>', `${exitCodeScript}</head>`);
+    } else {
+      console.error('Warning: </head> not found in', file);
+      continue;
+    }
+
+    fs.writeFileSync(filePath, html);
+    console.log('Added exit_code script to:', file);
   }
 
   console.log(JSON.stringify(exitCode));
