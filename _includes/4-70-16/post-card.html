@@ -1,0 +1,14 @@
+<article class="post-card">
+  <header class="post-card-header">
+    <span class="post-card-date"><i class="bi bi-calendar3"></i> {{ post.date | date: "%B %d, %Y" }}</span>
+    <span class="post-card-author"><i class="bi bi-person"></i> {{ post.author }}</span>
+  </header>
+  <h3 class="post-card-title">{{ post.title }}</h3>
+  {% if post.description %}<p class="post-card-description">{{ post.description }}</p>{% endif %}
+  <footer class="post-card-footer">
+    <div class="post-card-tags">
+      {% for tag in post.tags %}<span class="badge badge-outline">{{ tag }}</span>{% endfor %}
+    </div>
+    <button class="copy-link-btn" data-url="{{ post.url }}"><i class="bi bi-link-45deg"></i></button>
+  </footer>
+</article>
