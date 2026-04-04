@@ -50,7 +50,7 @@ async function derivePubKey(passkey) {
 }
 
 /* ═══ AUTH ═══ */
-const SESSION = { passkey: null, key: null, access: 'guest', visitorId: null };
+let SESSION = { passkey: null, key: null, access: 'guest', visitorId: null };
 
 async function authorize(passkey) {
   try {
@@ -66,9 +66,9 @@ async function authorize(passkey) {
     }
 
     const derivedPub = await derivePubKey(inputKey);
-    const matched = null;
+    let matched = null;
     const keys = Object.keys(users);
-    for (const i = 0; i < keys.length; i++) {
+    for (let i = 0; i < keys.length; i++) {
       if (users[keys[i]].pubKey === derivedPub) {
         matched = users[keys[i]];
         matched._id = keys[i];
