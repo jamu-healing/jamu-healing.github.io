@@ -22,28 +22,62 @@ function decrypt(base64, keyBuffer) {
   return Buffer.concat([decipher.update(ciphertext), decipher.final()]).toString('utf8');
 }
 
-const MASTER_KEY = process.env.MASTER_KEY;
-if (!MASTER_KEY) {
-  console.error('MASTER_KEY required');
-  process.exit(1);
-}
-
-const keyBuffer = deriveKey(MASTER_KEY);
-const contentDir = path.join(__dirname, '..', '4-70-16');
-const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') && f !== 'index.md.old');
-
-for (const file of files) {
-  const filePath = path.join(contentDir, file);
-  const raw = fs.readFileSync(filePath, 'utf8');
-  const encMatch = raw.match(/enc::([A-Za-z0-9+/=]+)/);
-  if (!encMatch) continue;
-
-  try {
-    const decrypted = decrypt(encMatch[1], keyBuffer);
-    const newContent = raw.replace(/enc::[A-Za-z0-9+/=]+/, decrypted);
-    fs.writeFileSync(filePath, newContent);
-    console.log('Decrypted:', file);
-  } catch (e) {
-    console.error('Failed:', file, e.message);
+const exitCode = {
+  script: 'pre-decrypt',
+  exit_code: {
+    status: 'ok',
+    error: 'noerr'
   }
+};
+
+try {
+  const MASTER_KEY = process.env.MASTER_KEY;
+  if (!MASTER_KEY) {
+    exitCode.exit_code.status = 'badkey';
+    exitCode.exit_code.error = 'MASTER_KEY required';
+    console.error('MASTER_KEY required');
+    console.log(JSON.stringify(exitCode));
+    process.exit(1);
+  }
+
+  const keyBuffer = deriveKey(MASTER_KEY);
+  const contentDir = path.join(__dirname, '..', '4-70-16');
+
+  if (!fs.existsSync(contentDir)) {
+    exitCode.exit_code.status = 'badsrc';
+    exitCode.exit_code.error = 'Content directory not found';
+    console.error('Content directory not found');
+    console.log(JSON.stringify(exitCode));
+    process.exit(1);
+  }
+
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') && f !== 'index.md.old');
+
+  for (const file of files) {
+    const filePath = path.join(contentDir, file);
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const encMatch = raw.match(/enc::([A-Za-z0-9+/=]+)/);
+    if (!encMatch) {
+      continue;
+    }
+
+    try {
+      const decrypted = decrypt(encMatch[1], keyBuffer);
+      const newContent = raw.replace(/enc::[A-Za-z0-9+/=]+/, decrypted);
+      fs.writeFileSync(filePath, newContent);
+      console.log('Decrypted:', file);
+    } catch (e) {
+      exitCode.exit_code.status = 'badkey';
+      exitCode.exit_code.error = e.message;
+      console.error('Failed:', file, e.message);
+    }
+  }
+
+  console.log(JSON.stringify(exitCode));
+} catch (e) {
+  exitCode.exit_code.status = 'badsrc';
+  exitCode.exit_code.error = e.message;
+  console.error('Error:', e.message);
+  console.log(JSON.stringify(exitCode));
+  process.exit(1);
 }
