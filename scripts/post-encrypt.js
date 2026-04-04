@@ -40,26 +40,22 @@ for (const file of htmlFiles) {
   const filePath = path.join(siteDir, file);
   let html = fs.readFileSync(filePath, 'utf8');
 
-  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
-  if (!mainMatch) continue;
+  // Find and encrypt only article content inside post-content div
+  const contentMatch = html.match(/<div class="post-content prose">([\s\S]*?)<\/div>/i);
+  if (!contentMatch) continue;
 
-  const mainContent = mainMatch[1];
-  const encrypted = encrypt(mainContent, keyBuffer);
+  const content = contentMatch[1];
+  const encrypted = encrypt(content, keyBuffer);
 
+  // Replace only the content, preserving structure
   html = html.replace(
-    mainMatch[0],
-    '<main id="content-main">\n' +
-    '      <div class="enc-warning">Encrypted content - enter passkey in /4-70-16/ to view</div>\n' +
+    contentMatch[0],
+    '<div class="enc-warning">Encrypted content - enter passkey in /4-70-16/ to view</div>\n' +
+    '<div class="post-content prose">\n' +
     '      <enc-box class="is-hidden">enc::' + encrypted + '</enc-box>\n' +
-    '    </main>'
+    '    </div>'
   );
 
-  var script = '\n<script>\n' +
-    '(function(){var IV_LEN=12,ITERATIONS=100000;async function deriveKey(pk){var enc=new TextEncoder();var salt=enc.encode(pk);var km=await crypto.subtle.importKey("raw",enc.encode(pk),"PBKDF2",false,["deriveKey"]);return crypto.subtle.deriveKey({name:"PBKDF2",salt:salt,iterations:ITERATIONS,hash:"SHA-256"},km,{name:"AES-GCM",length:256},false,["decrypt"]);}async function decrypt(b64,key){var buf=Uint8Array.from(atob(b64),function(c){return c.charCodeAt(0);});var iv=buf.slice(0,IV_LEN);var ct=buf.slice(IV_LEN);var pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:iv},key,ct);return new TextDecoder().decode(pt);}async function run(){var box=document.querySelector("enc-box");if(!box)return;var encText=box.textContent.trim().replace(/^enc::/,"");if(!encText)return;var pk=sessionStorage.getItem("passkey");if(!pk){var w=document.querySelector(".enc-warning");if(w)w.textContent="Passkey required - login at /4-70-16/ first";return;}var key=await deriveKey(pk);try{var html=await decrypt(encText,key);box.classList.remove("is-hidden");box.innerHTML=html;var w=document.querySelector(".enc-warning");if(w)w.classList.add("is-hidden");}catch(e){console.error("Decrypt failed:",e);}}document.addEventListener("DOMContentLoaded",run);})();\n' +
-    '<\/script>\n';
-
-  html = html.replace('</body>', script + '</body>');
-
-  fs.writeFileSync(filePath, html);
   console.log('Encrypted:', file);
+  fs.writeFileSync(filePath, html);
 }

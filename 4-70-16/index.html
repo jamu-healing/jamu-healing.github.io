@@ -47,6 +47,10 @@ title: "Private Access"
           <p>Once you have the passkey, enter it in the field on the left to unlock your personalized content.</p>
         </div>
         <div id="posts-container" class="posts-cards is-hidden">
+          {% assign posts = site.pages | where_exp: "page", "page.path contains '4-70-16/' and page.layout == 'post'" %}
+          {% for post in posts %}
+            {% include 4-70-16/post-card.html %}
+          {% endfor %}
         </div>
       </main>
     </div>

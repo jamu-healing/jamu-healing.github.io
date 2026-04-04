@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 ---
 <article>
   <div class="post-header">
@@ -7,16 +7,58 @@ layout: default
       <div class="blog-meta blog-meta-spacing">
         <span><i class="bi bi-lock"></i> Encrypted Content</span>
         <span><i class="bi bi-calendar3"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+        {% if page.categories.size > 0 %}
+          <span class="cat">{{ page.categories | join: ", " }}</span>
+        {% endif %}
+        {% if page.author %}
+          <span><i class="bi bi-person"></i> {{ page.author }}</span>
+        {% endif %}
       </div>
       <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="text-description">{{ page.description }}</p>
+      {% endif %}
     </div>
   </div>
 
   <section class="section-no-border">
     <div class="container">
       <div class="enc-warning">Passkey required - login at /4-70-16/ first</div>
-      <div class="post-content prose">
-        {{ content | split: "enc::" | last | strip }}
+      <div class="post-layout">
+        <aside class="post-aside">
+          <p class="post-aside-title">Contents</p>
+          <nav id="toc"></nav>
+        </aside>
+        <div class="post-content prose">
+          {{ content | split: "enc::" | last | strip }}
+        </div>
+      </div>
+
+      {% if page.tags.size > 0 %}
+        <div class="tags-container">
+          <p class="tags-label">Tags</p>
+          <div class="tags-list">
+            {% for tag in page.tags %}
+              <span class="badge badge-outline">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Post Navigation -->
+      <div class="post-nav">
+        {% if page.previous %}
+          <a href="{{ page.previous.url }}" class="btn btn-outline">
+            <i class="bi bi-arrow-left"></i> {{ page.previous.title | truncate: 30 }}
+          </a>
+        {% else %}
+          <div></div>
+        {% endif %}
+        {% if page.next %}
+          <a href="{{ page.next.url }}" class="btn btn-outline">
+            {{ page.next.title | truncate: 30 }} <i class="bi bi-arrow-right"></i>
+          </a>
+        {% endif %}
       </div>
     </div>
   </section>
@@ -63,6 +105,25 @@ layout: default
       box.innerHTML = html;
       var warn = document.querySelector('.enc-warning');
       if (warn) warn.classList.add('is-hidden');
+      
+      // Generate Table of Contents
+      var toc = document.getElementById('toc');
+      if (toc) {
+        var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+        var ul = document.createElement('ul');
+        headings.forEach(function(heading) {
+          var id = heading.textContent.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-');
+          heading.id = id;
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.href = '#' + id;
+          a.textContent = heading.textContent;
+          a.className = heading.tagName.toLowerCase();
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        toc.appendChild(ul);
+      }
     } catch (e) {
       console.error('Decrypt failed:', e);
       var warn = document.querySelector('.enc-warning');

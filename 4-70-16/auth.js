@@ -115,6 +115,7 @@ function renderAdminUI() {
     '<div class="admin-actions">' +
       '<input type="password" id="gh-pat" placeholder="GitHub PAT (encrypted)" class="passkey-input">' +
       '<button id="save-pat" class="btn btn-primary btn-sm">Save PAT</button>' +
+      '<button id="logout-btn" class="btn btn-outline btn-sm">Logout</button>' +
     '</div>' +
     '<div class="admin-title" style="margin-top:1.6rem;">Encrypted Posts</div>' +
     '<ul id="md-list" class="admin-md-list"></ul>' +
@@ -122,6 +123,9 @@ function renderAdminUI() {
     '<button id="md-save" class="btn btn-primary" disabled>Push to GitHub</button>' +
   '</section>';
   document.getElementById('content-main').insertAdjacentHTML('afterbegin', panel);
+
+  // Logout button
+  document.getElementById('logout-btn').onclick = function() { logout(); };
 
   // Service checks
   fetch('https://n8n.iguanodon-halosaur.ts.net/webhook/sgn', { mode: 'no-cors' })
@@ -235,6 +239,24 @@ async function decryptPage() {
   } catch (e) {
     console.error('Decrypt failed:', e);
   }
+}
+
+/* ═══ LOGOUT ═══ */
+function logout() {
+  // Clear session and local storage
+  sessionStorage.removeItem('access_level');
+  sessionStorage.removeItem('passkey');
+  localStorage.removeItem('jamu_key_' + SESSION.visitorId);
+  SESSION.passkey = null;
+  SESSION.key = null;
+  SESSION.access = 'guest';
+
+  // Reset UI
+  setStatus('--:-- | Guest');
+  document.getElementById('u-name').textContent = 'Guest';
+  document.getElementById('u-img').src = DEFAULT_AVATAR;
+  document.querySelectorAll('#auth-controls, #intro').forEach(function(el) { el.classList.remove('is-hidden'); });
+  document.querySelectorAll('#posts-container, #admin-panel').forEach(function(el) { el.classList.add('is-hidden'); });
 }
 
 /* ═══ INIT ═══ */
