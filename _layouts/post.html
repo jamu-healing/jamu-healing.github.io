@@ -102,6 +102,37 @@ document.addEventListener('DOMContentLoaded', function() {
     header.className = 'code-block-header';
     header.innerHTML = '<span>' + lang + '</span>';
 
+    // Copy button
+    var copyBtn = document.createElement('button');
+    copyBtn.className = 'code-block-btn';
+    copyBtn.innerHTML = '<i class="bi bi-copy"></i> Copy';
+    copyBtn.addEventListener('click', function() {
+      var text = code.textContent;
+      navigator.clipboard.writeText(text).then(function() {
+        copyBtn.innerHTML = '<i class="bi bi-check"></i> Copied';
+        setTimeout(function() {
+          copyBtn.innerHTML = '<i class="bi bi-copy"></i> Copy';
+        }, 2000);
+      });
+    });
+    header.appendChild(copyBtn);
+
+    // Download button
+    var downloadBtn = document.createElement('button');
+    downloadBtn.className = 'code-block-btn';
+    downloadBtn.innerHTML = '<i class="bi bi-download"></i> Download';
+    downloadBtn.addEventListener('click', function() {
+      var text = code.textContent;
+      var blob = new Blob([text], { type: 'text/plain' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'code.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+    header.appendChild(downloadBtn);
+
     pre.parentNode.insertBefore(wrapper, pre);
     wrapper.appendChild(header);
     wrapper.appendChild(pre);
