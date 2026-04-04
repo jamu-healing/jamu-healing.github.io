@@ -102,9 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
     header.className = 'code-block-header';
     header.innerHTML = '<span>' + lang + '</span>';
 
+    // Create actions container
+    var actions = document.createElement('div');
+    actions.className = 'code-block-actions';
+
     // Copy button
     var copyBtn = document.createElement('button');
-    copyBtn.className = 'code-block-btn';
     copyBtn.innerHTML = '<i class="bi bi-copy"></i> Copy';
     copyBtn.addEventListener('click', function() {
       var text = code.textContent;
@@ -115,11 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
       });
     });
-    header.appendChild(copyBtn);
+    actions.appendChild(copyBtn);
 
     // Download button
     var downloadBtn = document.createElement('button');
-    downloadBtn.className = 'code-block-btn';
     downloadBtn.innerHTML = '<i class="bi bi-download"></i> Download';
     downloadBtn.addEventListener('click', function() {
       var text = code.textContent;
@@ -131,7 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
       a.click();
       URL.revokeObjectURL(url);
     });
-    header.appendChild(downloadBtn);
+    actions.appendChild(downloadBtn);
+
+    header.appendChild(actions);
 
     pre.parentNode.insertBefore(wrapper, pre);
     wrapper.appendChild(header);
