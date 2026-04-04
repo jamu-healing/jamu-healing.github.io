@@ -13,6 +13,14 @@ const path = require('path');
 const KEYS_PATH = path.join(__dirname, '..', '4-70-16', '.local-keys.json');
 const USERS_PATH = path.join(__dirname, '..', '4-70-16', 'users.json');
 
+const exitCode = {
+  script: 'init-users',
+  exit_code: {
+    status: 'ok',
+    error: 'noerr'
+  }
+};
+
 function derivePubKey(passkey) {
   const enc = new TextEncoder();
   const salt = enc.encode(passkey + ':pubkey');
@@ -24,49 +32,66 @@ function generateShortHash(input) {
   return crypto.createHash('sha256').update(input).digest('hex').slice(0, 6);
 }
 
-// Read local keys
-const localKeys = JSON.parse(fs.readFileSync(KEYS_PATH, 'utf8'));
-
-// Access levels mapping
-const ACCESS_MAP = {
-  admin: 'admin',
-  debug: 'debug',
-  guest: 'guest'
-};
-
-const PROFILES = {
-  admin: {
-    name: 'Administrator',
-    image: '/images/evi-sudarto.jpg',
-    id_timecode: '20260329-001',
-    postslist: ['test-post.md', 'multable.md', 'new-test-post.md']
-  },
-  debug: {
-    name: 'Debug User',
-    image: '/images/evi-sudarto.jpg',
-    id_timecode: '20260329-002',
-    postslist: ['test-post.md']
+try {
+  // Read local keys
+  if (!fs.existsSync(KEYS_PATH)) {
+    exitCode.exit_code.status = 'badsrc';
+    exitCode.exit_code.error = '.local-keys.json not found';
+    console.error('.local-keys.json not found');
+    console.log(JSON.stringify(exitCode));
+    process.exit(1);
   }
-};
 
-const users = {};
+  const localKeys = JSON.parse(fs.readFileSync(KEYS_PATH, 'utf8'));
 
-for (const [name, passkey] of Object.entries(localKeys)) {
-  if (!passkey) continue;
-  const hash = generateShortHash(name);
-  const pubKey = derivePubKey(passkey);
-  const profile = PROFILES[name] || { name: name, image: '/images/person-slash.svg', postslist: [] };
-
-  users['u_' + hash] = {
-    name: profile.name,
-    pubKey: pubKey,
-    accessLevel: ACCESS_MAP[name] || 'guest',
-    image: profile.image,
-    id_timecode: profile.id_timecode || '',
-    postslist: profile.postslist
+  // Access levels mapping
+  const ACCESS_MAP = {
+    admin: 'admin',
+    debug: 'debug',
+    guest: 'guest'
   };
-}
 
-fs.writeFileSync(USERS_PATH, JSON.stringify(users, null, 2) + '\n');
-console.log('Generated users.json with', Object.keys(users).length, 'users');
-console.log('PubKeys generated from .local-keys.json (no raw passwords)');
+  const PROFILES = {
+    admin: {
+      name: 'Administrator',
+      image: '/images/evi-sudarto.jpg',
+      id_timecode: '20260329-001',
+      postslist: ['test-post.md', 'multable.md', 'new-test-post.md']
+    },
+    debug: {
+      name: 'Debug User',
+      image: '/images/evi-sudarto.jpg',
+      id_timecode: '20260329-002',
+      postslist: ['test-post.md']
+    }
+  };
+
+  const users = {};
+
+  for (const [name, passkey] of Object.entries(localKeys)) {
+    if (!passkey) continue;
+    const hash = generateShortHash(name);
+    const pubKey = derivePubKey(passkey);
+    const profile = PROFILES[name] || { name: name, image: '/images/person-slash.svg', postslist: [] };
+
+    users['u_' + hash] = {
+      name: profile.name,
+      pubKey: pubKey,
+      accessLevel: ACCESS_MAP[name] || 'guest',
+      image: profile.image,
+      id_timecode: profile.id_timecode || '',
+      postslist: profile.postslist
+    };
+  }
+
+  fs.writeFileSync(USERS_PATH, JSON.stringify(users, null, 2) + '\n');
+  console.log('Generated users.json with', Object.keys(users).length, 'users');
+  console.log('PubKeys generated from .local-keys.json (no raw passwords)');
+  console.log(JSON.stringify(exitCode));
+} catch (e) {
+  exitCode.exit_code.status = 'badsrc';
+  exitCode.exit_code.error = e.message;
+  console.error('Error:', e.message);
+  console.log(JSON.stringify(exitCode));
+  process.exit(1);
+}
