@@ -180,8 +180,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   async function decryptContent() {
     try {
+      // Check if content starts with enc:: prefix
+      if (!encText.startsWith('enc::')) {
+        console.error('Invalid encrypted content format');
+        return;
+      }
+      // Remove enc:: prefix
+      var base64Text = encText.substring(5);
       var key = await deriveKey(passkey);
-      var html = await decrypt(encText, key);
+      var html = await decrypt(base64Text, key);
       box.classList.remove('is-hidden');
       box.innerHTML = html;
       var warn = document.querySelector('.enc-warning');
