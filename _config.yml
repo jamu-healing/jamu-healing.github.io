@@ -34,9 +34,9 @@ defaults:
       layout: "page"
   - scope:
       path: "4-70-16"
-      type: "pages"
+      type: "posts"
     values:
-      layout: "post"
+      layout: "4-70-16/post"
       author: "Evi Sudarto"
 
 # Plugins

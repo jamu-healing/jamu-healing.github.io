@@ -1,0 +1,80 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<article>
+  <div class="post-header">
+    <div class="container">
+      <div class="blog-meta blog-meta-spacing">
+        <span><i class="bi bi-lock"></i> Encrypted Content</span>
+        <span><i class="bi bi-calendar3"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+        {% if page.categories.size > 0 %}
+          <span class="cat">{{ page.categories | join: ", " }}</span>
+        {% endif %}
+        {% if page.author %}
+          <span><i class="bi bi-person"></i> {{ page.author }}</span>
+        {% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="text-description">{{ page.description }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <section class="section-no-border">
+    <div class="container">
+      <div class="enc-warning">Passkey required - login at /4-70-16/ first</div>
+      <div class="post-layout">
+        <aside class="post-aside">
+          <p class="post-aside-title">Contents</p>
+          <nav id="toc"></nav>
+        </aside>
+        <div class="post-content prose">
+          {% if content contains 'enc::' %}
+            <enc-box class="is-hidden">{{ content }}</enc-box>
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </div>
+      </div>
+
+      {% if page.tags.size > 0 %}
+        <div class="tags-container">
+          <p class="tags-label">Tags</p>
+          <div class="tags-list">
+            {% for tag in page.tags %}
+              <span class="badge badge-outline">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Post Navigation -->
+      <div class="post-nav">
+        {% if page.previous %}
+          <a href="{{ page.previous.url }}" class="btn btn-outline">
+            <i class="bi bi-arrow-left"></i> {{ page.previous.title | truncate: 30 }}
+          </a>
+        {% else %}
+          <div></div>
+        {% endif %}
+        {% if page.next %}
+          <a href="{{ page.next.url }}" class="btn btn-outline">
+            {{ page.next.title | truncate: 30 }} <i class="bi bi-arrow-right"></i>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</article>
+<script type="module">
+import PostView from '/4-70-16/ESM/post-view.js';
+import OnPageDecryptor from '/4-70-16/ESM/onpage-decryptor.js';
+
+PostView.init();
+OnPageDecryptor.init();
+</script>

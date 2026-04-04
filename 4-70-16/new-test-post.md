@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 4-70-16/post
 title: "Encryption tests"
 date: 2026-02-04
 categories: [encrypted]
