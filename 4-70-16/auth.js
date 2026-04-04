@@ -7,9 +7,9 @@ const IV_LEN = 12;
 const ITERATIONS = 100000;
 
 async function deriveKey(passkey) {
-  var enc = new TextEncoder();
-  var salt = enc.encode(passkey);
-  var keyMaterial = await crypto.subtle.importKey('raw', enc.encode(passkey), 'PBKDF2', false, ['deriveKey']);
+  const enc = new TextEncoder();
+  const salt = enc.encode(passkey);
+  const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(passkey), 'PBKDF2', false, ['deriveKey']);
   return crypto.subtle.deriveKey(
     { name: 'PBKDF2', salt: salt, iterations: ITERATIONS, hash: 'SHA-256' },
     keyMaterial,
@@ -20,28 +20,28 @@ async function deriveKey(passkey) {
 }
 
 async function encrypt(text, key) {
-  var iv = crypto.getRandomValues(new Uint8Array(IV_LEN));
-  var enc = new TextEncoder();
-  var cipher = await crypto.subtle.encrypt({ name: 'AES-GCM', iv: iv }, key, enc.encode(text));
-  var buf = new Uint8Array(IV_LEN + cipher.byteLength);
+  const iv = crypto.getRandomValues(new Uint8Array(IV_LEN));
+  const enc = new TextEncoder();
+  const cipher = await crypto.subtle.encrypt({ name: 'AES-GCM', iv: iv }, key, enc.encode(text));
+  const buf = new Uint8Array(IV_LEN + cipher.byteLength);
   buf.set(iv, 0);
   buf.set(new Uint8Array(cipher), IV_LEN);
   return btoa(String.fromCharCode.apply(null, buf));
 }
 
 async function decrypt(base64, key) {
-  var buf = Uint8Array.from(atob(base64), function(c) { return c.charCodeAt(0); });
-  var iv = buf.slice(0, IV_LEN);
-  var cipher = buf.slice(IV_LEN);
-  var plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, key, cipher);
+  const buf = Uint8Array.from(atob(base64), function(c) { return c.charCodeAt(0); });
+  const iv = buf.slice(0, IV_LEN);
+  const cipher = buf.slice(IV_LEN);
+  const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, key, cipher);
   return new TextDecoder().decode(plain);
 }
 
 async function derivePubKey(passkey) {
-  var enc = new TextEncoder();
-  var salt = enc.encode(passkey + ':pubkey');
-  var keyMaterial = await crypto.subtle.importKey('raw', enc.encode(passkey), 'PBKDF2', false, ['deriveBits']);
-  var bits = await crypto.subtle.deriveBits(
+  const enc = new TextEncoder();
+  const salt = enc.encode(passkey + ':pubkey');
+  const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(passkey), 'PBKDF2', false, ['deriveBits']);
+  const bits = await crypto.subtle.deriveBits(
     { name: 'PBKDF2', salt: salt, iterations: ITERATIONS, hash: 'SHA-256' },
     keyMaterial,
     256
@@ -50,25 +50,25 @@ async function derivePubKey(passkey) {
 }
 
 /* ═══ AUTH ═══ */
-var SESSION = { passkey: null, key: null, access: 'guest', visitorId: null };
+const SESSION = { passkey: null, key: null, access: 'guest', visitorId: null };
 
 async function authorize(passkey) {
   try {
-    var visitor = await (await fpPromise).get();
+    const visitor = await (await fpPromise).get();
     SESSION.visitorId = visitor.visitorId;
-    var users = await fetch('./users.json').then(function(r) { return r.json(); });
-    var savedKey = localStorage.getItem('jamu_key_' + visitor.visitorId);
-    var inputKey = passkey || savedKey;
+    const users = await fetch('./users.json').then(function(r) { return r.json(); });
+    const savedKey = localStorage.getItem('jamu_key_' + visitor.visitorId);
+    const inputKey = passkey || savedKey;
 
     if (!inputKey) {
       setStatus('--:-- | Guest');
       return;
     }
 
-    var derivedPub = await derivePubKey(inputKey);
-    var matched = null;
-    var keys = Object.keys(users);
-    for (var i = 0; i < keys.length; i++) {
+    const derivedPub = await derivePubKey(inputKey);
+    const matched = null;
+    const keys = Object.keys(users);
+    for (const i = 0; i < keys.length; i++) {
       if (users[keys[i]].pubKey === derivedPub) {
         matched = users[keys[i]];
         matched._id = keys[i];
@@ -102,14 +102,14 @@ async function authorize(passkey) {
 }
 
 function setStatus(text) {
-  var el = document.getElementById('status-line');
+  const el = document.getElementById('status-line');
   if (el) el.textContent = text;
 }
 
 /* ═══ ADMIN UI ═══ */
 function renderAdminUI() {
   if (document.getElementById('admin-panel')) return;
-  var panel = '<section id="admin-panel" class="admin-panel">' +
+  const panel = '<section id="admin-panel" class="admin-panel">' +
     '<div class="admin-title">Admin Panel</div>' +
     '<div class="admin-stat">Services: n8n <span id="n8n-stat">...</span> | WebDav <span id="webdav-stat">...</span></div>' +
     '<div class="admin-actions">' +
@@ -135,29 +135,29 @@ function renderAdminUI() {
 
   // Service checks
   fetch('https://n8n.iguanodon-halosaur.ts.net/webhook/sgn', { mode: 'no-cors' })
-    .then(function() { var e = document.getElementById('n8n-stat'); if (e) e.textContent = 'Online'; })
-    .catch(function() { var e = document.getElementById('n8n-stat'); if (e) e.textContent = 'Offline'; });
+    .then(function() { const e = document.getElementById('n8n-stat'); if (e) e.textContent = 'Online'; })
+    .catch(function() { const e = document.getElementById('n8n-stat'); if (e) e.textContent = 'Offline'; });
 
   fetch('https://webdav-server.iguanodon-halosaur.ts.net/', { headers: { 'Authorization': 'Basic ' + btoa('admin:admin') } })
-    .then(function(r) { var e = document.getElementById('webdav-stat'); if (e) e.textContent = r.status <= 401 ? 'Online' : 'Error ' + r.status; })
-    .catch(function() { var e = document.getElementById('webdav-stat'); if (e) e.textContent = 'Offline'; });
+    .then(function(r) { const e = document.getElementById('webdav-stat'); if (e) e.textContent = r.status <= 401 ? 'Online' : 'Error ' + r.status; })
+    .catch(function() { const e = document.getElementById('webdav-stat'); if (e) e.textContent = 'Offline'; });
 
   // PAT storage
-  var savedPat = localStorage.getItem('gh_pat_enc');
+  const savedPat = localStorage.getItem('gh_pat_enc');
   if (savedPat) {
     document.getElementById('gh-pat').placeholder = 'PAT saved (encrypted)';
   }
   document.getElementById('save-pat').onclick = async function() {
-    var patInput = document.getElementById('gh-pat');
+    const patInput = document.getElementById('gh-pat');
     if (!patInput.value) return;
-    var enc = await encrypt(patInput.value, SESSION.key);
+    const enc = await encrypt(patInput.value, SESSION.key);
     localStorage.setItem('gh_pat_enc', enc);
     patInput.value = '';
     patInput.placeholder = 'PAT saved (encrypted)';
   };
 
   // MD list
-  var files = ['test-post.md', 'multable.md'];
+  const files = ['test-post.md', 'multable.md'];
   document.getElementById('md-list').innerHTML = files.map(function(f) {
     return '<li class="admin-md-item"><span>' + f + '</span>' +
       '<button class="btn btn-outline btn-sm" onclick="loadMd(\'' + f + '\')">Edit</button>' +
@@ -173,15 +173,15 @@ function renderAdminUI() {
 
   // Delete button
   document.getElementById('md-delete').onclick = function() {
-    var filename = document.getElementById('md-save').dataset.filename;
+    const filename = document.getElementById('md-save').dataset.filename;
     if (filename) deleteMd(filename);
   };
 }
 
 /* ═══ MD EDITOR ═══ */
 async function loadMd(filename) {
-  var resp = await fetch('./' + filename);
-  var text = await resp.text();
+  const resp = await fetch('./' + filename);
+  const text = await resp.text();
   document.getElementById('md-editor').value = text;
   document.getElementById('md-editor').disabled = false;
   document.getElementById('md-save').disabled = false;
@@ -189,15 +189,15 @@ async function loadMd(filename) {
 }
 
 async function saveMd() {
-  var editor = document.getElementById('md-editor');
-  var filename = document.getElementById('md-save').dataset.filename;
-  var content = editor.value;
+  const editor = document.getElementById('md-editor');
+  const filename = document.getElementById('md-save').dataset.filename;
+  const content = editor.value;
   if (!filename || !content) return;
 
-  var encrypted = await encrypt(content, SESSION.key);
-  var frontMatter = '---\nlayout: post\ntitle: "Encrypted"\nenc: true\npubKey: "' + await derivePubKey(SESSION.passkey) + '"\n---\n\nenc::' + encrypted;
+  const encrypted = await encrypt(content, SESSION.key);
+  const frontMatter = '---\nlayout: post\ntitle: "Encrypted"\nenc: true\npubKey: "' + await derivePubKey(SESSION.passkey) + '"\n---\n\nenc::' + encrypted;
 
-  var pat = await decrypt(localStorage.getItem('gh_pat_enc'), SESSION.key);
+  const pat = await decrypt(localStorage.getItem('gh_pat_enc'), SESSION.key);
   if (!pat) { alert('Save GitHub PAT first'); return; }
 
   await pushToGitHub(pat, filename, frontMatter);
@@ -205,7 +205,7 @@ async function saveMd() {
 
 /* ═══ NEW POST ═══ */
 function newPost() {
-  var editor = document.getElementById('md-editor');
+  const editor = document.getElementById('md-editor');
   editor.value = '---\nlayout: encrypted\ntitle: "New Post"\ndate: ' + new Date().toISOString().split('T')[0] + '\ntags: []\nauthor: Admin\n---\n\nWrite your content here...';
   editor.disabled = false;
   document.getElementById('md-save').disabled = false;
@@ -225,7 +225,7 @@ async function deleteMd(filename) {
     return;
   }
 
-  var pat = await decrypt(localStorage.getItem('gh_pat_enc'), SESSION.key);
+  const pat = await decrypt(localStorage.getItem('gh_pat_enc'), SESSION.key);
   if (!pat) {
     alert('Save GitHub PAT first');
     return;
@@ -236,22 +236,22 @@ async function deleteMd(filename) {
 
 /* ═══ GITHUB API ═══ */
 async function getFileSHA(token, path) {
-  var resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + path, {
+  const resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + path, {
     headers: { 'Authorization': 'token ' + token }
   });
   if (resp.ok) {
-    var data = await resp.json();
+    const data = await resp.json();
     return data.sha;
   }
   return null;
 }
 
 async function pushToGitHub(token, filename, content) {
-  var sha = await getFileSHA(token, filename);
-  var body = { message: 'Update encrypted ' + filename, content: btoa(unescape(encodeURIComponent(content))), branch: 'redesign/static-css' };
+  const sha = await getFileSHA(token, filename);
+  const body = { message: 'Update encrypted ' + filename, content: btoa(unescape(encodeURIComponent(content))), branch: 'redesign/static-css' };
   if (sha) body.sha = sha;
 
-  var resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + filename, {
+  const resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + filename, {
     method: 'PUT',
     headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
@@ -261,21 +261,21 @@ async function pushToGitHub(token, filename, content) {
     // Refresh file list
     location.reload();
   } else {
-    var err = await resp.json();
+    const err = await resp.json();
     alert('Push failed: ' + (err.message || 'Unknown'));
   }
 }
 
 async function deleteFromGitHub(token, filename) {
-  var sha = await getFileSHA(token, filename);
+  const sha = await getFileSHA(token, filename);
   if (!sha) {
     alert('File not found');
     return;
   }
 
-  var body = { message: 'Delete encrypted ' + filename, sha: sha, branch: 'redesign/static-css' };
+  const body = { message: 'Delete encrypted ' + filename, sha: sha, branch: 'redesign/static-css' };
 
-  var resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + filename, {
+  const resp = await fetch('https://api.github.com/repos/jamu-healing/jamu-healing.github.io/contents/4-70-16/' + filename, {
     method: 'DELETE',
     headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
@@ -285,31 +285,31 @@ async function deleteFromGitHub(token, filename) {
     // Refresh file list
     location.reload();
   } else {
-    var err = await resp.json();
+    const err = await resp.json();
     alert('Delete failed: ' + (err.message || 'Unknown'));
   }
 }
 
 /* ═══ POST DECRYPTOR ═══ */
 async function decryptPage() {
-  var box = document.querySelector('enc-box');
+  const box = document.querySelector('enc-box');
   if (!box) return;
-  var encText = box.textContent.trim().replace(/^enc::/, '');
+  const encText = box.textContent.trim().replace(/^enc::/, '');
   if (!encText) return;
 
-  var passkey = sessionStorage.getItem('passkey') || SESSION.passkey;
+  const passkey = sessionStorage.getItem('passkey') || SESSION.passkey;
   if (!passkey) {
-    var el = document.querySelector('.enc-warning');
+    const el = document.querySelector('.enc-warning');
     if (el) el.textContent = 'Passkey required - login first';
     return;
   }
 
-  var key = await deriveKey(passkey);
+  const key = await deriveKey(passkey);
   try {
-    var html = await decrypt(encText, key);
+    const html = await decrypt(encText, key);
     box.classList.remove('is-hidden');
     box.innerHTML = html;
-    var warn = document.querySelector('.enc-warning');
+    const warn = document.querySelector('.enc-warning');
     if (warn) warn.classList.add('is-hidden');
   } catch (e) {
     console.error('Decrypt failed:', e);
@@ -336,13 +336,13 @@ function logout() {
 
 /* ═══ COPY LINK ═══ */
 function initCopyLinkButtons() {
-  var buttons = document.querySelectorAll('.copy-link-btn');
+  const buttons = document.querySelectorAll('.copy-link-btn');
   buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
-      var url = btn.getAttribute('data-url');
-      var fullUrl = window.location.origin + url;
+      const url = btn.getAttribute('data-url');
+      const fullUrl = window.location.origin + url;
       navigator.clipboard.writeText(fullUrl).then(function() {
-        var originalHTML = btn.innerHTML;
+        const originalHTML = btn.innerHTML;
         btn.innerHTML = '<i class="bi bi-check"></i>';
         setTimeout(function() {
           btn.innerHTML = originalHTML;
@@ -354,11 +354,11 @@ function initCopyLinkButtons() {
 
 /* ═══ INIT ═══ */
 document.addEventListener('DOMContentLoaded', function() {
-  var authForm = document.getElementById('auth-controls');
+  const authForm = document.getElementById('auth-controls');
   if (authForm) {
     authForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      var passkey = document.getElementById('passkey');
+      const passkey = document.getElementById('passkey');
       if (passkey) authorize(passkey.value);
     });
   }
