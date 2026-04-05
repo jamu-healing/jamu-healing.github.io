@@ -63,8 +63,20 @@ try {
 
     try {
       const decrypted = decrypt(encMatch[1], keyBuffer);
-      const newContent = raw.replace(/enc::[A-Za-z0-9+/=]+/, decrypted);
-      fs.writeFileSync(filePath, newContent);
+      
+      // Find original front matter
+      const frontMatterMatch = raw.match(/^---([\s\S]*?)---\n/);
+      
+      let finalContent;
+      if (frontMatterMatch) {
+        // Remove front matter from decrypted content if present
+        const cleanDecrypted = decrypted.replace(/^---[\s\S]*?---\n?/, '').trim();
+        finalContent = `---${frontMatterMatch[1]}---\n\n${cleanDecrypted}`;
+      } else {
+        finalContent = decrypted;
+      }
+      
+      fs.writeFileSync(filePath, finalContent);
       console.log('Decrypted:', file);
     } catch (e) {
       exitCode.exit_code.status = 'badkey';
