@@ -34,11 +34,7 @@ layout: default
           <nav id="toc"></nav>
         </aside>
         <div class="post-content prose">
-          {% if content contains 'enc::' %}
-            <enc-box class="is-hidden">{{ content }}</enc-box>
-          {% else %}
-            {{ content }}
-          {% endif %}
+          {{ content }}
         </div>
       </div>
 
